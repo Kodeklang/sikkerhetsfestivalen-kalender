@@ -5,6 +5,8 @@
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
+import rum from "./rum.js";
+
 const raw = readFileSync(new URL("./program.json", import.meta.url), "utf8");
 const program = JSON.parse(raw);
 
@@ -177,9 +179,16 @@ const sessions = program.sessions.map((s) => {
 // The service worker's cache name must change when *any* shipped asset
 // changes, not just the programme, or a CSS edit would never reach a client.
 const assetHash = createHash("sha256").update(raw);
-for (const f of ["../css/style.css", "../css/fonts.css", "../js/app.js"]) {
+for (const f of [
+  "../css/style.css",
+  "../css/fonts.css",
+  "../js/app.js",
+  "../../node_modules/@datadog/browser-rum/bundle/datadog-rum.js",
+]) {
   assetHash.update(readFileSync(new URL(f, import.meta.url)));
 }
+// /js/rum.js is generated rather than shipped, so hash what generates it.
+assetHash.update(JSON.stringify(rum));
 
 export default {
   buildId: assetHash.digest("hex").slice(0, 12),
