@@ -133,23 +133,26 @@ html[lang="en"] .lang__off { background: rgba(255, 255, 255, 0.9); color: var(--
 }
 .chip--solid { background: color-mix(in srgb, var(--track) 8%, #fff); }
 
+/* The reset chip belongs to no track, so it borrows the neutral ink and reads
+   as pressed whenever nothing is filtered - which is the default state. */
+.chip--reset { --track: var(--ink-mute); }
+
 button.chip { cursor: pointer; transition: opacity 0.12s ease, background-color 0.12s ease; }
 button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 
-/* The chosen track reads as filled; the rest recede without disappearing. */
+/* Chosen tracks read as filled; the rest recede without disappearing, so the
+   legend still shows what else the day has to offer. */
 .chip[aria-pressed="true"] {
   background: var(--track); color: #fff; border-color: var(--track);
 }
 .chip[aria-pressed="true"]:hover { background: var(--track); }
 .chip.is-muted { opacity: 0.4; }
 
-/* Filtering de-emphasises rather than hides: the shape of the day stays
-   readable, and nothing is removed from the accessibility tree. */
-.session.is-dimmed {
-  opacity: 0.3;
-  filter: grayscale(0.9);
-}
-.session { transition: opacity 0.15s ease, filter 0.15s ease; }
+/* Filtering removes rather than de-emphasises: a session outside the selection
+   leaves the layout entirely, and with it the accessibility tree. #filter-status
+   announces the result, which is the only thing left to go on. */
+.session.is-filtered-out { display: none; }
+.session { transition: filter 0.15s ease; }
 
 @media (prefers-reduced-motion: reduce) {
   .session, button.chip { transition: none; }

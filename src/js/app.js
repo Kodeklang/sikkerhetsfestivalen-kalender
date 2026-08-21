@@ -35,27 +35,55 @@ applyLang(currentLang());
 
 /* --------------------------------------------------------- track filter */
 
-// Picking a track leaves its sessions in colour and greys the rest down. It is
-// a de-emphasis, not a filter: nothing is hidden, so the shape of the day and
-// the accessibility tree both stay intact.
+// Picking tracks is a real filter, not a de-emphasis: rooms the selection does
+// not reach collapse away, and every other session leaves the grid - and with it
+// the accessibility tree, which is why the live region below reports what
+// survived. Picking nothing shows the whole day.
+//
+// The selection spans days and is stored as a list of slugs. A day only applies
+// the tracks it actually runs; the rest stay stored, so stepping to a day
+// without them and back does not quietly drop them.
 
-const TRACK_KEY = "sf-track";
+const TRACK_KEY = "sf-tracks";
+const LEGACY_TRACK_KEY = "sf-track";
 const chips = document.querySelectorAll(".chip[data-track]");
+const resetChip = document.getElementById("track-reset");
 const trackedSessions = document.querySelectorAll(".session[data-track]");
 const filterStatus = document.getElementById("filter-status");
 
+// One-time move from the single-track key. Reading it clears it, so a visitor
+// who had a track selected keeps it exactly once and never migrates again.
+const legacyTrack = localStorage.getItem(LEGACY_TRACK_KEY);
+if (legacyTrack !== null) {
+  localStorage.removeItem(LEGACY_TRACK_KEY);
+  if (legacyTrack && localStorage.getItem(TRACK_KEY) === null) {
+    localStorage.setItem(TRACK_KEY, JSON.stringify([legacyTrack]));
+  }
+}
+
+function storedTracks() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(TRACK_KEY) ?? "[]");
+    return Array.isArray(parsed) ? parsed.filter((s) => typeof s === "string") : [];
+  } catch {
+    // Hand-edited or truncated storage: fall back to showing everything.
+    return [];
+  }
+}
+
 if (chips.length) {
-  const nameOf = (slug) =>
-    [...chips].find((c) => c.dataset.track === slug)?.textContent.trim() ?? slug;
+  const bySlug = new Map([...chips].map((c) => [c.dataset.track, c]));
+  const forToday = () => storedTracks().filter((slug) => bySlug.has(slug));
+  const nameOf = (slug) => bySlug.get(slug)?.textContent.trim() ?? slug;
 
   const gridEl = document.querySelector(".grid");
   const columned = gridEl ? gridEl.querySelectorAll("[data-col]") : [];
   const roomCount = gridEl ? Number(gridEl.style.getPropertyValue("--rooms")) : 0;
 
   /**
-   * Collapse every room with no session in this track. Columns are zeroed
-   * rather than renumbered, so nothing else on the grid has to move.
-   * Returns how many rooms survived.
+   * Collapse every room the selection does not reach. Columns are zeroed
+   * rather than renumbered, so nothing else on the grid has to move. A null
+   * `keep` means no filter at all. Returns how many rooms survived.
    */
   const applyColumns = (keep) => {
     if (!gridEl) return 0;
@@ -79,24 +107,37 @@ if (chips.length) {
 
   // `announce` guards the live region: only a real click should speak. Writing
   // it on load or on a language switch would just be noise.
-  const applyTrack = (slug, { announce = false, lang = currentLang() } = {}) => {
+  const applyTracks = (slugs, { announce = false, lang = currentLang() } = {}) => {
+    const picked = new Set(slugs);
     for (const chip of chips) {
-      const on = chip.dataset.track === slug;
+      const on = picked.has(chip.dataset.track);
       chip.setAttribute("aria-pressed", String(on));
-      chip.classList.toggle("is-muted", Boolean(slug) && !on);
+      chip.classList.toggle("is-muted", picked.size > 0 && !on);
     }
+    resetChip?.setAttribute("aria-pressed", String(picked.size === 0));
 
-    const matching = [...trackedSessions].filter((s) => s.dataset.track === slug);
     // Which columns a track occupies is worked out at build time, per day, from
     // that day's schedule - a track may sit in several rooms, and a room may
-    // host more than one track. Sessions in a kept room that belong to another
-    // track stay visible but greyed, for context.
-    const chip = slug ? [...chips].find((c) => c.dataset.track === slug) : null;
-    const keep = chip ? new Set(chip.dataset.cols.split(" ").filter(Boolean)) : null;
+    // host more than one track. Several tracks keep the union of their columns;
+    // a session sharing a kept room with an unpicked track is still hidden.
+    let keep = null;
+    if (picked.size) {
+      keep = new Set();
+      for (const slug of picked) {
+        for (const col of bySlug.get(slug).dataset.cols.split(" ")) {
+          if (col) keep.add(col);
+        }
+      }
+    }
     const rooms = applyColumns(keep);
 
+    let shown = 0;
     for (const session of trackedSessions) {
-      session.classList.toggle("is-dimmed", Boolean(slug) && session.dataset.track !== slug);
+      // A session with no track at all carries an empty slug, so any filter
+      // hides it too: only what was asked for stays on the grid.
+      const on = !picked.size || picked.has(session.dataset.track);
+      session.classList.toggle("is-filtered-out", !on);
+      if (on) shown += 1;
     }
 
     if (!filterStatus) return;
@@ -104,36 +145,49 @@ if (chips.length) {
       filterStatus.textContent = "";
       return;
     }
-    if (!slug) {
+    if (!picked.size) {
       filterStatus.textContent = lang === "en" ? "Showing all tracks" : "Viser alle spor";
       return;
     }
+    // Naming a single track is more use than counting it.
+    const what = picked.size === 1
+      ? nameOf([...picked][0])
+      : `${picked.size} ${lang === "en" ? "tracks" : "spor"}`;
     filterStatus.textContent = lang === "en"
-      ? `Highlighting ${nameOf(slug)}: ${matching.length} sessions in ${rooms} rooms`
-      : `Framhever ${nameOf(slug)}: ${matching.length} foredrag i ${rooms} rom`;
+      ? `Showing ${what}: ${shown} ${shown === 1 ? "session" : "sessions"} in ${rooms} ${rooms === 1 ? "room" : "rooms"}`
+      : `Viser ${what}: ${shown} foredrag i ${rooms} rom`;
   };
 
   for (const chip of chips) {
     chip.addEventListener("click", () => {
-      // Clicking the active track clears the filter.
-      const next = chip.getAttribute("aria-pressed") === "true" ? "" : chip.dataset.track;
-      if (next) localStorage.setItem(TRACK_KEY, next);
+      // Each chip toggles its own track; clicking the last one off shows
+      // everything again, which is the same thing as picking nothing.
+      const slug = chip.dataset.track;
+      const all = storedTracks();
+      const next = all.includes(slug) ? all.filter((s) => s !== slug) : [...all, slug];
+      if (next.length) localStorage.setItem(TRACK_KEY, JSON.stringify(next));
       else localStorage.removeItem(TRACK_KEY);
-      applyTrack(next, { announce: true });
+      applyTracks(next.filter((s) => bySlug.has(s)), { announce: true });
     });
   }
 
-  // Re-announce in the new language, and carry the choice across days.
-  onLangChange.push((lang) => applyTrack(localStorage.getItem(TRACK_KEY) || "", { lang }));
+  // With twenty tracks, clearing a selection one chip at a time is a chore.
+  resetChip?.addEventListener("click", () => {
+    localStorage.removeItem(TRACK_KEY);
+    applyTracks([], { announce: true });
+  });
 
-  const stored = localStorage.getItem(TRACK_KEY) || "";
-  const active = [...chips].find((c) => c.dataset.track === stored);
-  // A track may not appear on every day; drop a selection this day cannot show.
-  applyTrack(active ? stored : "");
-  if (active) {
+  // Switching language strands the announcement in the old one; re-applying
+  // clears it. This is also what carries the choice across days.
+  onLangChange.push((lang) => applyTracks(forToday(), { lang }));
+
+  const initial = forToday();
+  applyTracks(initial);
+  const firstPicked = [...chips].find((c) => initial.includes(c.dataset.track));
+  if (firstPicked) {
     // Carried over from another day, the chip may sit off-screen in the
-    // horizontally scrolling legend - show why the grid is greyed.
-    active.scrollIntoView({ inline: "center", block: "nearest" });
+    // horizontally scrolling legend - show why the grid is filtered.
+    firstPicked.scrollIntoView({ inline: "center", block: "nearest" });
   }
 }
 

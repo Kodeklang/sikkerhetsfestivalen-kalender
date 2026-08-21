@@ -25,6 +25,10 @@ eleventyComputed:
   </header>
 
   <ul class="tracks" aria-label="Spor">
+    <li>
+      <button type="button" class="chip chip--reset" id="track-reset"
+              aria-pressed="true" data-en="All tracks">Alle spor</button>
+    </li>
     {%- for t in day.tracks %}
     <li>
       <button type="button" class="chip" data-track="{{ t.slug }}" data-cols="{{ t.cols | join(' ') }}"
