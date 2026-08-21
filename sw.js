@@ -8,7 +8,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-9afcd81bcb9a";
+const CACHE = "sf-2ed4d5fee015";
 
 const BASE = "/";
 
@@ -54,7 +54,7 @@ const REST = [...new Set([
   "/program/emerging-cyber-forensics-challenges-what-the-c-suite-must-kn-1302446/",
   "/program/nar-mat-blir-geopolitikk-slik-sikrer-vi-norges-matfat-sammen-1092840/",
   "/program/fallgruver-og-suksessfaktorer-i-personellsikkerhetsarbeidet--1168418/",
-  "/program/podcast-o3c-1311726/",
+  "/program/fremtidens-soc-med-telenor-1311726/",
   "/program/sitter-vi-fast-i-skyen-1090795/",
   "/program/the-quantum-countdown-procrastinate-or-migrate-1171105/",
   "/program/krav-til-cybersikkerhet-i-en-usikker-tid-nis2-digitalsikkerh-1155834/",
@@ -72,7 +72,7 @@ const REST = [...new Set([
   "/program/ai-i-digital-etterforskning-1173633/",
   "/program/sykt-mange-sikkerhetskrav-i-offentlig-anskaffelse-ma-det-vae-1171342/",
   "/program/innsiderisiko-forskningsperspektiver-og-forelopige-funn-1167428/",
-  "/program/podcast-o3c-1311727/",
+  "/program/agentisk-soc-hos-sto-1311727/",
   "/program/hawaii-pizza-how-dare-you-or-do-i-really-care-1168502/",
   "/program/pqc-migrasjon-for-store-virksomheter-1148467/",
   "/program/sikkerhetskrav-i-randsonen-slik-treffer-sikkerhetskravene-un-1174160/",
@@ -326,6 +326,7 @@ const REST = [...new Set([
   "/img/av/6BT1nwPLPo-64.webp", "/img/av/6BT1nwPLPo-128.webp",
   "/img/av/aeOWYIQM8Z-64.webp", "/img/av/aeOWYIQM8Z-128.webp",
   "/img/av/vHG16Owapz-64.webp", "/img/av/vHG16Owapz-128.webp",
+  "/img/av/Pe60vahScg-64.webp", "/img/av/Pe60vahScg-128.webp",
   "/img/av/adP_ZHpsV6-64.webp", "/img/av/adP_ZHpsV6-128.webp",
   "/img/av/BGuiPyKgjw-64.webp", "/img/av/BGuiPyKgjw-128.webp",
   "/img/av/oYl7lVRA6K-64.webp", "/img/av/oYl7lVRA6K-128.webp",
