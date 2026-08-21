@@ -39,6 +39,11 @@ and on demand:
 2. build with Eleventy
 3. publish `_site` to the `gh-pages` branch, committed only if it changed
 
+The site is published at <https://sikkerhetsfestivalen.kodeklang.dev>. Its
+`CNAME` file lives in `src/root/` rather than being left where GitHub's custom
+domain setting writes it, because step 3 replaces the `gh-pages` tree wholesale
+— a file only GitHub put there would be gone on the next hourly run.
+
 Because the built output is committed, git itself is the change detector. If the
 bytes are identical there is no commit, no deploy, and every ETag on `gh-pages`
 stays valid — so browsers keep their cached copy until the programme genuinely
