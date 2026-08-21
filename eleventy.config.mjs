@@ -26,10 +26,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/root": "." });
 
   // The RUM SDK ships a prebuilt bundle, so it needs no bundler of our own.
-  // Copy the whole directory: the session replay recorder and the profiler are
-  // separate chunks the SDK fetches at runtime, relative to its own URL.
+  // The slim build has no session replay recorder, so unlike the full one it
+  // fetches no chunks at runtime and only this single file has to travel. Its
+  // directory also holds a Salesforce variant we have no use for, hence naming
+  // the file rather than copying the directory.
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@datadog/browser-rum/bundle": "js/datadog",
+    "node_modules/@datadog/browser-rum-slim/bundle/datadog-rum-slim.js":
+      "js/datadog/datadog-rum-slim.js",
   });
 
   // Only the generated derivatives are published. The originals stay in the

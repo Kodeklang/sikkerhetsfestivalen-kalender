@@ -15,6 +15,6 @@
     "subset-font": "^2.5.0"
   },
   "dependencies": {
-    "@datadog/browser-rum": "^7.9.0"
+    "@datadog/browser-rum-slim": "^7.9.0"
   }
 }

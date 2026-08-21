@@ -24,12 +24,10 @@ export default {
   version: pkg.version,
 
   sessionSampleRate: 100,
-  sessionReplaySampleRate: 20,
   trackResources: true,
   trackUserInteractions: true,
   trackLongTasks: true,
 
-  // Session replay records the DOM, so state the privacy level rather than
-  // leaning on the SDK default of the same name.
-  defaultPrivacyLevel: "mask-user-input",
+  // No sessionReplaySampleRate or defaultPrivacyLevel: both only govern the
+  // session replay recorder, which the slim build does not carry.
 };

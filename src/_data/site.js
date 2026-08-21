@@ -218,7 +218,7 @@ for (const f of [
   "../css/style.css",
   "../css/fonts.css",
   "../js/app.js",
-  "../../node_modules/@datadog/browser-rum/bundle/datadog-rum.js",
+  "../../node_modules/@datadog/browser-rum-slim/bundle/datadog-rum-slim.js",
 ]) {
   assetHash.update(readFileSync(new URL(f, import.meta.url)));
 }
