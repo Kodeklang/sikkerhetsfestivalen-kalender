@@ -7,11 +7,12 @@
 <meta name="description" content="Programmet for Sikkerhetsfestivalen 2026 i Lillehammer, 24.–26. august.">
 <meta name="theme-color" content="#e8850f">
 <meta name="app-version" content="5c68f6c32884">
-<link rel="manifest" href="/manifest.webmanifest">
-<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/icons/icon-180.png">
-<link rel="stylesheet" href="/css/fonts.css">
-<link rel="stylesheet" href="/css/style.css">
+<meta name="base-path" content="/sikkerhetsfestivalen-kalender/">
+<link rel="manifest" href="/sikkerhetsfestivalen-kalender/manifest.webmanifest">
+<link rel="icon" href="/sikkerhetsfestivalen-kalender/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/sikkerhetsfestivalen-kalender/icons/icon-180.png">
+<link rel="stylesheet" href="/sikkerhetsfestivalen-kalender/css/fonts.css">
+<link rel="stylesheet" href="/sikkerhetsfestivalen-kalender/css/style.css">
 </head>
 <body>
 <div class="app app--landing">
@@ -30,15 +31,15 @@
     <h1>Sikkerhetsfestivalen 2026</h1>
     <p class="landing__dates">Lillehammer, 24.–26. august</p>
     <nav class="landing__days" aria-label="Velg dag">
-      <a class="landing__day" href="/dag/1/">
+      <a class="landing__day" href="/sikkerhetsfestivalen-kalender/dag/1/">
         <span class="landing__dow" data-en="Monday">Mandag</span>
         <span class="landing__date">24.08</span>
       </a>
-      <a class="landing__day" href="/dag/2/">
+      <a class="landing__day" href="/sikkerhetsfestivalen-kalender/dag/2/">
         <span class="landing__dow" data-en="Tuesday">Tirsdag</span>
         <span class="landing__date">25.08</span>
       </a>
-      <a class="landing__day" href="/dag/3/">
+      <a class="landing__day" href="/sikkerhetsfestivalen-kalender/dag/3/">
         <span class="landing__dow" data-en="Wednesday">Onsdag</span>
         <span class="landing__date">26.08</span>
       </a>
@@ -52,7 +53,7 @@
     var days = [{"url":"/dag/1/","date":"2026-08-24"},{"url":"/dag/2/","date":"2026-08-25"},{"url":"/dag/3/","date":"2026-08-26"}];
     var today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Oslo" });
     var match = days.find(function (d) { return d.date === today; });
-    if (match) location.replace(match.url);
+    if (match) location.replace("/sikkerhetsfestivalen-kalender/".replace(/\/$/, "") + match.url);
   })();
 </script>
 
@@ -62,6 +63,6 @@
   <button type="button" id="update-reload" data-en="Reload">Last inn på nytt</button>
 </p>
 
-<script type="module" src="/js/app.js"></script>
+<script type="module" src="/sikkerhetsfestivalen-kalender/js/app.js"></script>
 </body>
 </html>

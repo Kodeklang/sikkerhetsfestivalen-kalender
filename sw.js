@@ -3,19 +3,21 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-4affdaff217f";
+const CACHE = "sf-09be83c88c62";
+
+const BASE = "/sikkerhetsfestivalen-kalender/";
 
 const SHELL = [
-  "/",
-  "/dag/1/",
-  "/dag/2/",
-  "/dag/3/",
-  "/css/style.css",
-  "/css/fonts.css",
-  "/js/app.js",
-  "/manifest.webmanifest",
-  "/icons/icon.svg",
-  "/icons/icon-192.png",
+  BASE,
+  "/sikkerhetsfestivalen-kalender/dag/1/",
+  "/sikkerhetsfestivalen-kalender/dag/2/",
+  "/sikkerhetsfestivalen-kalender/dag/3/",
+  "/sikkerhetsfestivalen-kalender/css/style.css",
+  "/sikkerhetsfestivalen-kalender/css/fonts.css",
+  "/sikkerhetsfestivalen-kalender/js/app.js",
+  "/sikkerhetsfestivalen-kalender/manifest.webmanifest",
+  "/sikkerhetsfestivalen-kalender/icons/icon.svg",
+  "/sikkerhetsfestivalen-kalender/icons/icon-192.png",
 ];
 
 const NETWORK_TIMEOUT = 2500;
@@ -49,7 +51,7 @@ async function networkFirst(request) {
   } catch {
     const cached = await cache.match(request);
     if (cached) return cached;
-    if (request.mode === "navigate") return cache.match("/") ?? Response.error();
+    if (request.mode === "navigate") return (await cache.match(BASE)) ?? Response.error();
     throw new Error("offline and uncached");
   }
 }
@@ -71,7 +73,7 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== location.origin) return;
 
   // The update check must always see the truth.
-  if (url.pathname === "/version.json") return;
+  if (url.pathname === `${BASE}version.json`) return;
 
   // Pages go network-first so that "reload" after an update really reloads.
   if (request.mode === "navigate") {
