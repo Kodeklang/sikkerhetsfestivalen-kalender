@@ -54,6 +54,17 @@ The running app polls `version.json` (a 304 with no body until something
 changes) and offers a reload when the hash differs from the one it was built
 with. The service worker makes that reload instant and the site usable offline.
 
+## Track filter
+
+Each day lists only the tracks actually running that day, as chips above the
+grid. Clicking one leaves its sessions in colour and greys the rest down;
+clicking again clears it. It de-emphasises rather than hides, so the shape of
+the day stays readable and nothing leaves the accessibility tree.
+
+The choice persists in `localStorage` and carries across days. A track that is
+absent from a given day stays remembered but dormant there, rather than greying
+out the whole grid with nothing to explain why.
+
 ## One-off tooling
 
 Neither of these runs in CI; their output is committed.

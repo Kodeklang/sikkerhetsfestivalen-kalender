@@ -170,8 +170,13 @@ that reload instant.
 
 ## Out of scope
 
-Favourites, filtering, and search. The grid's track chips are a display-only
-legend, as in the design.
+Favourites and free-text search.
+
+The track chips began as a display-only legend, as in the design. They were
+made clickable shortly after: selecting a track leaves its sessions in colour
+and greys the rest down. That also forced the legend to be scoped per day —
+listing all twenty tracks on a day that runs three would have let you grey out
+the entire grid with nothing to explain why.
 
 ## Risks
 
