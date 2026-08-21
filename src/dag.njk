@@ -70,12 +70,13 @@ eleventyComputed:
                data-track="{{ s.track.slug if s.track else '' }}" data-col="{{ s.col }}"
                style="--col: {{ s.col }}; --row-start: {{ s.rowStart }}; --row-end: {{ s.rowEnd }}; --track: {{ s.colour }}; --lines: {{ s.lines.d }}; --lines-narrow: {{ s.lines.m }}">
         <a class="session__link" href="{{ s.url | url }}">
-          {#- The avatar sits inside the title so it can float: the first lines
-              tuck in beside it, the rest run the full width of the card. #}
-          <span class="session__title">
-            {%- if s.size != "sm" %}<span class="session__avatar" aria-hidden="true"
-              {%- if s.avatar %} style="background-image: url({{ s.avatar | url }})"{% endif %}></span>{% endif %}
-            {{- s.title }}</span>
+          {#- The avatar has to stay outside the title. The title is a
+              -webkit-box so that line-clamp can put an ellipsis on it, and a
+              -webkit-box blockifies its children: Safari would stack the avatar
+              above the text and push the last line out of the card. #}
+          {%- if s.size != "sm" %}<span class="session__avatar" aria-hidden="true"
+            {%- if s.avatar %} style="background-image: url({{ s.avatar | url }})"{% endif %}></span>{% endif %}
+          <span class="session__title">{{ s.title }}</span>
           <span class="visually-hidden">
             <time datetime="{{ s.startUtc }}">{{ s.startUtc | time }}</time>–<time datetime="{{ s.endUtc }}">{{ s.endUtc | time }}</time>,
             {{ s.roomName }}{% if s.track %}, {{ s.track.name }}{% endif %}

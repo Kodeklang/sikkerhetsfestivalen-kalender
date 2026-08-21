@@ -35,6 +35,10 @@
 
 html, body { margin: 0; padding: 0; height: 100%; background: var(--paper); }
 
+/* How many title lines fit in a card is worked out at build time from a known
+   font size, so iOS must not be left free to inflate the text on its own. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
 body {
   font-family: var(--sans);
   color: var(--ink);
@@ -254,18 +258,15 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 }
 
 .session__link {
-  display: block;
+  display: flex; gap: 7px; align-items: flex-start;
   height: 100%; padding: 6px 7px; overflow: hidden;
   color: var(--track);
 }
 .session__link:hover { color: var(--track); }
 .session:hover { filter: brightness(0.975); }
 
-/* Floated, not a flex sibling, so only the lines level with it are indented
-   and every line below runs the full width of the card. */
 .session__avatar {
-  float: left; margin: 1px 7px 0 0;
-  width: 22px; height: 22px; border-radius: 50%;
+  width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.07);
   background-color: #efeee8;
   background-image: repeating-linear-gradient(135deg, #dedcd3 0 3px, #efeee8 3px 6px);
@@ -281,14 +282,12 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
   font-size: 12px; font-weight: 600; line-height: var(--leading);
   overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--lines, 2);
-  /* The clamp is what puts the ellipsis on, but it is a -webkit-box feature and
-     this box carries a float. max-height repeats the same limit in plain CSS so
-     that a browser which declines to clamp still cuts between two lines rather
-     than slicing through the last one. */
+  /* The clamp is what puts the ellipsis on. max-height repeats the same limit
+     in plain CSS so that a browser which declines to clamp still cuts between
+     two lines rather than slicing through the last one. */
   max-height: calc(var(--lines, 2) * var(--leading) * 1em);
-  /* A compound like "Leverandørkjedeangrep" is wider than the line left free
-     beside the avatar, and would otherwise drop below the float and push the
-     whole title out of the card. */
+  /* A compound like "Leverandørkjedeangrep" is wider than the column, and would
+     otherwise spill sideways out of the card. */
   overflow-wrap: break-word;
 }
 .session--sm .session__title { font-size: 11px; }
