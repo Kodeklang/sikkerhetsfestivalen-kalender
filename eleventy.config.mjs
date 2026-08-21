@@ -5,6 +5,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/icons": "icons" });
   eleventyConfig.addPassthroughCopy({ "src/root": "." });
 
+  // The RUM SDK ships a prebuilt bundle, so it needs no bundler of our own.
+  // Copy the whole directory: the session replay recorder and the profiler are
+  // separate chunks the SDK fetches at runtime, relative to its own URL.
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@datadog/browser-rum/bundle": "js/datadog",
+  });
+
   // Norwegian-style time and date, always in the festival's own timezone so
   // the build does not depend on the machine it runs on.
   const inOslo = (opts) => new Intl.DateTimeFormat("nb-NO", { timeZone: "Europe/Oslo", ...opts });
