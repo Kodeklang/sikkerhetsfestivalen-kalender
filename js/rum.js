@@ -1,15 +1,17 @@
-// Starts Real User Monitoring. This file exists only to carry the build-time
-// configuration in src/_data/rum.js into the browser: src/js/app.js is copied
-// through untouched and never sees a template.
+// Starts Real User Monitoring, and carries the build-time configuration in
+// src/_data/rum.js into the browser: src/js/app.js is copied through untouched
+// and never sees a template.
 //
-// The SDK bundle is loaded just above this one, both deferred, so DD_RUM is
-// already defined by the time this runs. The guard is for the visitor whose
-// content blocker ate the bundle - a missing analytics script must never take
-// the programme down with it.
+// The SDK is 185KB of JavaScript on a page whose own script is 10KB, so it is
+// not allowed near the critical path. It used to be a deferred <script> in the
+// head, which meant every visitor downloaded and ran it before the document
+// was interactive. Now this file pulls it in once the browser is idle.
+//
+// RUM still reports the page load itself: the SDK reads the Navigation Timing
+// entries retrospectively rather than having to be present while they happen.
 
-if (window.DD_RUM) {
-  window.DD_RUM.onReady(function () {
-    window.DD_RUM.init({
+const SDK = "/js/datadog/datadog-rum.js";
+const CONFIG = {
   "applicationId": "66620052-0f7f-4fd0-a99c-67db2da0512b",
   "clientToken": "pub572110d7577bcdf36821d5af480b08d7",
   "site": "datadoghq.eu",
@@ -22,6 +24,26 @@ if (window.DD_RUM) {
   "trackUserInteractions": true,
   "trackLongTasks": true,
   "defaultPrivacyLevel": "mask-user-input"
-});
+};
+
+function start() {
+  // A content blocker eating the bundle must never take the programme down.
+  if (!window.DD_RUM) return;
+  window.DD_RUM.onReady(function () {
+    window.DD_RUM.init(CONFIG);
   });
 }
+
+function loadSdk() {
+  const script = document.createElement("script");
+  script.src = SDK;
+  script.async = true;
+  script.addEventListener("load", start);
+  document.head.appendChild(script);
+}
+
+// Idle time only arrives once the browser has finished the work that matters;
+// the timeout is the backstop for a page that never goes idle. Safari has no
+// requestIdleCallback, so it waits a beat instead.
+if (window.requestIdleCallback) requestIdleCallback(loadSdk, { timeout: 3000 });
+else setTimeout(loadSdk, 1200);

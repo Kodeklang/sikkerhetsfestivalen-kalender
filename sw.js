@@ -3,7 +3,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-f6fabdcead08";
+const CACHE = "sf-de356fe0263c";
 
 const BASE = "/";
 
@@ -16,13 +16,10 @@ const SHELL = [
   "/css/fonts.css",
   "/js/app.js",
   "/js/rum.js",
-  "/js/datadog/datadog-rum.js",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
 ];
-
-const NETWORK_TIMEOUT = 2500;
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -33,28 +30,50 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys()
-      .then((names) => Promise.all(names.filter((n) => n !== CACHE).map((n) => caches.delete(n))))
-      .then(() => self.clients.claim()),
-  );
+  event.waitUntil((async () => {
+    // Let the browser start a navigation's network request while this worker is
+    // still booting, so the two overlap instead of queueing.
+    await self.registration.navigationPreload?.enable();
+    const names = await caches.keys();
+    await Promise.all(names.filter((n) => n !== CACHE).map((n) => caches.delete(n)));
+    await self.clients.claim();
+  })());
 });
 
-/** Network first, but never leave the user staring at a spinner on bad wifi. */
-async function networkFirst(request) {
+/**
+ * Serve the page from the cache and refresh it in the background.
+ *
+ * Every day grid is precached at install, so stepping between dates costs a
+ * cache read rather than a round trip - which on a crowded conference network
+ * is the difference between instant and a wait. Going to the network first
+ * meant waiting for it even though the answer was already on disk.
+ *
+ * Freshness does not depend on this path. A deploy changes CACHE, so the new
+ * worker installs a fresh copy of every page and app.js reloads the document on
+ * controllerchange; version.json is never served from here, so the update
+ * banner still sees the truth.
+ */
+async function staleWhileRevalidate(event, request) {
   const cache = await caches.open(CACHE);
-  try {
-    const response = await Promise.race([
-      fetch(request),
-      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), NETWORK_TIMEOUT)),
-    ]);
-    if (response.ok) cache.put(request, response.clone());
+  const cached = await cache.match(request);
+
+  const fresh = (async () => {
+    const response = (await event.preloadResponse) || (await fetch(request));
+    if (response?.ok) await cache.put(request, response.clone());
     return response;
+  })();
+
+  if (cached) {
+    // Do not make the visitor wait on the refresh, but keep the worker alive
+    // long enough to finish it.
+    event.waitUntil(fresh.catch(() => {}));
+    return cached;
+  }
+
+  try {
+    return await fresh;
   } catch {
-    const cached = await cache.match(request);
-    if (cached) return cached;
-    if (request.mode === "navigate") return (await cache.match(BASE)) ?? Response.error();
-    throw new Error("offline and uncached");
+    return (await cache.match(BASE)) ?? Response.error();
   }
 }
 
@@ -77,9 +96,8 @@ self.addEventListener("fetch", (event) => {
   // The update check must always see the truth.
   if (url.pathname === `${BASE}version.json`) return;
 
-  // Pages go network-first so that "reload" after an update really reloads.
   if (request.mode === "navigate") {
-    event.respondWith(networkFirst(request));
+    event.respondWith(staleWhileRevalidate(event, request));
     return;
   }
 
