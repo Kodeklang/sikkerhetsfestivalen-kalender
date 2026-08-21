@@ -300,7 +300,40 @@ async function checkForUpdate() {
   }
 }
 
-document.getElementById("update-reload")?.addEventListener("click", () => location.reload());
+// Reloading on its own is not enough. Navigations are served from the cache, so
+// the reload renders the very page the banner is complaining about and the
+// banner comes back with it. Normally the new worker settles that within a
+// second - it takes over and reloads the document itself - but that handoff
+// needs the browser to notice a new sw.js, which iOS Safari checks for far less
+// eagerly than Chrome and a CDN can hold back for its own cache lifetime. A
+// button that only works once the worker cooperates is a button that looks
+// broken. So fetch this page past every cache first, store it, and reload into
+// it.
+async function reloadWithFreshPage() {
+  try {
+    const response = await fetch(location.href, { cache: "reload" });
+    if (response.ok && window.caches) {
+      for (const name of await caches.keys()) {
+        const cache = await caches.open(name);
+        // Only replace a copy that is actually held, so this never seeds a page
+        // into a cache the worker is on its way to deleting.
+        if (await cache.match(location.href)) {
+          await cache.put(location.href, response.clone());
+        }
+      }
+    }
+    // Nudge the worker too, so the rest of the programme catches up behind us.
+    await navigator.serviceWorker?.getRegistration().then((r) => r?.update());
+  } catch {
+    /* offline, or no cache to correct: the plain reload below still stands */
+  }
+  location.reload();
+}
+
+document.getElementById("update-reload")?.addEventListener("click", (event) => {
+  event.currentTarget.disabled = true;
+  reloadWithFreshPage();
+});
 document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "visible") checkForUpdate();
 });
