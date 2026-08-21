@@ -4,10 +4,13 @@ eleventyExcludeFromCollections: true
 ---
 // Service worker for the Sikkerhetsfestivalen programme.
 //
-// The whole site is taken at install: every day grid, every talk, every photo.
-// It comes to about 5MB, which is a one-time cost on the way in and buys a
-// programme that works in a basement conference room with no signal at all -
-// including talks the visitor never happened to open while they still had it.
+// The whole site is taken on the way in: every day grid, every talk, every
+// photo. It comes to about 5MB, which is a one-time cost and buys a programme
+// that works in a basement conference room with no signal at all - including
+// talks the visitor never happened to open while they still had it.
+//
+// The shell is cached at install and the rest once this worker is in charge,
+// because activation is what carries an update to a page that is already open.
 //
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
@@ -71,36 +74,56 @@ const fromNetwork = (url) => new Request(url, { cache: "reload" });
  * Fill the cache with everything in REST.
  *
  * Deliberately not cache.addAll: that is all-or-nothing, which is the right
- * trade for eight shell files and the wrong one for five hundred. A single
- * photo 404ing must not cost the visitor every cached page. Whatever is missed
- * here still resolves through the fetch handler on first use.
+ * trade for ten shell files and the wrong one for five hundred. A single photo
+ * 404ing must not cost the visitor every cached page. Whatever is missed here
+ * still resolves through the fetch handler on first use.
  *
  * The requests go out a few at a time rather than all at once, because this
  * runs while the visitor is reading the page that triggered it - on a crowded
  * conference network, five hundred parallel fetches would be taken out of the
  * bandwidth they are currently browsing on.
+ *
+ * Already-stored entries are skipped, so a pass that was cut short - the
+ * browser is free to kill a worker mid-task - resumes where it stopped instead
+ * of fetching the programme again.
  */
 async function warm(cache) {
   let next = 0;
   const worker = async () => {
     while (next < REST.length) {
       const url = REST[next++];
+      if (await cache.match(url)) continue;
       try {
         const response = await fetch(fromNetwork(url));
         if (response.ok) await cache.put(url, response);
       } catch {
-        /* offline mid-install: the fetch handler will pick this one up later */
+        /* offline mid-warm: the fetch handler will pick this one up later */
       }
     }
   };
   await Promise.all(Array.from({ length: 6 }, worker));
 }
 
+// One pass at a time. Every navigation asks for the programme to be topped up,
+// and without this each would start a competing pass over the same five hundred
+// files.
+let warming = null;
+function warmOnce() {
+  warming ??= caches.open(CACHE)
+    .then(warm)
+    .finally(() => { warming = null; });
+  return warming;
+}
+
 self.addEventListener("install", (event) => {
+  // The shell only. The rest of the programme is fetched after this worker is
+  // in charge, deliberately: an install that has to pull 5MB first is an update
+  // the visitor cannot see for as long as it takes. The banner would sit there
+  // through every reload, because until this worker activates the old one keeps
+  // answering with the page it already had.
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
     await cache.addAll(SHELL.map(fromNetwork));
-    await warm(cache);
     await self.skipWaiting();
   })());
 });
@@ -112,7 +135,10 @@ self.addEventListener("activate", (event) => {
     await self.registration.navigationPreload?.enable();
     const names = await caches.keys();
     await Promise.all(names.filter((n) => n !== CACHE).map((n) => caches.delete(n)));
+    // Claim before warming, not after: claiming is what reloads a page sitting
+    // on the previous version, and that must not wait for the programme.
     await self.clients.claim();
+    await warmOnce();
   })());
 });
 
@@ -177,6 +203,9 @@ self.addEventListener("fetch", (event) => {
 
   if (request.mode === "navigate") {
     event.respondWith(staleWhileRevalidate(event, request));
+    // Top up anything a killed worker left behind, so the offline guarantee
+    // repairs itself rather than waiting for the next deploy.
+    event.waitUntil(warmOnce());
     return;
   }
 
