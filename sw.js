@@ -3,13 +3,14 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-c308cf9632f9";
+const CACHE = "sf-e96a41294693";
 
 const BASE = "/";
 
+// Day one's url *is* BASE, so the loop already covers the front page. Listing
+// it twice would make cache.addAll reject the whole install on duplicates.
 const SHELL = [
-  BASE,
-  "/dag/1/",
+  "/",
   "/dag/2/",
   "/dag/3/",
   "/css/style.css",
