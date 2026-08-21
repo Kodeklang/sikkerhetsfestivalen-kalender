@@ -219,10 +219,15 @@ for (const f of [
   "../css/fonts.css",
   "../js/app.js",
   "../../node_modules/@datadog/browser-rum-slim/bundle/datadog-rum-slim.js",
+  // /js/rum.js and /sw.js are generated rather than shipped, so hash what
+  // generates them. Leaving the worker itself out was its own trap: a change
+  // to how it caches could not retire the cache it had already filled, so a
+  // fix for a caching bug never reached the clients suffering from it.
+  "../rum.njk",
+  "../sw.njk",
 ]) {
   assetHash.update(readFileSync(new URL(f, import.meta.url)));
 }
-// /js/rum.js is generated rather than shipped, so hash what generates it.
 assetHash.update(JSON.stringify(rum));
 
 export default {
