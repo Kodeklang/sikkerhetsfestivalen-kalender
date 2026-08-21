@@ -254,9 +254,26 @@ setInterval(checkForUpdate, 10 * 60_000);
 /* --------------------------------------------------------- service worker */
 
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register(`${BASE}sw.js`, { scope: BASE }).catch(() => {
-      /* the site works fine without it */
+  // A page that is already controlled has loaded its CSS and JS from the old
+  // worker's cache. When a new worker takes over it brings fresh assets, but
+  // this document is still running the previous bundle - so reload once.
+  // Without this every deploy would only reach people on their *second* visit.
+  if (navigator.serviceWorker.controller) {
+    let reloading = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (reloading) return;
+      reloading = true;
+      location.reload();
     });
+  }
+
+  window.addEventListener("load", () => {
+    // updateViaCache: "none" keeps sw.js itself off the HTTP cache, so a deploy
+    // is noticed on the next visit rather than up to ten minutes later.
+    navigator.serviceWorker
+      .register(`${BASE}sw.js`, { scope: BASE, updateViaCache: "none" })
+      .catch(() => {
+        /* the site works fine without it */
+      });
   });
 }

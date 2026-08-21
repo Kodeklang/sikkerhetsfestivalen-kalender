@@ -54,6 +54,12 @@ The running app polls `version.json` (a 304 with no body until something
 changes) and offers a reload when the hash differs from the one it was built
 with. The service worker makes that reload instant and the site usable offline.
 
+Because the worker serves CSS and JS cache-first, a visitor arriving right after
+a deploy would otherwise run the previous bundle for that whole visit — the new
+worker only takes over in the background. So the page reloads itself once when a
+new worker claims it, and `sw.js` is registered with `updateViaCache: "none"` so
+a deploy is noticed on the next visit rather than up to ten minutes later.
+
 ## Track filter
 
 Each day lists only the tracks actually running that day, as chips above the
