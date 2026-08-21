@@ -268,7 +268,9 @@ const back = document.getElementById("back");
 if (back && document.referrer) {
   try {
     const from = new URL(document.referrer);
-    if (from.origin === location.origin && from.pathname.startsWith(`${BASE}dag/`)) {
+    // Day one sits at the root; the other days under /dag/.
+    const fromGrid = from.pathname === BASE || from.pathname.startsWith(`${BASE}dag/`);
+    if (from.origin === location.origin && fromGrid) {
       back.addEventListener("click", (event) => {
         event.preventDefault();
         history.back();

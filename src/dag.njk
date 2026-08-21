@@ -3,7 +3,7 @@ pagination:
   data: site.days
   size: 1
   alias: day
-permalink: "/dag/{{ day.number }}/"
+permalink: "{{ day.url }}"
 layout: base.njk
 eleventyComputed:
   title: "{{ day.weekday.no }} {{ day.dateLabel }} · Program · Sikkerhetsfestivalen 2026"

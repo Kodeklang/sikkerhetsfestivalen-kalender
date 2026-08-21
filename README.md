@@ -4,6 +4,9 @@ A standalone, installable programme calendar for
 [Sikkerhetsfestivalen 2026](https://www.sikkerhetsfestivalen.no/program)
 (Lillehammer, 24–26 August). Rooms across, time down, one page per session.
 
+There is no day picker to get past: the root serves the first day's grid, and
+the other days sit at `/dag/2/` and `/dag/3/`, one tap away in the header.
+
 The published site is plain semantic HTML, CSS and vanilla JavaScript. Eleventy
 is a build-time tool only — no framework, and no third-party requests at
 runtime: fonts and speaker photos are served from this origin.
@@ -51,9 +54,9 @@ changes.
 
 **That makes build determinism load-bearing.** Nothing time-dependent may end up
 in the output, or an hourly run would produce a diff every hour and defeat the
-caching. So the red now-line, the "which day is today" redirect and the session
-countdown are all computed in the browser, and `version.json` carries a content
-hash rather than a build timestamp.
+caching. So the red now-line and the session countdown are both computed in the
+browser, and `version.json` carries a content hash rather than a build
+timestamp.
 
 The running app polls `version.json` (a 304 with no body until something
 changes) and offers a reload when the hash differs from the one it was built

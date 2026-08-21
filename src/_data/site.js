@@ -154,7 +154,9 @@ const days = program.days.map((day, index) => {
     dateLabel: `${day.date.slice(8, 10)}.${day.date.slice(5, 7)}`,
     weekday: { no: long, en: day.weekday },
     weekdayShort: { no: short, en: day.weekday.slice(0, 3) },
-    url: `/dag/${index + 1}/`,
+    // Day one is the site's front page: there is no landing page to pick a day
+    // from, so arriving at the root lands on the first day's grid.
+    url: index === 0 ? "/" : `/dag/${index + 1}/`,
     startUtc: new Date(from).toISOString(),
     slots: (to - from) / MS / SLOT_MIN,
     rooms,
@@ -232,7 +234,6 @@ assetHash.update(JSON.stringify(rum));
 
 export default {
   buildId: assetHash.digest("hex").slice(0, 12),
-  daysIndex: days.map((d) => ({ url: d.url, date: d.date })),
   version: createHash("sha256").update(raw).digest("hex").slice(0, 12),
   event: program.event,
   days,

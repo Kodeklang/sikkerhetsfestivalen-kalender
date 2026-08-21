@@ -11,8 +11,9 @@ const CACHE = "sf-{{ site.buildId }}";
 
 const BASE = "{{ '/' | url }}";
 
+// Day one's url *is* BASE, so the loop already covers the front page. Listing
+// it twice would make cache.addAll reject the whole install on duplicates.
 const SHELL = [
-  BASE,
   {%- for d in site.days %}
   "{{ d.url | url }}",
   {%- endfor %}
