@@ -1560,6 +1560,15 @@
       "photo": "/img/speakers/75961325-d612-4504-9c42-bf0710783072.png"
     },
     {
+      "id": "1b3d2f8e-5629-420f-9950-c7662bdfbf91",
+      "name": "Olav Østbye",
+      "tagline": "Principal Cloud Security Manager",
+      "bio": [
+        "Olav is a accomplished Principal Cloud Security Manager with a strong business understanding. At O3 Cyber, Olav collaborates closely with clients to understand their business goals and translate them into a cyber security strategy that delivers business value through risk reduction by applying modern security practices. Olav’s previous business and leadership experience and strong cyber security domain knowledge define him as an ideal advisor or CISO for hire. Olav holds the highly acknowledged certifications - CISM, CISSP, and CCSP."
+      ],
+      "photo": "/img/speakers/1b3d2f8e-5629-420f-9950-c7662bdfbf91.jpg"
+    },
+    {
       "id": "3ee00418-3128-447b-bba0-588e1fa1804e",
       "name": "Ole Andre Bråten",
       "tagline": "Industrial- and Organizational Psychologi Specialist / Crisis Management Author / AI researcher and practitioner",
@@ -2855,7 +2864,7 @@
     },
     {
       "id": "1311726",
-      "title": "Podcast O3C",
+      "title": "Fremtidens SOC med Telenor",
       "dayId": "46259",
       "roomId": "74839",
       "roomName": "7 - Microbryggeriet",
@@ -2864,14 +2873,17 @@
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
-        "7505ed8f-12ea-4b31-ba49-3b80319dbe12"
+        "7505ed8f-12ea-4b31-ba49-3b80319dbe12",
+        "1b3d2f8e-5629-420f-9950-c7662bdfbf91"
       ],
       "track": null,
-      "description": [],
-      "language": null,
-      "level": null,
+      "description": [
+        "Kaisa Lantto (Head of Cyber Security Operations Center) i Telenor snakker med Karim og Olav om fremtidens SOC."
+      ],
+      "language": "Norwegian",
+      "level": "Detailed",
       "otherTags": {},
-      "slug": "podcast-o3c-1311726"
+      "slug": "fremtidens-soc-med-telenor-1311726"
     },
     {
       "id": "1090795",
@@ -3378,7 +3390,7 @@
     },
     {
       "id": "1311727",
-      "title": "Podcast O3C",
+      "title": "Agentisk SOC hos Stø",
       "dayId": "46259",
       "roomId": "74839",
       "roomName": "7 - Microbryggeriet",
@@ -3387,14 +3399,17 @@
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
-        "99c62a5b-b5a5-4289-a6fb-a97c4e4a1268"
+        "99c62a5b-b5a5-4289-a6fb-a97c4e4a1268",
+        "1b3d2f8e-5629-420f-9950-c7662bdfbf91"
       ],
       "track": null,
-      "description": [],
-      "language": null,
-      "level": null,
+      "description": [
+        "Einar Gaustad Hanus og Johannes Ringstad fra Stø snakker med Olav og Håkon om Agentisk SOC."
+      ],
+      "language": "Norwegian",
+      "level": "Detailed",
       "otherTags": {},
-      "slug": "podcast-o3c-1311727"
+      "slug": "agentisk-soc-hos-sto-1311727"
     },
     {
       "id": "1168502",
