@@ -327,16 +327,6 @@
       "photo": "/img/speakers/b0843d0a-5d2a-48c0-a931-cea344760ee8.png"
     },
     {
-      "id": "2d42481a-bd27-454f-ba29-c18560f74408",
-      "name": "Amalie Loenning",
-      "tagline": "Cybersecurity Portfolio Manager & Head of Cyber Technical Excellence Norway",
-      "bio": [
-        "Amalie Lønning works for Siemens Norway and is specialized in the interplay between technology, process and people, with a passion for the application of new technologies to accelerate business performance and value creation as we move into industry 5.0 - securely.",
-        "Today she is managing Siemens Cybersecurity Portfolio in the Nordics while Leading the Cyber Technical Excellence team in Norway."
-      ],
-      "photo": "/img/speakers/2d42481a-bd27-454f-ba29-c18560f74408.jpg"
-    },
-    {
       "id": "eb593bc3-6f5c-4513-a35c-8f9e616984a5",
       "name": "Anastasiia Roskot",
       "tagline": "Ukrainian National Representative to the NATO CCDCOE / Senior Information Security Specialist",
@@ -814,6 +804,13 @@
         "Elin Ibsen Gustavsen jobber som spesialrådgiver i Advokatfirmaet Thommesen, hvor hun bistår næringslivsaktører med rådgivning innen nasjonal sikkerhet. Hun har særlig kompetanse på sikkerhetsloven og personellsikkerhet. Elin har en doktorgrad i militærsosiologi, og før hun begynne i Thommessen jobbet hun i PST, der hun blant annet ledet arbeidet med strategisk analyse innen kontraetterretning."
       ],
       "photo": "/img/speakers/90682254-0c44-4404-b7ac-e4d3784e9e16.jpg"
+    },
+    {
+      "id": "a7a29d02-da16-4d56-b579-a75d345de07a",
+      "name": "Elisabet haugsbø",
+      "tagline": "",
+      "bio": [],
+      "photo": null
     },
     {
       "id": "434a426b-4da5-4626-a425-3505b450507a",
@@ -5241,7 +5238,7 @@
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
-        "2d42481a-bd27-454f-ba29-c18560f74408"
+        "a7a29d02-da16-4d56-b579-a75d345de07a"
       ],
       "track": {
         "id": "411241",
