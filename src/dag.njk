@@ -68,7 +68,7 @@ eleventyComputed:
       {%- for s in day.sessions %}
       <article class="session session--{{ s.size }}" id="session-{{ s.id }}"
                data-track="{{ s.track.slug if s.track else '' }}" data-col="{{ s.col }}"
-               style="--col: {{ s.col }}; --row-start: {{ s.rowStart }}; --row-end: {{ s.rowEnd }}; --track: {{ s.colour }}">
+               style="--col: {{ s.col }}; --row-start: {{ s.rowStart }}; --row-end: {{ s.rowEnd }}; --track: {{ s.colour }}; --lines: {{ s.lines.d }}; --lines-narrow: {{ s.lines.m }}">
         <a class="session__link" href="{{ s.url | url }}">
           {%- if s.size != "sm" %}<span class="session__avatar" aria-hidden="true"
             {%- if s.avatar %} style="background-image: url({{ s.avatar | url }})"{% endif %}></span>{% endif %}

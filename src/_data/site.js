@@ -11,6 +11,23 @@ const program = JSON.parse(raw);
 const SLOT_MIN = 5; // one grid row
 const MS = 60_000;
 
+// Card geometry, mirroring style.css. A card's usable text height follows from
+// its duration alone, so the number of title lines that fit is known at build
+// time -- no calc() inside line-clamp (Safari won't take one) and no measuring
+// in the browser. Keep these in step with the CSS if the card chrome changes.
+const SLOT_H = { d: 8.5, m: 11 };   // :root and the max-width:720px override
+const CARD_CHROME = 16;             // 2px margin + 2px border + 12px padding
+const TITLE_LEADING = 1.28;         // .session__title line-height
+const TITLE_SIZE = { sm: 11, md: 12, lg: 12 };
+
+/** How many title lines fit in a card of this duration, per breakpoint. */
+const titleLines = (durationMin, size) => {
+  const leading = TITLE_SIZE[size] * TITLE_LEADING;
+  const fit = (slotH) =>
+    Math.max(1, Math.floor((durationMin / SLOT_MIN * slotH - CARD_CHROME) / leading));
+  return { d: fit(SLOT_H.d), m: fit(SLOT_H.m) };
+};
+
 // One colour per track; the card's background and border are derived from it
 // with color-mix() in CSS. The first five are the exact values from the design.
 const TRACK_COLOUR = {
@@ -127,18 +144,22 @@ const days = program.days.map((day, index) => {
     rooms,
     rules,
     tracks: dayTracks,
-    sessions: talks.map((s) => ({
-      ...s,
-      url: `/program/${s.slug}/`,
-      colour: colour(s.track),
+    sessions: talks.map((s) => {
       // Card density buckets: at the grid's px-per-minute a 30-minute block is
       // about 54px, which is where the avatar and a second line of title fit.
-      size: s.durationMin >= 45 ? "lg" : s.durationMin >= 30 ? "md" : "sm",
-      avatar: speakersById.get(s.speakerIds[0])?.photo ?? null,
-      col: colOf.get(s.roomId),
-      rowStart: row(s.startUtc),
-      rowEnd: row(s.endUtc),
-    })),
+      const size = s.durationMin >= 45 ? "lg" : s.durationMin >= 30 ? "md" : "sm";
+      return {
+        ...s,
+        url: `/program/${s.slug}/`,
+        colour: colour(s.track),
+        size,
+        lines: titleLines(s.durationMin, size),
+        avatar: speakersById.get(s.speakerIds[0])?.photo ?? null,
+        col: colOf.get(s.roomId),
+        rowStart: row(s.startUtc),
+        rowEnd: row(s.endUtc),
+      };
+    }),
     bands: services.map((s) => ({
       ...s,
       kind: /lunch|break|pause|lunsj/i.test(s.title) ? "pause" : "event",
