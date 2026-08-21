@@ -1,7 +1,18 @@
+import { mkdirSync } from "node:fs";
+import { AVATAR_DIR, buildAvatars } from "./lib/avatars.mjs";
+
+// Created up front so the passthrough copy below has something to point at on a
+// clean checkout, before any image has been generated.
+mkdirSync(AVATAR_DIR, { recursive: true });
+
 export default function (eleventyConfig) {
+  // Re-encode the speaker photos before anything else runs. Passthrough copy
+  // happens ahead of the data cascade, so generating them from the data file
+  // alone would publish an empty directory on a cold build.
+  eleventyConfig.on("eleventy.before", buildAvatars);
+
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
-  eleventyConfig.addPassthroughCopy({ "src/img": "img" });
   eleventyConfig.addPassthroughCopy({ "src/icons": "icons" });
   eleventyConfig.addPassthroughCopy({ "src/root": "." });
 
@@ -11,6 +22,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "node_modules/@datadog/browser-rum/bundle": "js/datadog",
   });
+
+  // Only the generated derivatives are published. The originals stay in the
+  // repo as the source for those, but nothing links to them.
+  eleventyConfig.addPassthroughCopy({ [AVATAR_DIR]: "img/av" });
 
   // Norwegian-style time and date, always in the festival's own timezone so
   // the build does not depend on the machine it runs on.

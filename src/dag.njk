@@ -74,8 +74,16 @@ eleventyComputed:
               -webkit-box so that line-clamp can put an ellipsis on it, and a
               -webkit-box blockifies its children: Safari would stack the avatar
               above the text and push the last line out of the card. #}
-          {%- if s.size != "sm" %}<span class="session__avatar" aria-hidden="true"
-            {%- if s.avatar %} style="background-image: url({{ s.avatar | url }})"{% endif %}></span>{% endif %}
+          {%- if s.size != "sm" %}
+          {%- if s.avatar %}
+          {#- Lazy so a filtered-out or off-screen speaker costs nothing: a day
+              grid carries a hundred of these and only a dozen are ever in view. #}
+          <img class="session__avatar" src="{{ avatars[s.avatar].small | url }}"
+               width="{{ avatars[s.avatar].width }}" height="{{ avatars[s.avatar].height }}"
+               alt="" aria-hidden="true" loading="lazy" decoding="async">
+          {%- else %}
+          <span class="session__avatar" aria-hidden="true"></span>
+          {%- endif %}{% endif %}
           <span class="session__title">{{ s.title }}</span>
           <span class="visually-hidden">
             <time datetime="{{ s.startUtc }}">{{ s.startUtc | time }}</time>–<time datetime="{{ s.endUtc }}">{{ s.endUtc | time }}</time>,

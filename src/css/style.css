@@ -271,6 +271,9 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
   background-color: #efeee8;
   background-image: repeating-linear-gradient(135deg, #dedcd3 0 3px, #efeee8 3px 6px);
   background-size: cover; background-position: center;
+  /* The hatch doubles as the placeholder: it shows through the lazily loaded
+     photo until that paints, and stays put for speakers who have none. */
+  object-fit: cover;
 }
 
 /* --lines is how many lines actually fit in this card, worked out from its
@@ -435,6 +438,7 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
   background-color: #f1f1ef;
   background-image: repeating-linear-gradient(135deg, #e2e2df 0 4px, #f1f1ef 4px 8px);
   background-size: cover; background-position: center;
+  object-fit: cover;
 }
 .speaker__who { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .speaker__name { margin: 0; font-size: 14px; font-weight: 700; }
