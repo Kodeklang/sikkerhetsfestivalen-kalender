@@ -162,6 +162,20 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
   .session, button.chip { transition: none; }
 }
 
+/* Pressed states. The reset at the top of this file drops the tap highlight
+   iOS would otherwise draw, and every one of these starts a full page load, so
+   until the next page paints this is the only sign the tap landed at all.
+   Instant rather than transitioned - feedback that fades in is not feedback -
+   and brightness rather than a colour, so it works the same on the orange
+   current-day chip as on the pale ones. */
+.day:active,
+.chip:active,
+.session:active,
+.back:active {
+  filter: brightness(0.93);
+  transition: none;
+}
+
 /* ----------------------------------------------------------------- grid */
 
 .grid-scroll {
