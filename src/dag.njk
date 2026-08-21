@@ -66,7 +66,7 @@ eleventyComputed:
       {%- endfor %}
 
       {%- for s in day.sessions %}
-      <article class="session session--{{ s.size }}" id="session-{{ s.id }}"
+      <article class="session session--{{ s.size }}{% if s.lines.tight %} session--tight{% endif %}" id="session-{{ s.id }}"
                data-track="{{ s.track.slug if s.track else '' }}" data-col="{{ s.col }}"
                style="--col: {{ s.col }}; --row-start: {{ s.rowStart }}; --row-end: {{ s.rowEnd }}; --track: {{ s.colour }}; --lines: {{ s.lines.d }}; --lines-narrow: {{ s.lines.m }}">
         <a class="session__link" href="{{ s.url | url }}">

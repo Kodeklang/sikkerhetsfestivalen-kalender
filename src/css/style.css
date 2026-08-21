@@ -277,9 +277,15 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
    real height rather than to a duration bucket keeps long titles legible
    instead of stopping at an arbitrary second line with space to spare. */
 .session__title {
-  font-size: 12px; font-weight: 600; line-height: 1.28;
+  --leading: 1.28;
+  font-size: 12px; font-weight: 600; line-height: var(--leading);
   overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--lines, 2);
+  /* The clamp is what puts the ellipsis on, but it is a -webkit-box feature and
+     this box carries a float. max-height repeats the same limit in plain CSS so
+     that a browser which declines to clamp still cuts between two lines rather
+     than slicing through the last one. */
+  max-height: calc(var(--lines, 2) * var(--leading) * 1em);
   /* A compound like "Leverandørkjedeangrep" is wider than the line left free
      beside the avatar, and would otherwise drop below the float and push the
      whole title out of the card. */
@@ -287,10 +293,18 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 }
 .session--sm .session__title { font-size: 11px; }
 
+/* Cards so short that a normal line would hang over the edge. Smaller type and
+   trimmed padding buy the line enough room to sit inside the card. */
+.session--tight .session__link { padding: 1px 6px; }
+.session--tight .session__title { --leading: 1.1; font-size: 10px; }
+
 /* Narrow screens stretch the grid to 2.2px per minute, so the same card holds
    more lines. Must track the --slot-h override at the top of this file. */
 @media (max-width: 720px) {
-  .session__title { -webkit-line-clamp: var(--lines-narrow, 2); }
+  .session__title {
+    -webkit-line-clamp: var(--lines-narrow, 2);
+    max-height: calc(var(--lines-narrow, 2) * var(--leading) * 1em);
+  }
 }
 
 /* ---------------------------------------------------------------- bands */

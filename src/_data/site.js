@@ -21,13 +21,27 @@ const SLOT_H = { d: 8.5, m: 11 };   // :root and the max-width:720px override
 const CARD_CHROME = 16;             // 2px margin + 2px border + 12px padding
 const TITLE_LEADING = 1.28;         // .session__title line-height
 const TITLE_SIZE = { sm: 11, md: 12, lg: 12 };
+// A ten-minute card is 20px tall on mobile and 15px on desktop, which the
+// normal type and padding overshoot -- the line used to hang past the card and
+// have its descenders sliced off. Those cards fall back to a compact scale
+// (.session--tight) that fits inside them instead.
+const TIGHT_CHROME = 6;             // 2px margin + 2px border + 2px padding
+const TIGHT_LEADING = 1.1;
+const TIGHT_SIZE = 10;
 
-/** How many title lines fit in a card of this duration, per breakpoint. */
+/**
+ * How many title lines fit in a card of this duration, per breakpoint, plus
+ * whether the card is too short to seat one line at the normal size.
+ */
 const titleLines = (durationMin, size) => {
+  const room = (slotH, chrome) => (durationMin / SLOT_MIN) * slotH - chrome;
   const leading = TITLE_SIZE[size] * TITLE_LEADING;
-  const fit = (slotH) =>
-    Math.max(1, Math.floor((durationMin / SLOT_MIN * slotH - CARD_CHROME) / leading));
-  return { d: fit(SLOT_H.d), m: fit(SLOT_H.m) };
+  const tight =
+    room(SLOT_H.d, CARD_CHROME) < leading || room(SLOT_H.m, CARD_CHROME) < leading;
+  const lead = tight ? TIGHT_SIZE * TIGHT_LEADING : leading;
+  const chrome = tight ? TIGHT_CHROME : CARD_CHROME;
+  const fit = (slotH) => Math.max(1, Math.floor(room(slotH, chrome) / lead));
+  return { tight, d: fit(SLOT_H.d), m: fit(SLOT_H.m) };
 };
 
 // One colour per track; the card's background and border are derived from it
