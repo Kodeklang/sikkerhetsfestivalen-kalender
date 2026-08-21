@@ -3,7 +3,9 @@
 // time-dependent, so that an unchanged programme builds byte-identical output.
 
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 import rum from "./rum.js";
 
@@ -215,20 +217,36 @@ const sessions = program.sessions.map((s) => {
 
 // The service worker's cache name must change when *any* shipped asset
 // changes, not just the programme, or a CSS edit would never reach a client.
+
+/** Every .njk under src, in a fixed order: readdir's is not one. */
+function templates(dir) {
+  const found = [];
+  const entries = readdirSync(dir, { withFileTypes: true })
+    .sort((a, b) => a.name.localeCompare(b.name));
+  for (const entry of entries) {
+    const p = path.join(dir, entry.name);
+    if (entry.isDirectory()) found.push(...templates(p));
+    else if (entry.name.endsWith(".njk")) found.push(p);
+  }
+  return found;
+}
+
 const assetHash = createHash("sha256").update(raw);
 for (const f of [
-  "../css/style.css",
-  "../css/fonts.css",
-  "../js/app.js",
-  "../../node_modules/@datadog/browser-rum-slim/bundle/datadog-rum-slim.js",
-  // /js/rum.js and /sw.js are generated rather than shipped, so hash what
-  // generates them. Leaving the worker itself out was its own trap: a change
-  // to how it caches could not retire the cache it had already filled, so a
-  // fix for a caching bug never reached the clients suffering from it.
-  "../rum.njk",
-  "../sw.njk",
+  new URL("../css/style.css", import.meta.url),
+  new URL("../css/fonts.css", import.meta.url),
+  new URL("../js/app.js", import.meta.url),
+  new URL("../../node_modules/@datadog/browser-rum-slim/bundle/datadog-rum-slim.js", import.meta.url),
+  // Every template, rather than only the two that generate /js/rum.js and
+  // /sw.js. The cache now holds every rendered page, so an edit to anything
+  // that shapes one has to retire it - otherwise a fix to a detail page would
+  // sit unread behind a cache name still claiming to be current. Leaving the
+  // worker itself out was the same trap in its first form: a change to how it
+  // caches could not retire the cache it had already filled, so a fix for a
+  // caching bug never reached the clients suffering from it.
+  ...templates(fileURLToPath(new URL("../", import.meta.url))),
 ]) {
-  assetHash.update(readFileSync(new URL(f, import.meta.url)));
+  assetHash.update(readFileSync(f));
 }
 assetHash.update(JSON.stringify(rum));
 
