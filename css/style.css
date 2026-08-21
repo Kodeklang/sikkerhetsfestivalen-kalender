@@ -141,10 +141,13 @@ html[lang="en"] .lang__off { background: rgba(255, 255, 255, 0.9); color: var(--
 .grid {
   position: relative;
   display: grid;
-  grid-template-columns: var(--gutter-w) repeat(var(--rooms), var(--col-w));
+  grid-template-columns: var(--gutter-w) repeat(var(--rooms), minmax(var(--col-w), 1fr));
   grid-template-rows: var(--head-h) repeat(var(--slots), var(--slot-h));
-  min-width: 100%;
-  width: max-content;
+  /* Fill the viewport on a sparse day such as Monday, which has only two rooms,
+     but never squeeze the columns below their design width - past that the grid
+     scrolls sideways instead. */
+  width: 100%;
+  min-width: calc(var(--gutter-w) + var(--rooms) * var(--col-w));
 }
 
 .grid__corner {
@@ -269,6 +272,10 @@ html[lang="en"] .lang__off { background: rgba(255, 255, 255, 0.9); color: var(--
 .band--pause .band__label { color: #0d6b60; }
 
 /* ------------------------------------------------------------- now line */
+
+/* Without this the `hidden` attribute loses to `display: flex` below and the
+   line shows on days that are not today. */
+.now[hidden] { display: none; }
 
 .now {
   position: absolute; left: 0; right: 0; z-index: 25;
