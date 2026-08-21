@@ -4,6 +4,11 @@ eleventyExcludeFromCollections: true
 ---
 // Service worker for the Sikkerhetsfestivalen programme.
 //
+// The whole site is taken at install: every day grid, every talk, every photo.
+// It comes to about 5MB, which is a one-time cost on the way in and buys a
+// programme that works in a basement conference room with no signal at all -
+// including talks the visitor never happened to open while they still had it.
+//
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
@@ -11,6 +16,10 @@ const CACHE = "sf-{{ site.buildId }}";
 
 const BASE = "{{ '/' | url }}";
 
+// What the app cannot run without. This list is taken atomically: if any of it
+// cannot be had, the install fails and the old worker stays in charge, which is
+// better than activating a cache that is missing the stylesheet.
+//
 // Day one's url *is* BASE, so the loop already covers the front page. Listing
 // it twice would make cache.addAll reject the whole install on duplicates.
 const SHELL = [
@@ -26,17 +35,74 @@ const SHELL = [
   "{{ '/icons/icon-192.png' | url }}",
 ];
 
+// Everything else the site publishes. Deduplicated because two speakers sharing
+// a photo share its generated URL - eleventy-img names derivatives after the
+// contents of the source, so identical images collapse onto one file.
+const REST = [...new Set([
+  // The detail pages: the whole point of precaching this much.
+  {%- for t in site.talks %}
+  "{{ t.url | url }}",
+  {%- endfor %}
+  // Speaker photos, in both the grid and the detail size.
+  {%- for src, av in avatars %}
+  "{{ av.small | url }}", "{{ av.large | url }}",
+  {%- endfor %}
+  // fonts.css is in the shell; the faces it names are not, because
+  // font-display: swap means a missing one costs typography and not the page.
+  {%- for f in fonts %}
+  "{{ f | url }}",
+  {%- endfor %}
+  // Only ever fetched by an install prompt or the home screen, so they would
+  // otherwise be the assets least likely to be cached when they are needed.
+  "{{ '/icons/icon-180.png' | url }}",
+  "{{ '/icons/icon-512.png' | url }}",
+  "{{ '/icons/icon-maskable-512.png' | url }}",
+  "{{ '/js/datadog/datadog-rum-slim.js' | url }}",
+])];
+
+// cache: "reload" so the precache is filled from the network rather than from
+// the browser's HTTP cache. GitHub Pages stamps every asset max-age=600, so a
+// worker installing in the ten minutes after a deploy would otherwise store
+// pre-deploy files under a cache name asserting they are current - and nothing
+// below ever revalidates them.
+const fromNetwork = (url) => new Request(url, { cache: "reload" });
+
+/**
+ * Fill the cache with everything in REST.
+ *
+ * Deliberately not cache.addAll: that is all-or-nothing, which is the right
+ * trade for eight shell files and the wrong one for five hundred. A single
+ * photo 404ing must not cost the visitor every cached page. Whatever is missed
+ * here still resolves through the fetch handler on first use.
+ *
+ * The requests go out a few at a time rather than all at once, because this
+ * runs while the visitor is reading the page that triggered it - on a crowded
+ * conference network, five hundred parallel fetches would be taken out of the
+ * bandwidth they are currently browsing on.
+ */
+async function warm(cache) {
+  let next = 0;
+  const worker = async () => {
+    while (next < REST.length) {
+      const url = REST[next++];
+      try {
+        const response = await fetch(fromNetwork(url));
+        if (response.ok) await cache.put(url, response);
+      } catch {
+        /* offline mid-install: the fetch handler will pick this one up later */
+      }
+    }
+  };
+  await Promise.all(Array.from({ length: 6 }, worker));
+}
+
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE)
-      // cache: "reload" so this is filled from the network rather than from the
-      // browser's HTTP cache. GitHub Pages stamps every asset max-age=600, so a
-      // worker installing in the ten minutes after a deploy would otherwise
-      // store pre-deploy files under a cache name asserting they are current -
-      // and nothing below ever revalidates them.
-      .then((cache) => cache.addAll(SHELL.map((u) => new Request(u, { cache: "reload" }))))
-      .then(() => self.skipWaiting()),
-  );
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    await cache.addAll(SHELL.map(fromNetwork));
+    await warm(cache);
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener("activate", (event) => {
@@ -53,7 +119,7 @@ self.addEventListener("activate", (event) => {
 /**
  * Serve the page from the cache and refresh it in the background.
  *
- * Every day grid is precached at install, so stepping between dates costs a
+ * Every page is precached at install, so moving around the programme costs a
  * cache read rather than a round trip - which on a crowded conference network
  * is the difference between instant and a wait. Going to the network first
  * meant waiting for it even though the answer was already on disk.
@@ -94,7 +160,7 @@ async function cacheFirst(request) {
   // Same reason as the precache: a miss is about to be stored under a cache
   // name that stands for a particular deploy, so it must come from the network
   // and not from whatever the HTTP cache kept from the last one.
-  const response = await fetch(new Request(request, { cache: "reload" }));
+  const response = await fetch(fromNetwork(request));
   if (response.ok) cache.put(request, response.clone());
   return response;
 }
