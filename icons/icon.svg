@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Sikkerhetsfestivalen program">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8850f"/>
+      <stop offset="1" stop-color="#d96f07"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="113" fill="url(#g)"/>
+  <g fill="#fff">
+    <rect x="110" y="131" width="64" height="151" rx="14"/>
+    <rect x="110" y="302" width="64" height="90" rx="14" opacity=".8"/>
+    <rect x="224" y="159" width="64" height="220" rx="14"/>
+    <rect x="338" y="131" width="64" height="100" rx="14" opacity=".8"/>
+    <rect x="338" y="251" width="64" height="131" rx="14"/>
+  </g>
+</svg>

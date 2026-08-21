@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Program · Sikkerhetsfestivalen 2026</title>
+<meta name="description" content="Programmet for Sikkerhetsfestivalen 2026 i Lillehammer, 24.–26. august.">
+<meta name="theme-color" content="#e8850f">
+<meta name="app-version" content="5c68f6c32884">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="app app--landing">
+  <div class="masthead">
+  
+  <span class="masthead__title">
+    <span data-en="Programme for Sikkerhetsfestivalen 2026">Program for Sikkerhetsfestivalen 2026</span>
+    
+  </span>
+  <button type="button" class="lang" id="lang" aria-label="Language / Språk">
+    <span class="lang__on">NO</span><span class="lang__off">EN</span>
+  </button>
+</div>
+
+  <main class="landing">
+    <h1>Sikkerhetsfestivalen 2026</h1>
+    <p class="landing__dates">Lillehammer, 24.–26. august</p>
+    <nav class="landing__days" aria-label="Velg dag">
+      <a class="landing__day" href="/dag/1/">
+        <span class="landing__dow" data-en="Monday">Mandag</span>
+        <span class="landing__date">24.08</span>
+      </a>
+      <a class="landing__day" href="/dag/2/">
+        <span class="landing__dow" data-en="Tuesday">Tirsdag</span>
+        <span class="landing__date">25.08</span>
+      </a>
+      <a class="landing__day" href="/dag/3/">
+        <span class="landing__dow" data-en="Wednesday">Onsdag</span>
+        <span class="landing__date">26.08</span>
+      </a>
+    </nav>
+  </main>
+</div>
+<script>
+  // Jump straight to the day that is running, if any. Time-dependent, so it
+  // must happen in the browser rather than at build time.
+  (function () {
+    var days = [{"url":"/dag/1/","date":"2026-08-24"},{"url":"/dag/2/","date":"2026-08-25"},{"url":"/dag/3/","date":"2026-08-26"}];
+    var today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Oslo" });
+    var match = days.find(function (d) { return d.date === today; });
+    if (match) location.replace(match.url);
+  })();
+</script>
+
+
+<p class="update" id="update" hidden>
+  <span data-en="The programme has been updated.">Programmet er oppdatert.</span>
+  <button type="button" id="update-reload" data-en="Reload">Last inn på nytt</button>
+</p>
+
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

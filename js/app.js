@@ -1,0 +1,156 @@
+// Everything here is either time-dependent or a user preference, which is
+// exactly what may not be baked into the HTML: the build must stay
+// byte-identical for an unchanged programme.
+
+const LANG_KEY = "sf-lang";
+const onLangChange = [];
+
+/* ------------------------------------------------------------- language */
+
+function currentLang() {
+  return localStorage.getItem(LANG_KEY) === "en" ? "en" : "no";
+}
+
+function applyLang(lang) {
+  document.documentElement.lang = lang;
+  for (const el of document.querySelectorAll("[data-en]")) {
+    // Remember the Norwegian original the first time we touch an element.
+    if (el.dataset.no === undefined) el.dataset.no = el.textContent.trim();
+    el.textContent = lang === "en" ? el.dataset.en : el.dataset.no;
+  }
+  for (const fn of onLangChange) fn(lang);
+}
+
+const langButton = document.getElementById("lang");
+if (langButton) {
+  langButton.addEventListener("click", () => {
+    const next = currentLang() === "en" ? "no" : "en";
+    localStorage.setItem(LANG_KEY, next);
+    applyLang(next);
+  });
+}
+applyLang(currentLang());
+
+/* ------------------------------------------------------------- now line */
+
+const grid = document.querySelector(".grid");
+const nowLine = document.getElementById("now");
+
+if (grid && nowLine) {
+  const dayStart = Date.parse(grid.dataset.dayStart);
+  const slotMin = Number(grid.dataset.slotMin) || 5;
+  const totalMin = Number(grid.style.getPropertyValue("--slots")) * slotMin;
+  const nowTime = document.getElementById("now-time");
+  const clock = new Intl.DateTimeFormat("nb-NO", {
+    timeZone: "Europe/Oslo", hour: "2-digit", minute: "2-digit", hour12: false,
+  });
+  let placed = false;
+
+  const tick = () => {
+    const minutes = (Date.now() - dayStart) / 60_000;
+    if (minutes < 0 || minutes > totalMin) {
+      nowLine.hidden = true;
+      return false;
+    }
+    grid.style.setProperty("--now-min", minutes.toFixed(2));
+    nowTime.textContent = clock.format(new Date());
+    nowLine.hidden = false;
+    return true;
+  };
+
+  if (tick()) {
+    // Open scrolled to the now-line, a little above centre.
+    const scroller = document.getElementById("grid-scroll");
+    requestAnimationFrame(() => {
+      if (placed) return;
+      placed = true;
+      scroller.scrollTop = Math.max(0, nowLine.offsetTop - scroller.clientHeight * 0.42);
+    });
+  }
+  setInterval(tick, 30_000);
+}
+
+/* ------------------------------------------------------------- countdown */
+
+const countdown = document.getElementById("countdown");
+
+if (countdown) {
+  const start = Date.parse(countdown.dataset.start);
+  const end = Date.parse(countdown.dataset.end);
+
+  const render = (lang) => {
+    const now = Date.now();
+    if (now >= end) {
+      countdown.textContent = lang === "en" ? "Finished" : "Ferdig";
+      return;
+    }
+    if (now >= start) {
+      countdown.textContent = lang === "en" ? "On now" : "Pågår nå";
+      return;
+    }
+    const mins = Math.round((start - now) / 60_000);
+    const h = Math.floor(mins / 60);
+    const m = mins % 60;
+    const span = h ? `${h}${lang === "en" ? "h" : " t"} ${m} min` : `${m} min`;
+    countdown.textContent = lang === "en" ? `${span} to start` : `${span} til start`;
+  };
+
+  onLangChange.push(render);
+  render(currentLang());
+  setInterval(() => render(currentLang()), 30_000);
+}
+
+/* ------------------------------------------------------------------ back */
+
+// The href is a real link to the day grid so this works without JS; when the
+// visitor actually came from the grid, going back preserves their scroll.
+const back = document.getElementById("back");
+if (back && document.referrer) {
+  try {
+    const from = new URL(document.referrer);
+    if (from.origin === location.origin && from.pathname.startsWith("/dag/")) {
+      back.addEventListener("click", (event) => {
+        event.preventDefault();
+        history.back();
+      });
+    }
+  } catch {
+    /* malformed referrer: keep the plain link */
+  }
+}
+
+/* ---------------------------------------------------------- programme update */
+
+const banner = document.getElementById("update");
+const built = document.querySelector('meta[name="app-version"]')?.content;
+
+async function checkForUpdate() {
+  if (!banner || !built) return;
+  try {
+    // no-cache still revalidates, so this is a 304 with no body until the
+    // programme actually changes.
+    const res = await fetch("/version.json", { cache: "no-cache" });
+    if (!res.ok) return;
+    const { version } = await res.json();
+    if (version && version !== built) banner.hidden = false;
+  } catch {
+    /* offline: try again later */
+  }
+}
+
+document.getElementById("update-reload")?.addEventListener("click", () => location.reload());
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") checkForUpdate();
+});
+checkForUpdate();
+setInterval(checkForUpdate, 10 * 60_000);
+
+/* --------------------------------------------------------- service worker */
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {
+      /* the site works fine without it */
+    });
+  });
+}
