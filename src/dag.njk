@@ -1,0 +1,80 @@
+---
+pagination:
+  data: site.days
+  size: 1
+  alias: day
+permalink: "/dag/{{ day.number }}/"
+layout: base.njk
+eleventyComputed:
+  title: "{{ day.weekday.no }} {{ day.dateLabel }} · Program · Sikkerhetsfestivalen 2026"
+  description: "Programmet for {{ day.weekday.no }} {{ day.dateLabel }} på Sikkerhetsfestivalen 2026 i Lillehammer."
+---
+<div class="app">
+  {% include "masthead.njk" %}
+
+  <header class="dayhead">
+    <nav class="days" aria-label="Velg dag">
+      {%- for d in site.days %}
+      <a class="day{% if d.number == day.number %} is-current{% endif %}"
+         href="{{ d.url }}"{% if d.number == day.number %} aria-current="page"{% endif %}>
+        <span class="day__dow" data-en="{{ d.weekdayShort.en }}">{{ d.weekdayShort.no }}</span>
+        <span class="day__date">{{ d.dateLabel }}</span>
+      </a>
+      {%- endfor %}
+    </nav>
+  </header>
+
+  <ul class="tracks" aria-label="Spor">
+    {%- for t in site.tracks %}
+    <li class="chip" style="--track: {{ t.colour }}">{{ t.name }}</li>
+    {%- endfor %}
+  </ul>
+
+  <div class="grid-scroll" id="grid-scroll">
+    <div class="grid" style="--rooms: {{ day.rooms | length }}; --slots: {{ day.slots }}"
+         data-day-start="{{ day.startUtc }}" data-slot-min="5">
+
+      <div class="grid__corner"><abbr title="Norsk tid">CEST</abbr></div>
+
+      {%- for room in day.rooms %}
+      <h2 class="grid__room" style="--col: {{ loop.index0 + 2 }}">{{ room.name }}</h2>
+      {%- endfor %}
+
+      {%- for room in day.rooms %}
+      <div class="grid__stripe" style="--col: {{ loop.index0 + 2 }}" aria-hidden="true"></div>
+      {%- endfor %}
+
+      {%- for r in day.rules %}
+      <div class="grid__rule{% if r.major %} is-major{% endif %}" style="--row: {{ r.row }}" aria-hidden="true"></div>
+      {%- if r.label %}<p class="grid__hour" style="--row: {{ r.row }}" aria-hidden="true">{{ r.label }}</p>{% endif %}
+      {%- endfor %}
+
+      {%- for b in day.bands %}
+      <div class="band band--{{ b.kind }}" style="--row-start: {{ b.rowStart }}; --row-end: {{ b.rowEnd }}">
+        <span class="band__label">
+          {{ b.title }} · <time datetime="{{ b.startUtc }}">{{ b.startUtc | time }}</time>–<time datetime="{{ b.endUtc }}">{{ b.endUtc | time }}</time>
+        </span>
+      </div>
+      {%- endfor %}
+
+      {%- for s in day.sessions %}
+      <article class="session session--{{ s.size }}" id="session-{{ s.id }}"
+               style="--col: {{ s.col }}; --row-start: {{ s.rowStart }}; --row-end: {{ s.rowEnd }}; --track: {{ s.colour }}">
+        <a class="session__link" href="{{ s.url }}">
+          {%- if s.size != "sm" %}<span class="session__avatar" aria-hidden="true"
+            {%- if s.avatar %} style="background-image: url({{ s.avatar }})"{% endif %}></span>{% endif %}
+          <span class="session__title">{{ s.title }}</span>
+          <span class="visually-hidden">
+            <time datetime="{{ s.startUtc }}">{{ s.startUtc | time }}</time>–<time datetime="{{ s.endUtc }}">{{ s.endUtc | time }}</time>,
+            {{ s.roomName }}{% if s.track %}, {{ s.track.name }}{% endif %}
+          </span>
+        </a>
+      </article>
+      {%- endfor %}
+
+      <div class="now" id="now" hidden>
+        <span class="now__time" id="now-time"></span>
+      </div>
+    </div>
+  </div>
+</div>

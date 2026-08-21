@@ -122,6 +122,10 @@ function* eachElement(html, openRe, tag) {
   }
 }
 
+/** Sessionize emits 7 fractional-second digits, which Safari's Date parser
+ *  rejects. Normalise to plain ISO so the browser can parse it. */
+const iso = (s) => new Date(s).toISOString();
+
 const slugify = (s) =>
   decodeEntities(s).toLowerCase()
     .replace(/[æ]/g, "ae").replace(/[ø]/g, "o").replace(/[å]/g, "a")
@@ -170,7 +174,7 @@ function parseGrid(html) {
 
   const tabRe = /<a class="sz-tabs__link" href="#sz-tab-(\d+)" data-sztz="DayLong\|[^|]+\|([^|]+)\|([^"]+)">([^<]*)</g;
   for (const m of html.matchAll(tabRe)) {
-    days.push({ id: m[1], startUtc: m[2], endUtc: m[3], weekday: text(m[4]), rooms: [] });
+    days.push({ id: m[1], startUtc: iso(m[2]), endUtc: iso(m[3]), weekday: text(m[4]), rooms: [] });
   }
   if (!days.length) throw new Error("GridSmart: no day tabs found");
 
@@ -195,8 +199,8 @@ function parseGrid(html) {
       const title = /<h3 class="sz-session__title">\s*(?:<a[^>]*>)?([\s\S]*?)(?:<\/a>)?\s*<\/h3>/.exec(outer);
       if (!when || !room || !title) throw new Error(`GridSmart: incomplete session ${id}`);
 
-      const startUtc = when[1];
-      const endUtc = when[2];
+      const startUtc = iso(when[1]);
+      const endUtc = iso(when[2]);
       sessions.push({
         id,
         title: text(title[1]),
@@ -222,10 +226,16 @@ function parseSessions(html) {
   for (const { outer, match } of eachElement(html, openRe, "li")) {
     const desc = /<p class="sz-session__description">([\s\S]*?)<\/p>/.exec(outer);
     const tags = parseTags(outer);
+    const { language, level, main_tag, ...rest } = tags;
     extra.set(match[1], {
       description: richText(desc?.[1] ?? ""),
-      language: tags.language?.[0]?.name ?? null,
-      level: tags.level?.[0]?.name ?? null,
+      language: language?.[0]?.name ?? null,
+      level: level?.[0]?.name ?? null,
+      // Anything Sessionize adds later (a target-audience category, say) lands
+      // here and the detail page picks it up on its own.
+      otherTags: Object.fromEntries(
+        Object.entries(rest).map(([group, list]) => [group, list.map((t) => t.name)]),
+      ),
     });
   }
   return extra;
@@ -299,6 +309,7 @@ for (const s of sessions) {
   s.description = more.description ?? [];
   s.language = more.language ?? null;
   s.level = more.level ?? null;
+  s.otherTags = more.otherTags ?? {};
   s.slug = `${slugify(s.title)}-${s.id}`;
   delete s.tags;
 }

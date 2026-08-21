@@ -1,0 +1,101 @@
+---
+pagination:
+  data: site.talks
+  size: 1
+  alias: session
+permalink: "{{ session.url }}"
+layout: base.njk
+eleventyComputed:
+  title: "{{ session.title }} · Sikkerhetsfestivalen 2026"
+  description: "{{ session.description[0] | striptags | truncate(160) if session.description.length else session.title }}"
+  back: "{{ session.day.url }}#session-{{ session.id }}"
+---
+<div class="app app--detail">
+  {% include "masthead.njk" %}
+
+  <main class="detail">
+    <header class="detail__head">
+      <p class="detail__meta">
+        {%- if session.track %}
+        <span class="chip chip--solid" style="--track: {{ session.colour }}">{{ session.track.name }}</span>
+        {%- endif %}
+        <span class="countdown" id="countdown"
+              data-start="{{ session.startUtc }}" data-end="{{ session.endUtc }}"></span>
+      </p>
+
+      <h1>{{ session.title }}</h1>
+
+      <p class="pills">
+        <span class="pill">
+          <span data-en="{{ session.day.weekday.en }}">{{ session.day.weekday.no }}</span>
+          <time datetime="{{ session.startUtc }}">{{ session.startUtc | time }}</time>–<time datetime="{{ session.endUtc }}">{{ session.endUtc | time }}</time>
+        </span>
+        <span class="pill">{{ session.roomName | replace(" - ", " · ") }}</span>
+      </p>
+
+      <p class="tags">
+        {%- if session.language %}<span class="tag">{{ session.language }}</span>{% endif %}
+        {%- if session.level %}<span class="tag">{{ session.level }}</span>{% endif %}
+        <span class="tag">{{ session.durationMin | duration }}</span>
+      </p>
+    </header>
+
+    {%- if session.speakers.length %}
+    <section class="detail__section">
+      <h2 class="section__label" data-en="{{ 'Speakers' if session.speakers.length > 1 else 'Speaker' }}">
+        {{ 'Foredragsholdere' if session.speakers.length > 1 else 'Foredragsholder' }}
+      </h2>
+      {%- for p in session.speakers %}
+      <article class="speaker">
+        <div class="speaker__head">
+          <span class="speaker__photo"{% if p.photo %} style="background-image: url({{ p.photo }})"{% endif %}
+                role="img" aria-label="{{ p.name }}"></span>
+          <div class="speaker__who">
+            <h3 class="speaker__name">{{ p.name }}</h3>
+            {%- if p.tagline %}<p class="speaker__tagline">{{ p.tagline }}</p>{% endif %}
+          </div>
+        </div>
+        {%- for para in p.bio %}
+        <p class="speaker__bio">{{ para | safe }}</p>
+        {%- endfor %}
+      </article>
+      {%- endfor %}
+    </section>
+    {%- endif %}
+
+    {%- if session.description.length %}
+    <section class="detail__section">
+      <h2 class="section__label" data-en="About this session">Om sesjonen</h2>
+      {%- for para in session.description %}
+      <p class="detail__body">{{ para | safe }}</p>
+      {%- endfor %}
+    </section>
+    {%- endif %}
+
+    {%- if session.audience.length %}
+    <section class="detail__section">
+      <h2 class="section__label" data-en="Suitable for">Passer for</h2>
+      <p class="tags">
+        {%- for a in session.audience %}<span class="tag">{{ a }}</span>{% endfor %}
+      </p>
+    </section>
+    {%- endif %}
+
+    {%- if session.parallel.length %}
+    <section class="detail__section">
+      <h2 class="section__label" data-en="On at the same time">Samtidig i programmet</h2>
+      <ol class="parallel">
+        {%- for p in session.parallel %}
+        <li class="parallel__item" style="--track: {{ p.colour }}">
+          <a href="{{ p.url }}">
+            <time class="parallel__time" datetime="{{ p.startUtc }}">{{ p.startUtc | time }}</time>
+            <span class="parallel__title">{{ p.title }}</span>
+            <span class="parallel__room">{{ p.roomName | replace(" - ", " · ") }}</span>
+          </a>
+        </li>
+        {%- endfor %}
+      </ol>
+    </section>
+    {%- endif %}
+  </main>
+</div>
