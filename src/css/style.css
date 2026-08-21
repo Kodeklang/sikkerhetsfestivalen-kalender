@@ -298,8 +298,13 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
   border-top: 1px solid rgba(13, 125, 112, 0.35);
   border-bottom: 1px solid rgba(13, 125, 112, 0.35);
 }
+/* Pinned clear of the gutter rather than to the scrollport. The gutter is an
+   opaque sticky column painted above the bands, so a label held at left: 0
+   would spend its first 58px of travel hidden underneath it. The inset repeats
+   the 12px margin so the label never moves: it is stuck from the first pixel. */
 .band__label {
-  position: sticky; left: 0; margin-left: 12px; white-space: nowrap;
+  position: sticky; left: calc(var(--gutter-w) + 12px);
+  margin-left: 12px; white-space: nowrap;
   font-size: 12px; font-weight: 700; letter-spacing: 0.01em;
 }
 .band--event .band__label { color: var(--brand-ink); }
