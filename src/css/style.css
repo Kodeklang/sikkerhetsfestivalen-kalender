@@ -166,14 +166,20 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 .grid {
   position: relative;
   display: grid;
-  grid-template-columns: var(--gutter-w) repeat(var(--rooms), minmax(var(--col-w), 1fr));
+  /* The track filter overrides --cols to collapse irrelevant rooms to 0px.
+     Without JS the fallback gives every room an equal share. */
+  grid-template-columns: var(--cols, var(--gutter-w) repeat(var(--rooms), minmax(var(--col-w), 1fr)));
   grid-template-rows: var(--head-h) repeat(var(--slots), var(--slot-h));
   /* Fill the viewport on a sparse day such as Monday, which has only two rooms,
      but never squeeze the columns below their design width - past that the grid
-     scrolls sideways instead. */
+     scrolls sideways instead. --visible-rooms tracks the filter. */
   width: 100%;
-  min-width: calc(var(--gutter-w) + var(--rooms) * var(--col-w));
+  min-width: calc(var(--gutter-w) + var(--visible-rooms, var(--rooms)) * var(--col-w));
 }
+
+/* A room with no session in the highlighted track drops out entirely: its
+   column is collapsed to 0px and everything anchored to it is removed. */
+.grid [data-col].is-collapsed { display: none; }
 
 .grid__corner {
   grid-column: 1; grid-row: 1;

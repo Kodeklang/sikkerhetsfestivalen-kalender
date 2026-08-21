@@ -57,9 +57,20 @@ with. The service worker makes that reload instant and the site usable offline.
 ## Track filter
 
 Each day lists only the tracks actually running that day, as chips above the
-grid. Clicking one leaves its sessions in colour and greys the rest down;
-clicking again clears it. It de-emphasises rather than hides, so the shape of
-the day stays readable and nothing leaves the accessibility tree.
+grid. Clicking one focuses the grid on it:
+
+- rooms with no session in that track collapse away entirely
+- any remaining session that is not in the track is greyed down for context
+
+This festival happens to assign one track per room per day, so in practice a
+click leaves a single column — which on a phone removes horizontal scrolling
+altogether and turns the grid into a readable single-track agenda. The greying
+is the fallback for a track that spans several rooms.
+
+Columns collapse by being set to `0px` rather than renumbered, so no session
+has to be repositioned. Clearing the filter removes the override and the
+stylesheet's own `grid-template-columns` takes over again, which is also what
+a visitor without JavaScript gets.
 
 The choice persists in `localStorage` and carries across days. A track that is
 absent from a given day stays remembered but dormant there, rather than greying

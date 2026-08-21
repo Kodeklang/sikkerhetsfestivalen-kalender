@@ -35,17 +35,17 @@ eleventyComputed:
   <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
 
   <div class="grid-scroll" id="grid-scroll">
-    <div class="grid" style="--rooms: {{ day.rooms | length }}; --slots: {{ day.slots }}"
+    <div class="grid" style="--rooms: {{ day.rooms | length }}; --visible-rooms: {{ day.rooms | length }}; --slots: {{ day.slots }}"
          data-day-start="{{ day.startUtc }}" data-slot-min="5">
 
       <div class="grid__corner"><abbr title="Norsk tid">CEST</abbr></div>
 
       {%- for room in day.rooms %}
-      <h2 class="grid__room" style="--col: {{ loop.index0 + 2 }}">{{ room.name }}</h2>
+      <h2 class="grid__room" style="--col: {{ loop.index0 + 2 }}" data-col="{{ loop.index0 + 2 }}">{{ room.name }}</h2>
       {%- endfor %}
 
       {%- for room in day.rooms %}
-      <div class="grid__stripe" style="--col: {{ loop.index0 + 2 }}" aria-hidden="true"></div>
+      <div class="grid__stripe" style="--col: {{ loop.index0 + 2 }}" data-col="{{ loop.index0 + 2 }}" aria-hidden="true"></div>
       {%- endfor %}
 
       {%- for r in day.rules %}
@@ -63,7 +63,7 @@ eleventyComputed:
 
       {%- for s in day.sessions %}
       <article class="session session--{{ s.size }}" id="session-{{ s.id }}"
-               data-track="{{ s.track.slug if s.track else '' }}"
+               data-track="{{ s.track.slug if s.track else '' }}" data-col="{{ s.col }}"
                style="--col: {{ s.col }}; --row-start: {{ s.rowStart }}; --row-end: {{ s.rowEnd }}; --track: {{ s.colour }}">
         <a class="session__link" href="{{ s.url | url }}">
           {%- if s.size != "sm" %}<span class="session__avatar" aria-hidden="true"
