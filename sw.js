@@ -5,19 +5,19 @@
 
 const CACHE = "sf-221b98517d16";
 
-const BASE = "/sikkerhetsfestivalen-kalender/";
+const BASE = "/";
 
 const SHELL = [
   BASE,
-  "/sikkerhetsfestivalen-kalender/dag/1/",
-  "/sikkerhetsfestivalen-kalender/dag/2/",
-  "/sikkerhetsfestivalen-kalender/dag/3/",
-  "/sikkerhetsfestivalen-kalender/css/style.css",
-  "/sikkerhetsfestivalen-kalender/css/fonts.css",
-  "/sikkerhetsfestivalen-kalender/js/app.js",
-  "/sikkerhetsfestivalen-kalender/manifest.webmanifest",
-  "/sikkerhetsfestivalen-kalender/icons/icon.svg",
-  "/sikkerhetsfestivalen-kalender/icons/icon-192.png",
+  "/dag/1/",
+  "/dag/2/",
+  "/dag/3/",
+  "/css/style.css",
+  "/css/fonts.css",
+  "/js/app.js",
+  "/manifest.webmanifest",
+  "/icons/icon.svg",
+  "/icons/icon-192.png",
 ];
 
 const NETWORK_TIMEOUT = 2500;
