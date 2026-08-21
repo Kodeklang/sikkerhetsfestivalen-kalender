@@ -33,6 +33,71 @@ if (langButton) {
 }
 applyLang(currentLang());
 
+/* --------------------------------------------------------- track filter */
+
+// Picking a track leaves its sessions in colour and greys the rest down. It is
+// a de-emphasis, not a filter: nothing is hidden, so the shape of the day and
+// the accessibility tree both stay intact.
+
+const TRACK_KEY = "sf-track";
+const chips = document.querySelectorAll(".chip[data-track]");
+const trackedSessions = document.querySelectorAll(".session[data-track]");
+const filterStatus = document.getElementById("filter-status");
+
+if (chips.length) {
+  const nameOf = (slug) =>
+    [...chips].find((c) => c.dataset.track === slug)?.textContent.trim() ?? slug;
+
+  // `announce` guards the live region: only a real click should speak. Writing
+  // it on load or on a language switch would just be noise.
+  const applyTrack = (slug, { announce = false, lang = currentLang() } = {}) => {
+    for (const chip of chips) {
+      const on = chip.dataset.track === slug;
+      chip.setAttribute("aria-pressed", String(on));
+      chip.classList.toggle("is-muted", Boolean(slug) && !on);
+    }
+    for (const session of trackedSessions) {
+      session.classList.toggle("is-dimmed", Boolean(slug) && session.dataset.track !== slug);
+    }
+    if (!filterStatus) return;
+    if (!announce) {
+      filterStatus.textContent = "";
+      return;
+    }
+    if (!slug) {
+      filterStatus.textContent = lang === "en" ? "Showing all tracks" : "Viser alle spor";
+      return;
+    }
+    const n = [...trackedSessions].filter((s) => s.dataset.track === slug).length;
+    filterStatus.textContent = lang === "en"
+      ? `Highlighting ${nameOf(slug)}: ${n} sessions today`
+      : `Framhever ${nameOf(slug)}: ${n} foredrag i dag`;
+  };
+
+  for (const chip of chips) {
+    chip.addEventListener("click", () => {
+      // Clicking the active track clears the filter.
+      const next = chip.getAttribute("aria-pressed") === "true" ? "" : chip.dataset.track;
+      if (next) localStorage.setItem(TRACK_KEY, next);
+      else localStorage.removeItem(TRACK_KEY);
+      applyTrack(next, { announce: true });
+    });
+  }
+
+  // Re-announce in the new language, and carry the choice across days.
+  onLangChange.push((lang) => applyTrack(localStorage.getItem(TRACK_KEY) || "", { lang }));
+
+  const stored = localStorage.getItem(TRACK_KEY) || "";
+  const active = [...chips].find((c) => c.dataset.track === stored);
+  // A track may not appear on every day; drop a selection this day cannot show.
+  applyTrack(active ? stored : "");
+  if (active) {
+    // Carried over from another day, the chip may sit off-screen in the
+    // horizontally scrolling legend - show why the grid is greyed.
+    active.scrollIntoView({ inline: "center", block: "nearest" });
+  }
+}
+
 /* ------------------------------------------------------------- now line */
 
 const grid = document.querySelector(".grid");

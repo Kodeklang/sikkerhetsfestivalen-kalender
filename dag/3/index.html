@@ -49,27 +49,76 @@
   </header>
 
   <ul class="tracks" aria-label="Spor">
-    <li class="chip" style="--track: #b96806">Application Security</li>
-    <li class="chip" style="--track: #4a6a5a">Business Continuity &amp; Resilience</li>
-    <li class="chip" style="--track: #2f6f9e">Cloud &amp; Security Architecture</li>
-    <li class="chip" style="--track: #6b4fa0">Cryptography</li>
-    <li class="chip" style="--track: #4f6b3c">Culture &amp; Awareness</li>
-    <li class="chip" style="--track: #a03242">Cyber Crime</li>
-    <li class="chip" style="--track: #3f6b78">Forensics</li>
-    <li class="chip" style="--track: #0d7d70">Identity</li>
-    <li class="chip" style="--track: #3a3a38">Incident Management</li>
-    <li class="chip" style="--track: #d96f07">Keynote</li>
-    <li class="chip" style="--track: #6e6244">Legal &amp; Compliance</li>
-    <li class="chip" style="--track: #2f5d4a">National Security</li>
-    <li class="chip" style="--track: #b0491c">Offensive Security</li>
-    <li class="chip" style="--track: #7d5a2b">Operational Technology</li>
-    <li class="chip" style="--track: #7a7a74">Other</li>
-    <li class="chip" style="--track: #8a5a7a">Personnel Security</li>
-    <li class="chip" style="--track: #55606e">Physical Security</li>
-    <li class="chip" style="--track: #94631a">Risk &amp; Security Management</li>
-    <li class="chip" style="--track: #7a6a3f">Supplier Security</li>
-    <li class="chip" style="--track: #8a4b5c">Threat Intelligence</li>
+    <li>
+      <button type="button" class="chip" data-track="application-security" aria-pressed="false"
+              style="--track: #b96806">Application Security</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="business-continuity-resilience" aria-pressed="false"
+              style="--track: #4a6a5a">Business Continuity &amp; Resilience</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="cloud-security-architecture" aria-pressed="false"
+              style="--track: #2f6f9e">Cloud &amp; Security Architecture</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="cryptography" aria-pressed="false"
+              style="--track: #6b4fa0">Cryptography</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="culture-awareness" aria-pressed="false"
+              style="--track: #4f6b3c">Culture &amp; Awareness</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="cyber-crime" aria-pressed="false"
+              style="--track: #a03242">Cyber Crime</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="forensics" aria-pressed="false"
+              style="--track: #3f6b78">Forensics</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="identity" aria-pressed="false"
+              style="--track: #0d7d70">Identity</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="incident-management" aria-pressed="false"
+              style="--track: #3a3a38">Incident Management</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="legal-compliance" aria-pressed="false"
+              style="--track: #6e6244">Legal &amp; Compliance</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="national-security" aria-pressed="false"
+              style="--track: #2f5d4a">National Security</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="offensive-security" aria-pressed="false"
+              style="--track: #b0491c">Offensive Security</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="operational-technology" aria-pressed="false"
+              style="--track: #7d5a2b">Operational Technology</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="personnel-security" aria-pressed="false"
+              style="--track: #8a5a7a">Personnel Security</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="physical-security" aria-pressed="false"
+              style="--track: #55606e">Physical Security</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="risk-security-management" aria-pressed="false"
+              style="--track: #94631a">Risk &amp; Security Management</button>
+    </li>
+    <li>
+      <button type="button" class="chip" data-track="supplier-security" aria-pressed="false"
+              style="--track: #7a6a3f">Supplier Security</button>
+    </li>
   </ul>
+  <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
 
   <div class="grid-scroll" id="grid-scroll">
     <div class="grid" style="--rooms: 17; --slots: 48"
@@ -135,6 +184,7 @@
         </span>
       </div>
       <article class="session session--md" id="session-1169343"
+               data-track="national-security"
                style="--col: 10; --row-start: 2; --row-end: 10; --track: #2f5d4a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/offense-is-the-best-defense-the-evolution-of-ukrainian-cyber-1169343/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/2c703243-8428-4517-b019-90beff21b5be.png)"></span>
           <span class="session__title">Offense is the best defense: The Evolution of Ukrainian Cyber Capabilities and Lessons for Europe</span>
@@ -145,6 +195,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1168543"
+               data-track="application-security"
                style="--col: 2; --row-start: 2; --row-end: 10; --track: #b96806">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/the-invisible-privileged-user-attack-path-mapping-across-you-1168543/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/29b37147-2354-492a-b05d-127b9d8472d6.png)"></span>
           <span class="session__title">The Invisible Privileged User: Attack Path Mapping Across Your Software Delivery Chain</span>
@@ -155,6 +206,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1147782"
+               data-track="offensive-security"
                style="--col: 3; --row-start: 2; --row-end: 10; --track: #b0491c">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/i-like-big-shares-and-i-cannot-lie-1147782/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/d91c9462-9e2d-4fb6-9b68-6d8f51cb2bc2.png)"></span>
           <span class="session__title">I Like Big Shares and I Cannot Lie</span>
@@ -165,6 +217,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1129148"
+               data-track="risk-security-management"
                style="--col: 4; --row-start: 2; --row-end: 10; --track: #94631a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/governance-theatre-vs-reality-fixing-the-operating-model-beh-1129148/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/f92e7830-a9e4-410a-9e7a-9112f591086a.jpg)"></span>
           <span class="session__title">Governance Theatre vs Reality: Fixing the Operating Model Behind Control Failures</span>
@@ -175,6 +228,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1151961"
+               data-track="culture-awareness"
                style="--col: 5; --row-start: 2; --row-end: 10; --track: #4f6b3c">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/sikkerhetskultur-erfaringer-fra-en-innenfra-og-ut-tilnaermin-1151961/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/60539869-e36b-47af-b345-99af067eccc7.png)"></span>
           <span class="session__title">Sikkerhetskultur: erfaringer fra en innenfra-og-ut-tilnærming!</span>
@@ -185,6 +239,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169680"
+               data-track="cyber-crime"
                style="--col: 6; --row-start: 2; --row-end: 10; --track: #a03242">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/when-threats-become-multifaceted-how-the-police-prioritize-i-1169680/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/786f351b-5b97-4803-ad7d-d2f2d5158b1e.png)"></span>
           <span class="session__title">When threats become multifaceted: How the police prioritize in a complex environment</span>
@@ -195,6 +250,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1171339"
+               data-track="incident-management"
                style="--col: 7; --row-start: 2; --row-end: 10; --track: #3a3a38">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/hvem-eier-krisen-nar-sikkerhetshendelsen-treffer-pa-tvers-av-1171339/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/5eb8e099-5726-47e2-9e0b-92d2c9532b8c.jpg)"></span>
           <span class="session__title">Hvem eier krisen? – Når sikkerhetshendelsen treffer på tvers av 200 autonome team</span>
@@ -205,6 +261,7 @@
         </a>
       </article>
       <article class="session session--sm" id="session-1167370"
+               data-track="physical-security"
                style="--col: 8; --row-start: 2; --row-end: 5; --track: #55606e">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/nar-fysisk-sikkerhet-blir-shadow-it-hvem-eier-egentlig-kamer-1167370/">
           <span class="session__title">Når fysisk sikkerhet blir Shadow IT – hvem eier egentlig kameraene, adgangskontrollen og IoT-enheten</span>
@@ -215,6 +272,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1174099"
+               data-track="operational-technology"
                style="--col: 9; --row-start: 2; --row-end: 10; --track: #7d5a2b">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/how-to-prioritise-within-ot-in-light-of-a-chaotic-time-1174099/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/01852d4a-84e8-4444-ba72-b24510dec6a5.png)"></span>
           <span class="session__title">How to prioritise within OT in light of a chaotic time</span>
@@ -225,6 +283,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1124990"
+               data-track="business-continuity-resilience"
                style="--col: 11; --row-start: 2; --row-end: 10; --track: #4a6a5a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/bli-en-del-av-norges-beredskap-1124990/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/3ee00418-3128-447b-bba0-588e1fa1804e.png)"></span>
           <span class="session__title">Bli en del av Norges beredskap</span>
@@ -235,6 +294,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1171217"
+               data-track="identity"
                style="--col: 12; --row-start: 2; --row-end: 10; --track: #0d7d70">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/deepfake-detection-in-the-real-world-1171217/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/b7b74cb9-5e7f-48f3-b011-9f54eb71f793.jpg)"></span>
           <span class="session__title">Deepfake Detection in the Real World</span>
@@ -245,6 +305,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1170721"
+               data-track="forensics"
                style="--col: 13; --row-start: 2; --row-end: 10; --track: #3f6b78">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/design-intent-vs-digital-residue-inside-a-forensic-research--1170721/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/9aaa532c-f178-4a97-b3cc-5db4bcfeb7f6.jpg)"></span>
           <span class="session__title">Design Intent vs Digital Residue: Inside a Forensic Research Pipeline</span>
@@ -255,6 +316,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1171443"
+               data-track="supplier-security"
                style="--col: 14; --row-start: 2; --row-end: 10; --track: #7a6a3f">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/vare-sarbare-nettverk-1171443/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/2de0fa94-e8e2-4926-a1b3-75e75316dddc.jpg)"></span>
           <span class="session__title">Våre Sårbare Nettverk</span>
@@ -265,6 +327,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1148224"
+               data-track="personnel-security"
                style="--col: 15; --row-start: 2; --row-end: 10; --track: #8a5a7a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/kartlegging-av-hoyrisikoroller-og-menneskelige-sarbarheter-1148224/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/8c1aa02a-00e0-4d4d-81c4-4c60cc8a3f08.jpg)"></span>
           <span class="session__title">Kartlegging av høyrisikoroller og menneskelige sårbarheter</span>
@@ -275,6 +338,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1170279"
+               data-track="cloud-security-architecture"
                style="--col: 16; --row-start: 2; --row-end: 10; --track: #2f6f9e">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/nar-ot-moter-cloud-native-muligheter-og-risikoer-i-skjaering-1170279/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/8c36aeb5-a144-4497-8594-a9b2da898354.jpg)"></span>
           <span class="session__title">Når OT møter Cloud-Native – muligheter og risikoer i skjæringspunktet</span>
@@ -285,6 +349,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169428"
+               data-track="cryptography"
                style="--col: 17; --row-start: 2; --row-end: 10; --track: #6b4fa0">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/cryptography-and-export-controls-1169428/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/e3813e86-8e2a-4b8d-b51d-6ce13fe7154e.png)"></span>
           <span class="session__title">Cryptography and export controls</span>
@@ -295,6 +360,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1174328"
+               data-track="legal-compliance"
                style="--col: 18; --row-start: 2; --row-end: 10; --track: #6e6244">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/ai-agenter-og-personvern-trenger-jeg-en-dpia-1174328/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/76ae23bf-c003-4283-b957-37a333c68443.jpg)"></span>
           <span class="session__title">AI-agenter og personvern: Trenger jeg en DPIA?</span>
@@ -305,6 +371,7 @@
         </a>
       </article>
       <article class="session session--sm" id="session-1171401"
+               data-track="physical-security"
                style="--col: 8; --row-start: 5; --row-end: 8; --track: #55606e">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/fra-analyse-til-gjennomforing-effektiv-fysisk-sikring-i-poli-1171401/">
           <span class="session__title">Fra analyse til gjennomføring- effektiv fysisk sikring i politiet</span>
@@ -315,6 +382,7 @@
         </a>
       </article>
       <article class="session session--lg" id="session-1170937"
+               data-track="national-security"
                style="--col: 10; --row-start: 14; --row-end: 34; --track: #2f5d4a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/when-freedom-is-at-stake-from-ukraine-s-frontline-to-norwegi-1170937/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/3f6bec04-b536-49d5-9cac-8a9b0b462f41.jpg)"></span>
           <span class="session__title">When freedom is at stake - from Ukraine&#39;s frontline to Norwegian preparedness</span>
@@ -325,6 +393,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1128991"
+               data-track="application-security"
                style="--col: 2; --row-start: 14; --row-end: 22; --track: #b96806">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/building-tpt-from-alert-chaos-to-clear-priorities-1128991/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/8348f424-c997-4519-9917-57466eb1c1e5.jpg)"></span>
           <span class="session__title">Building TPT: From alert chaos to clear priorities</span>
@@ -335,6 +404,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169263"
+               data-track="offensive-security"
                style="--col: 3; --row-start: 14; --row-end: 22; --track: #b0491c">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/delegating-your-attack-surface-through-oauth-consents-1169263/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/60194a49-5d16-4445-a9fb-c0cf412a662b.jpg)"></span>
           <span class="session__title">Delegating your attack surface through OAuth consents</span>
@@ -345,6 +415,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169804"
+               data-track="risk-security-management"
                style="--col: 4; --row-start: 14; --row-end: 22; --track: #94631a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/steering-the-ai-revolution-building-trust-and-accountability-1169804/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/156f3549-cb32-4fa5-b576-a300d4312128.jpg)"></span>
           <span class="session__title">Steering the AI Revolution: Building Trust and Accountability with AI Governance</span>
@@ -355,6 +426,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1171069"
+               data-track="culture-awareness"
                style="--col: 5; --row-start: 14; --row-end: 22; --track: #4f6b3c">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/cybersikkerhet-er-ogsa-kultur-empiriske-funn-om-nasjonale-fo-1171069/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/5df03dc6-20a6-422a-8adc-9543068ebbfc.jpg)"></span>
           <span class="session__title">Cybersikkerhet er også kultur: Empiriske funn om nasjonale forskjeller</span>
@@ -365,6 +437,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169604"
+               data-track="cyber-crime"
                style="--col: 6; --row-start: 14; --row-end: 22; --track: #a03242">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/hunting-international-cyber-criminals-1169604/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/a06ca65b-78e6-4fc5-9834-d937983a9818.jpg)"></span>
           <span class="session__title">Hunting international cyber criminals</span>
@@ -375,6 +448,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1151290"
+               data-track="incident-management"
                style="--col: 7; --row-start: 14; --row-end: 22; --track: #3a3a38">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/ai-i-soc-en-hva-vi-laerte-av-a-bygge-en-agentisk-triage-assi-1151290/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/3a732eb4-f581-4ce2-a214-8db6d685a924.png)"></span>
           <span class="session__title">AI i SOC-en: hva vi lærte av å bygge en agentisk triage-assistent</span>
@@ -385,6 +459,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1168026"
+               data-track="physical-security"
                style="--col: 8; --row-start: 14; --row-end: 22; --track: #55606e">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/lykketioringen-som-forsvant-en-leksjon-i-strategisk-blindhet-1168026/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/aa90d46d-6f14-4d22-879e-d7525cd966ab.jpg)"></span>
           <span class="session__title">Lykketiøringen som forsvant: En leksjon i strategisk blindhet og grå nesehorn.</span>
@@ -395,6 +470,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1172376"
+               data-track="operational-technology"
                style="--col: 9; --row-start: 14; --row-end: 22; --track: #7d5a2b">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/genai-in-the-war-room-crafting-facilitating-and-analyzing-ot-1172376/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/53d57258-4469-49ed-8b4b-285bad7d9e44.jpg)"></span>
           <span class="session__title">GenAI in the War Room: Crafting, Facilitating, and Analyzing OT Tabletops</span>
@@ -405,6 +481,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1168867"
+               data-track="business-continuity-resilience"
                style="--col: 11; --row-start: 14; --row-end: 22; --track: #4a6a5a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/minimum-viable-company-nar-alt-star-pa-spill-hva-er-det-vikt-1168867/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/3f6fc32c-340f-4008-8ae0-fc3b5ffdfe90.jpg)"></span>
           <span class="session__title">Minimum Viable Company - Når alt står på spill: Hva er det viktigste?</span>
@@ -415,6 +492,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169631"
+               data-track="identity"
                style="--col: 12; --row-start: 14; --row-end: 22; --track: #0d7d70">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/virksomhetslommebok-hva-er-det-1169631/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/0eda477c-cf1d-48d0-a0d2-79a5b9fd3cd1.jpg)"></span>
           <span class="session__title">Virksomhetslommebok – hva er det?</span>
@@ -425,6 +503,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1173978"
+               data-track="forensics"
                style="--col: 13; --row-start: 14; --row-end: 22; --track: #3f6b78">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/reducing-business-risk-through-proactive-digital-forensics-1173978/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/26ae76da-d161-4df3-9ea2-0316f0a82be5.jpg)"></span>
           <span class="session__title">Reducing business risk through proactive digital forensics</span>
@@ -435,6 +514,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1170735"
+               data-track="supplier-security"
                style="--col: 14; --row-start: 14; --row-end: 22; --track: #7a6a3f">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/nar-leverandoren-blir-angrepet-hvem-tar-regningen-1170735/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/d09109e9-a721-4c91-8fa8-19f8d64488af.jpg)"></span>
           <span class="session__title">Når leverandøren blir angrepet – hvem tar regningen?</span>
@@ -445,6 +525,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1168379"
+               data-track="personnel-security"
                style="--col: 15; --row-start: 14; --row-end: 22; --track: #8a5a7a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/bry-deg-hvorfor-arbeidsmiljo-er-et-av-vare-viktigste-tiltak-1168379/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/c875c38c-b045-4da3-a6b4-1f7d05ac64e7.jpg)"></span>
           <span class="session__title">Bry deg! Hvorfor arbeidsmiljø er et av våre viktigste tiltak</span>
@@ -455,6 +536,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1139513"
+               data-track="cloud-security-architecture"
                style="--col: 16; --row-start: 14; --row-end: 22; --track: #2f6f9e">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/your-source-code-is-under-attack-who-s-defending-it-1139513/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/a1c1518e-c437-4873-9858-b0c13271ef1c.jpg)"></span>
           <span class="session__title">Your Source Code Is Under Attack. Who’s Defending It?</span>
@@ -465,6 +547,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1171010"
+               data-track="cryptography"
                style="--col: 17; --row-start: 14; --row-end: 22; --track: #6b4fa0">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/cryptanalysis-with-claude-code-1171010/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/026389d1-2adf-4ffb-8cc7-51cf4e6c8fb1.png)"></span>
           <span class="session__title">Cryptanalysis with Claude Code</span>
@@ -475,6 +558,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169532"
+               data-track="legal-compliance"
                style="--col: 18; --row-start: 14; --row-end: 22; --track: #6e6244">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/risiko-med-to-briller-fria-og-dpia-i-ki-prosjekter-1169532/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/418d0be8-bc79-4b14-8eea-5bd8a82e91c0.jpg)"></span>
           <span class="session__title">Risiko med to briller: FRIA og DPIA i KI-prosjekter</span>
@@ -485,6 +569,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1171475"
+               data-track="application-security"
                style="--col: 2; --row-start: 26; --row-end: 34; --track: #b96806">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/hack-faster-than-you-deploy-integrating-continuous-penetrati-1171475/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/ade7775a-80e6-4c72-b211-148544228dad.png)"></span>
           <span class="session__title">Hack Faster Than You Deploy: Integrating Continuous Penetration Testing into the SDLC.</span>
@@ -495,6 +580,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169561"
+               data-track="offensive-security"
                style="--col: 3; --row-start: 26; --row-end: 34; --track: #b0491c">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/wsl-nice-for-developers-even-nicer-for-red-teamers-1169561/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/a4eae081-3a19-47e8-af7a-b8362df5c73b.jpg)"></span>
           <span class="session__title">WSL: Nice for developers, even nicer for red teamers</span>
@@ -505,6 +591,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169569"
+               data-track="risk-security-management"
                style="--col: 4; --row-start: 26; --row-end: 34; --track: #94631a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/verdivurdering2025-final-v4-endelig-xlsx-1169569/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/4c7dc008-6023-4081-9dde-a074001fdfde.jpg)"></span>
           <span class="session__title">verdivurdering2025_final_v4_ENDELIG.xlsx</span>
@@ -515,6 +602,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1168637"
+               data-track="culture-awareness"
                style="--col: 5; --row-start: 26; --row-end: 34; --track: #4f6b3c">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/det-er-ikke-deg-det-er-systemet-hop-som-nokkelen-til-robust--1168637/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/1876d989-6026-494d-9b44-f176cd2237a6.jpg)"></span>
           <span class="session__title">Det er ikke deg, det er systemet! HOP som nøkkelen til robust cybersikkerhet</span>
@@ -525,6 +613,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1166353"
+               data-track="cyber-crime"
                style="--col: 6; --row-start: 26; --row-end: 34; --track: #a03242">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/exposing-a-cybercrime-network-1166353/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/ecd080e0-a8aa-4c57-b828-efdb8d73b3e2.jpg)"></span>
           <span class="session__title">Exposing a cybercrime network</span>
@@ -535,6 +624,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1152135"
+               data-track="incident-management"
                style="--col: 7; --row-start: 26; --row-end: 34; --track: #3a3a38">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/hvordan-overleve-en-pentest-1152135/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/4c039b65-1236-443d-92c5-61253e7fe66d.jpg)"></span>
           <span class="session__title">Hvordan overleve en pentest</span>
@@ -545,6 +635,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1166393"
+               data-track="physical-security"
                style="--col: 8; --row-start: 26; --row-end: 34; --track: #55606e">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/fra-styrerom-til-sikkerhetsvakt-den-rode-traden-fra-risikost-1166393/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/65fbc62b-55ad-4ea5-8336-9c4695fad674.jpg)"></span>
           <span class="session__title">Fra styrerom til sikkerhetsvakt: Den røde tråden fra risikostyring og compliance til operativ sikker</span>
@@ -555,6 +646,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1170287"
+               data-track="operational-technology"
                style="--col: 9; --row-start: 26; --row-end: 34; --track: #7d5a2b">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/pirates-of-the-north-sea-1170287/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/dc169b5f-03cd-4aeb-9b1b-dc3fc446d299.png)"></span>
           <span class="session__title">Pirates Of The North Sea</span>
@@ -565,6 +657,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1166313"
+               data-track="business-continuity-resilience"
                style="--col: 11; --row-start: 26; --row-end: 34; --track: #4a6a5a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/kriseledelse-i-blindebukk-strategi-og-jus-nar-skjermene-gar--1166313/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/287c3a6e-b313-48ce-9e19-3c7d81b7e73f.jpg)"></span>
           <span class="session__title">Kriseledelse i blindebukk – strategi og jus når skjermene går i svart</span>
@@ -575,6 +668,7 @@
         </a>
       </article>
       <article class="session session--sm" id="session-1169995"
+               data-track="identity"
                style="--col: 12; --row-start: 26; --row-end: 28; --track: #0d7d70">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/hva-gjor-vi-for-de-sma-1169995/">
           <span class="session__title">Hva gjør vi for de små ?</span>
@@ -585,6 +679,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1171185"
+               data-track="supplier-security"
                style="--col: 14; --row-start: 26; --row-end: 34; --track: #7a6a3f">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/supply-chain-security-protecting-your-business-end-to-end-1171185/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/ffcc42a6-6cb1-4e9d-b3a4-5e4c20c9a0c3.png)"></span>
           <span class="session__title">Supply Chain Security - Protecting your business - End to End</span>
@@ -595,6 +690,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1132176"
+               data-track="personnel-security"
                style="--col: 15; --row-start: 26; --row-end: 34; --track: #8a5a7a">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/innsidere-og-spionasje-1132176/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/c991ff9f-1575-4822-ab0f-95bc9d7072d8.jpg)"></span>
           <span class="session__title">Innsidere og spionasje</span>
@@ -605,6 +701,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169659"
+               data-track="cloud-security-architecture"
                style="--col: 16; --row-start: 26; --row-end: 34; --track: #2f6f9e">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/ci-cd-the-most-privileged-system-in-your-cloud-1169659/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/521aa8cc-2df0-4aca-ba3a-a69392044c0d.jpg)"></span>
           <span class="session__title">CI/CD: The Most Privileged System in Your Cloud</span>
@@ -615,6 +712,7 @@
         </a>
       </article>
       <article class="session session--md" id="session-1169723"
+               data-track="legal-compliance"
                style="--col: 18; --row-start: 26; --row-end: 34; --track: #6e6244">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/employer-oversight-meets-neural-insight-business-case-risks--1169723/"><span class="session__avatar" aria-hidden="true" style="background-image: url(/sikkerhetsfestivalen-kalender/img/speakers/2a4d0215-35c5-4b0e-8544-58cb87e7f4db.jpg)"></span>
           <span class="session__title">Employer Oversight Meets Neural Insight: Business Case, Risks and Governance</span>
@@ -625,6 +723,7 @@
         </a>
       </article>
       <article class="session session--sm" id="session-1170369"
+               data-track="identity"
                style="--col: 12; --row-start: 28; --row-end: 30; --track: #0d7d70">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/upn-gone-wrong-breaking-identity-security-in-azure-entra-id-1170369/">
           <span class="session__title">UPN Gone Wrong: Breaking Identity Security in Azure &amp; Entra ID</span>
@@ -635,6 +734,7 @@
         </a>
       </article>
       <article class="session session--sm" id="session-1140152"
+               data-track="identity"
                style="--col: 12; --row-start: 30; --row-end: 32; --track: #0d7d70">
         <a class="session__link" href="/sikkerhetsfestivalen-kalender/program/passord-trusselmodell-beskyttelse-og-hvorfor-kompleksitet-be-1140152/">
           <span class="session__title">Passord: trusselmodell, beskyttelse og hvorfor kompleksitet betyr noe</span>
