@@ -15,6 +15,9 @@ export default function (eleventyConfig) {
     min >= 60 ? `${Math.floor(min / 60)} t${min % 60 ? ` ${min % 60} min` : ""}` : `${min} min`);
 
   return {
+    // GitHub Pages serves a project site under /<repo>/. Override with
+    // PATH_PREFIX=/ when moving to a custom domain.
+    pathPrefix: process.env.PATH_PREFIX ?? "/sikkerhetsfestivalen-kalender/",
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",

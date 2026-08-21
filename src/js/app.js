@@ -3,6 +3,8 @@
 // byte-identical for an unchanged programme.
 
 const LANG_KEY = "sf-lang";
+// GitHub Pages serves this under /<repo>/, so nothing may assume the root.
+const BASE = document.querySelector('meta[name="base-path"]')?.content || "/";
 const onLangChange = [];
 
 /* ------------------------------------------------------------- language */
@@ -108,7 +110,7 @@ const back = document.getElementById("back");
 if (back && document.referrer) {
   try {
     const from = new URL(document.referrer);
-    if (from.origin === location.origin && from.pathname.startsWith("/dag/")) {
+    if (from.origin === location.origin && from.pathname.startsWith(`${BASE}dag/`)) {
       back.addEventListener("click", (event) => {
         event.preventDefault();
         history.back();
@@ -129,7 +131,7 @@ async function checkForUpdate() {
   try {
     // no-cache still revalidates, so this is a 304 with no body until the
     // programme actually changes.
-    const res = await fetch("/version.json", { cache: "no-cache" });
+    const res = await fetch(`${BASE}version.json`, { cache: "no-cache" });
     if (!res.ok) return;
     const { version } = await res.json();
     if (version && version !== built) banner.hidden = false;
@@ -149,7 +151,7 @@ setInterval(checkForUpdate, 10 * 60_000);
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js").catch(() => {
+    navigator.serviceWorker.register(`${BASE}sw.js`, { scope: BASE }).catch(() => {
       /* the site works fine without it */
     });
   });

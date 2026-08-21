@@ -107,6 +107,7 @@ const days = program.days.map((day, index) => {
     rules,
     sessions: talks.map((s) => ({
       ...s,
+      url: `/program/${s.slug}/`,
       colour: colour(s.track),
       // Card density buckets: at the grid's px-per-minute a 30-minute block is
       // about 54px, which is where the avatar and a second line of title fit.

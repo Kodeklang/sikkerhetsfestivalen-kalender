@@ -16,7 +16,7 @@ eleventyComputed:
     <nav class="days" aria-label="Velg dag">
       {%- for d in site.days %}
       <a class="day{% if d.number == day.number %} is-current{% endif %}"
-         href="{{ d.url }}"{% if d.number == day.number %} aria-current="page"{% endif %}>
+         href="{{ d.url | url }}"{% if d.number == day.number %} aria-current="page"{% endif %}>
         <span class="day__dow" data-en="{{ d.weekdayShort.en }}">{{ d.weekdayShort.no }}</span>
         <span class="day__date">{{ d.dateLabel }}</span>
       </a>
@@ -60,9 +60,9 @@ eleventyComputed:
       {%- for s in day.sessions %}
       <article class="session session--{{ s.size }}" id="session-{{ s.id }}"
                style="--col: {{ s.col }}; --row-start: {{ s.rowStart }}; --row-end: {{ s.rowEnd }}; --track: {{ s.colour }}">
-        <a class="session__link" href="{{ s.url }}">
+        <a class="session__link" href="{{ s.url | url }}">
           {%- if s.size != "sm" %}<span class="session__avatar" aria-hidden="true"
-            {%- if s.avatar %} style="background-image: url({{ s.avatar }})"{% endif %}></span>{% endif %}
+            {%- if s.avatar %} style="background-image: url({{ s.avatar | url }})"{% endif %}></span>{% endif %}
           <span class="session__title">{{ s.title }}</span>
           <span class="visually-hidden">
             <time datetime="{{ s.startUtc }}">{{ s.startUtc | time }}</time>–<time datetime="{{ s.endUtc }}">{{ s.endUtc | time }}</time>,

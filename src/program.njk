@@ -48,7 +48,7 @@ eleventyComputed:
       {%- for p in session.speakers %}
       <article class="speaker">
         <div class="speaker__head">
-          <span class="speaker__photo"{% if p.photo %} style="background-image: url({{ p.photo }})"{% endif %}
+          <span class="speaker__photo"{% if p.photo %} style="background-image: url({{ p.photo | url }})"{% endif %}
                 role="img" aria-label="{{ p.name }}"></span>
           <div class="speaker__who">
             <h3 class="speaker__name">{{ p.name }}</h3>
@@ -87,7 +87,7 @@ eleventyComputed:
       <ol class="parallel">
         {%- for p in session.parallel %}
         <li class="parallel__item" style="--track: {{ p.colour }}">
-          <a href="{{ p.url }}">
+          <a href="{{ p.url | url }}">
             <time class="parallel__time" datetime="{{ p.startUtc }}">{{ p.startUtc | time }}</time>
             <span class="parallel__title">{{ p.title }}</span>
             <span class="parallel__room">{{ p.roomName | replace(" - ", " · ") }}</span>

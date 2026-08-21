@@ -9,17 +9,19 @@ eleventyExcludeFromCollections: true
 
 const CACHE = "sf-{{ site.buildId }}";
 
+const BASE = "{{ '/' | url }}";
+
 const SHELL = [
-  "/",
+  BASE,
   {%- for d in site.days %}
-  "{{ d.url }}",
+  "{{ d.url | url }}",
   {%- endfor %}
-  "/css/style.css",
-  "/css/fonts.css",
-  "/js/app.js",
-  "/manifest.webmanifest",
-  "/icons/icon.svg",
-  "/icons/icon-192.png",
+  "{{ '/css/style.css' | url }}",
+  "{{ '/css/fonts.css' | url }}",
+  "{{ '/js/app.js' | url }}",
+  "{{ '/manifest.webmanifest' | url }}",
+  "{{ '/icons/icon.svg' | url }}",
+  "{{ '/icons/icon-192.png' | url }}",
 ];
 
 const NETWORK_TIMEOUT = 2500;
@@ -53,7 +55,7 @@ async function networkFirst(request) {
   } catch {
     const cached = await cache.match(request);
     if (cached) return cached;
-    if (request.mode === "navigate") return cache.match("/") ?? Response.error();
+    if (request.mode === "navigate") return (await cache.match(BASE)) ?? Response.error();
     throw new Error("offline and uncached");
   }
 }
@@ -75,7 +77,7 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== location.origin) return;
 
   // The update check must always see the truth.
-  if (url.pathname === "/version.json") return;
+  if (url.pathname === `${BASE}version.json`) return;
 
   // Pages go network-first so that "reload" after an update really reloads.
   if (request.mode === "navigate") {
