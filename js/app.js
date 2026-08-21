@@ -48,6 +48,35 @@ if (chips.length) {
   const nameOf = (slug) =>
     [...chips].find((c) => c.dataset.track === slug)?.textContent.trim() ?? slug;
 
+  const gridEl = document.querySelector(".grid");
+  const columned = gridEl ? gridEl.querySelectorAll("[data-col]") : [];
+  const roomCount = gridEl ? Number(gridEl.style.getPropertyValue("--rooms")) : 0;
+
+  /**
+   * Collapse every room with no session in this track. Columns are zeroed
+   * rather than renumbered, so nothing else on the grid has to move.
+   * Returns how many rooms survived.
+   */
+  const applyColumns = (keep) => {
+    if (!gridEl) return 0;
+    if (!keep) {
+      gridEl.style.removeProperty("--cols");
+      gridEl.style.setProperty("--visible-rooms", String(roomCount));
+      for (const el of columned) el.classList.remove("is-collapsed");
+      return roomCount;
+    }
+    const widths = [];
+    for (let col = 2; col < roomCount + 2; col++) {
+      widths.push(keep.has(String(col)) ? "minmax(var(--col-w), 1fr)" : "0px");
+    }
+    gridEl.style.setProperty("--cols", `var(--gutter-w) ${widths.join(" ")}`);
+    gridEl.style.setProperty("--visible-rooms", String(keep.size));
+    for (const el of columned) {
+      el.classList.toggle("is-collapsed", !keep.has(el.dataset.col));
+    }
+    return keep.size;
+  };
+
   // `announce` guards the live region: only a real click should speak. Writing
   // it on load or on a language switch would just be noise.
   const applyTrack = (slug, { announce = false, lang = currentLang() } = {}) => {
@@ -56,9 +85,17 @@ if (chips.length) {
       chip.setAttribute("aria-pressed", String(on));
       chip.classList.toggle("is-muted", Boolean(slug) && !on);
     }
+
+    const matching = [...trackedSessions].filter((s) => s.dataset.track === slug);
+    // Rooms are kept when they host at least one session in the track; the
+    // other sessions in those rooms stay visible but greyed for context.
+    const keep = slug ? new Set(matching.map((s) => s.dataset.col)) : null;
+    const rooms = applyColumns(keep);
+
     for (const session of trackedSessions) {
       session.classList.toggle("is-dimmed", Boolean(slug) && session.dataset.track !== slug);
     }
+
     if (!filterStatus) return;
     if (!announce) {
       filterStatus.textContent = "";
@@ -68,10 +105,9 @@ if (chips.length) {
       filterStatus.textContent = lang === "en" ? "Showing all tracks" : "Viser alle spor";
       return;
     }
-    const n = [...trackedSessions].filter((s) => s.dataset.track === slug).length;
     filterStatus.textContent = lang === "en"
-      ? `Highlighting ${nameOf(slug)}: ${n} sessions today`
-      : `Framhever ${nameOf(slug)}: ${n} foredrag i dag`;
+      ? `Highlighting ${nameOf(slug)}: ${matching.length} sessions in ${rooms} rooms`
+      : `Framhever ${nameOf(slug)}: ${matching.length} foredrag i ${rooms} rom`;
   };
 
   for (const chip of chips) {
