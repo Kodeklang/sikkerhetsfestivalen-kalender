@@ -114,7 +114,7 @@ html[lang="en"] .lang__off { background: rgba(255, 255, 255, 0.9); color: var(--
 }
 .day.is-current:hover { color: #fff; }
 .day__dow { font-size: 12px; font-weight: 600; }
-.day__date { font-size: 11px; font-weight: 500; opacity: 0.72; }
+.day__date { font-size: 11px; font-weight: 400; opacity: 0.72; }
 
 /* --------------------------------------------------------- track legend */
 
@@ -387,7 +387,7 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 }
 
 .countdown {
-  font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--brand-ink);
+  font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--brand-ink);
 }
 .countdown:empty { display: none; }
 
@@ -442,7 +442,7 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 }
 .speaker__who { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .speaker__name { margin: 0; font-size: 14px; font-weight: 700; }
-.speaker__tagline { margin: 0; font-size: 12px; font-weight: 500; color: var(--ink-mute); }
+.speaker__tagline { margin: 0; font-size: 12px; font-weight: 400; color: var(--ink-mute); }
 .speaker__bio {
   margin: 0; font-size: 13px; line-height: 1.6; color: #4a4a46; text-wrap: pretty;
 }
@@ -457,7 +457,7 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 }
 .parallel__item a:hover { color: var(--ink); background: #fafaf9; }
 .parallel__time {
-  flex-shrink: 0; font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--ink-faint);
+  flex-shrink: 0; font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--ink-faint);
 }
 .parallel__title { flex: 1; font-size: 13px; font-weight: 600; min-width: 0; }
 .parallel__room {

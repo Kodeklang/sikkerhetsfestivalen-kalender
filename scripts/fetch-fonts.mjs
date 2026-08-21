@@ -6,7 +6,10 @@
 import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
-const CSS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap";
+// Weight 500 is deliberately absent: it styled four muted details (.day__date,
+// .speaker__tagline, .countdown, .parallel__time) that read the same at 400,
+// and each Montserrat weight is a 38KB download.
+const CSS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Montserrat:wght@400;600;700&display=swap";
 const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36";
 const SUBSETS = ["latin", "latin-ext"]; // enough for Norwegian and European names
 const OUT = path.resolve(import.meta.dirname, "../src/css/fonts");
