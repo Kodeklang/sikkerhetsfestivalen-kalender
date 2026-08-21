@@ -48,6 +48,19 @@ jobs:
             git push origin HEAD:main
           fi
 
+      # eleventy-img skips any derivative already on disk, so carrying this
+      # directory between runs means an hourly build re-encodes nothing unless a
+      # speaker is genuinely new. Restored *after* the fetch so the key covers
+      # the photos this build will actually use; restore-keys then falls back to
+      # the previous run's cache, which is what lets a single added speaker cost
+      # one encode rather than two hundred.
+      - name: Cache generated avatars
+        uses: actions/cache@v4
+        with:
+          path: .cache/img
+          key: avatars-${{ hashFiles('src/img/speakers/**') }}
+          restore-keys: avatars-
+
       - name: Build
         run: npx @11ty/eleventy
 
