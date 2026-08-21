@@ -178,6 +178,10 @@ and greys the rest down. That also forced the legend to be scoped per day —
 listing all twenty tracks on a day that runs three would have let you grey out
 the entire grid with nothing to explain why.
 
+Later still, the chips became multi-select and the greying became real hiding:
+any number of tracks can be picked, and everything outside the selection leaves
+the grid. See "Track filter" in the README for the behaviour as it now stands.
+
 ## Risks
 
 - **The scraper parses HTML.** Sessionize could change its markup. The scraper

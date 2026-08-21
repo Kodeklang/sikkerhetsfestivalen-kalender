@@ -63,30 +63,40 @@ a deploy is noticed on the next visit rather than up to ten minutes later.
 ## Track filter
 
 Each day lists only the tracks actually running that day, as chips above the
-grid. Clicking one focuses the grid on it:
+grid. The chips are independent toggles — pick any number of them, and the grid
+narrows to exactly that selection:
 
-- rooms with no session in that track collapse away entirely
-- any remaining session that is not in the track is greyed down for context
+- rooms the selection does not reach collapse away entirely
+- every session outside the selection is removed from the layout
+
+This is a filter, not a de-emphasis: a hidden session leaves the accessibility
+tree along with the layout, so `#filter-status` announces what survived —
+"Viser 2 spor: 8 foredrag i 2 rom". A leading "Alle spor" chip clears the whole
+selection, which beats unpicking twenty chips by hand.
 
 Which columns a track occupies is worked out at build time, per day, by walking
 that day's schedule — a track may run in several rooms, and a room may host more
 than one track, so nothing is assumed. Each chip carries its own column list in
 `data-cols`, and the mapping is rebuilt whenever the programme is scraped.
+Several chips keep the union of their columns.
 
-In the current programme most tracks own a room for the whole day, so a click
-usually leaves a single column — on a phone that removes horizontal scrolling
+In the current programme most tracks own a room for the whole day, so a single
+pick usually leaves one column — on a phone that removes horizontal scrolling
 altogether and turns the grid into a readable single-track agenda. Monday shows
 the other case: Keynote and Application Security share a room, so selecting
-Keynote keeps that column and greys its neighbour.
+Keynote keeps that column but hides the Application Security card sitting in it.
+Sessions belonging to no track at all — the two Podcast O3C slots on Tuesday —
+are hidden by any selection, since no chip claims them.
 
 Columns collapse by being set to `0px` rather than renumbered, so no session
-has to be repositioned. Clearing the filter removes the override and the
+has to be repositioned. Clearing the selection removes the override and the
 stylesheet's own `grid-template-columns` takes over again, which is also what
 a visitor without JavaScript gets.
 
-The choice persists in `localStorage` and carries across days. A track that is
-absent from a given day stays remembered but dormant there, rather than greying
-out the whole grid with nothing to explain why.
+The selection persists in `localStorage` under `sf-tracks`, as a list of slugs,
+and spans days. A day applies only the tracks it actually runs but keeps the
+rest stored, so stepping to a day without them and back does not quietly drop
+them. An older single-track `sf-track` value migrates once and is then removed.
 
 ## One-off tooling
 
