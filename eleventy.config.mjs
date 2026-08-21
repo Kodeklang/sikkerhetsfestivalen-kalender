@@ -1,9 +1,11 @@
 import { mkdirSync } from "node:fs";
 import { AVATAR_DIR, buildAvatars } from "./lib/avatars.mjs";
+import { FONT_DIR, buildFonts } from "./lib/fonts.mjs";
 
 // Created up front so the passthrough copy below has something to point at on a
 // clean checkout, before any image has been generated.
 mkdirSync(AVATAR_DIR, { recursive: true });
+mkdirSync(FONT_DIR, { recursive: true });
 
 export default function (eleventyConfig) {
   // Re-encode the speaker photos before anything else runs. Passthrough copy
@@ -11,7 +13,14 @@ export default function (eleventyConfig) {
   // alone would publish an empty directory on a cold build.
   eleventyConfig.on("eleventy.before", buildAvatars);
 
-  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  // Same ordering rule as the avatars: subset before passthrough copies run.
+  eleventyConfig.on("eleventy.before", buildFonts);
+
+  // Named individually rather than copying src/css wholesale: the originals in
+  // src/css/fonts are the input to the subsetter, not something to publish.
+  eleventyConfig.addPassthroughCopy({ "src/css/style.css": "css/style.css" });
+  eleventyConfig.addPassthroughCopy({ "src/css/fonts.css": "css/fonts.css" });
+  eleventyConfig.addPassthroughCopy({ [FONT_DIR]: "css/fonts" });
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/icons": "icons" });
   eleventyConfig.addPassthroughCopy({ "src/root": "." });
