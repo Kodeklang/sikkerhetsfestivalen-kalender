@@ -24,7 +24,12 @@ const SHELL = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE)
-      .then((cache) => cache.addAll(SHELL))
+      // cache: "reload" so this is filled from the network rather than from the
+      // browser's HTTP cache. GitHub Pages stamps every asset max-age=600, so a
+      // worker installing in the ten minutes after a deploy would otherwise
+      // store pre-deploy files under a cache name asserting they are current -
+      // and nothing below ever revalidates them.
+      .then((cache) => cache.addAll(SHELL.map((u) => new Request(u, { cache: "reload" }))))
       .then(() => self.skipWaiting()),
   );
 });
@@ -81,7 +86,10 @@ async function cacheFirst(request) {
   const cache = await caches.open(CACHE);
   const cached = await cache.match(request);
   if (cached) return cached;
-  const response = await fetch(request);
+  // Same reason as the precache: a miss is about to be stored under a cache
+  // name that stands for a particular deploy, so it must come from the network
+  // and not from whatever the HTTP cache kept from the last one.
+  const response = await fetch(new Request(request, { cache: "reload" }));
   if (response.ok) cache.put(request, response.clone());
   return response;
 }
