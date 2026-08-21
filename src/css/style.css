@@ -122,13 +122,38 @@ html[lang="en"] .lang__off { background: rgba(255, 255, 255, 0.9); color: var(--
   scrollbar-width: thin;
 }
 
+/* Keep the list semantics: display:contents can drop them in some AT. */
+.tracks li { display: flex; flex-shrink: 0; }
+
 .chip {
   flex-shrink: 0; white-space: nowrap;
   padding: 5px 12px; border-radius: 999px;
-  font-size: 11px; font-weight: 600;
+  font: inherit; font-size: 11px; font-weight: 600;
   color: var(--track); border: 1px solid var(--track); background: #fff;
 }
 .chip--solid { background: color-mix(in srgb, var(--track) 8%, #fff); }
+
+button.chip { cursor: pointer; transition: opacity 0.12s ease, background-color 0.12s ease; }
+button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
+
+/* The chosen track reads as filled; the rest recede without disappearing. */
+.chip[aria-pressed="true"] {
+  background: var(--track); color: #fff; border-color: var(--track);
+}
+.chip[aria-pressed="true"]:hover { background: var(--track); }
+.chip.is-muted { opacity: 0.4; }
+
+/* Filtering de-emphasises rather than hides: the shape of the day stays
+   readable, and nothing is removed from the accessibility tree. */
+.session.is-dimmed {
+  opacity: 0.3;
+  filter: grayscale(0.9);
+}
+.session { transition: opacity 0.15s ease, filter 0.15s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .session, button.chip { transition: none; }
+}
 
 /* ----------------------------------------------------------------- grid */
 

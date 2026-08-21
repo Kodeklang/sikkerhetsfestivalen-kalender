@@ -48,6 +48,7 @@ const ms = (iso) => Date.parse(iso);
 const floorTo = (t, min) => Math.floor(t / (min * MS)) * min * MS;
 const ceilTo = (t, min) => Math.ceil(t / (min * MS)) * min * MS;
 const colour = (track) => (track && TRACK_COLOUR[track.name]) || FALLBACK_COLOUR;
+const byName = (a, b) => a.name.localeCompare(b.name, "nb");
 
 const speakersById = new Map(program.speakers.map((s) => [s.id, s]));
 
@@ -91,6 +92,13 @@ const days = program.days.map((day, index) => {
     });
   }
 
+  // Only the tracks actually running today. A legend listing all 20 would be
+  // misleading on Monday, which has four talks, and clicking an absent track
+  // would grey out the whole grid for no reason.
+  const dayTracks = [...new Map(
+    talks.filter((s) => s.track).map((s) => [s.track.id, { ...s.track, colour: colour(s.track) }]),
+  ).values()].sort(byName);
+
   const [long, short] = WEEKDAY_NO[day.weekday] ?? [day.weekday, day.weekday.slice(0, 3)];
   return {
     id: day.id,
@@ -105,6 +113,7 @@ const days = program.days.map((day, index) => {
     slots: (to - from) / MS / SLOT_MIN,
     rooms,
     rules,
+    tracks: dayTracks,
     sessions: talks.map((s) => ({
       ...s,
       url: `/program/${s.slug}/`,

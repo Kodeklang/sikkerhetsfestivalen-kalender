@@ -25,10 +25,14 @@ eleventyComputed:
   </header>
 
   <ul class="tracks" aria-label="Spor">
-    {%- for t in site.tracks %}
-    <li class="chip" style="--track: {{ t.colour }}">{{ t.name }}</li>
+    {%- for t in day.tracks %}
+    <li>
+      <button type="button" class="chip" data-track="{{ t.slug }}" aria-pressed="false"
+              style="--track: {{ t.colour }}">{{ t.name }}</button>
+    </li>
     {%- endfor %}
   </ul>
+  <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
 
   <div class="grid-scroll" id="grid-scroll">
     <div class="grid" style="--rooms: {{ day.rooms | length }}; --slots: {{ day.slots }}"
@@ -59,6 +63,7 @@ eleventyComputed:
 
       {%- for s in day.sessions %}
       <article class="session session--{{ s.size }}" id="session-{{ s.id }}"
+               data-track="{{ s.track.slug if s.track else '' }}"
                style="--col: {{ s.col }}; --row-start: {{ s.rowStart }}; --row-end: {{ s.rowEnd }}; --track: {{ s.colour }}">
         <a class="session__link" href="{{ s.url | url }}">
           {%- if s.size != "sm" %}<span class="session__avatar" aria-hidden="true"
