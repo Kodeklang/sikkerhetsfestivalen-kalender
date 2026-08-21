@@ -7,8 +7,8 @@
   "days": [
     {
       "id": "46258",
-      "startUtc": "2026-08-24T07:00:00.0000000Z",
-      "endUtc": "2026-08-24T22:05:00.0000000Z",
+      "startUtc": "2026-08-24T07:00:00.000Z",
+      "endUtc": "2026-08-24T22:05:00.000Z",
       "weekday": "Monday",
       "rooms": [
         {
@@ -28,8 +28,8 @@
     },
     {
       "id": "46259",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T22:00:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T22:00:00.000Z",
       "weekday": "Tuesday",
       "rooms": [
         {
@@ -109,8 +109,8 @@
     },
     {
       "id": "46260",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T11:00:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T11:00:00.000Z",
       "weekday": "Wednesday",
       "rooms": [
         {
@@ -2227,8 +2227,8 @@
       "dayId": "46258",
       "roomId": "74823",
       "roomName": "8 - Scandic Lillehammer",
-      "startUtc": "2026-08-24T07:00:00.0000000Z",
-      "endUtc": "2026-08-24T09:30:00.0000000Z",
+      "startUtc": "2026-08-24T07:00:00.000Z",
+      "endUtc": "2026-08-24T09:30:00.000Z",
       "durationMin": 150,
       "isService": true,
       "speakerIds": [],
@@ -2236,6 +2236,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "registration-b1c0dd99-974e-4edf-8ed2-2c09d4649252"
     },
     {
@@ -2244,8 +2245,8 @@
       "dayId": "46258",
       "roomId": "74823",
       "roomName": "8 - Scandic Lillehammer",
-      "startUtc": "2026-08-24T09:30:00.0000000Z",
-      "endUtc": "2026-08-24T09:50:00.0000000Z",
+      "startUtc": "2026-08-24T09:30:00.000Z",
+      "endUtc": "2026-08-24T09:50:00.000Z",
       "durationMin": 20,
       "isService": false,
       "speakerIds": [
@@ -2262,6 +2263,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "velkommen-til-sikkerhetsfestivalen-1088221"
     },
     {
@@ -2270,8 +2272,8 @@
       "dayId": "46258",
       "roomId": "74823",
       "roomName": "8 - Scandic Lillehammer",
-      "startUtc": "2026-08-24T09:50:00.0000000Z",
-      "endUtc": "2026-08-24T10:35:00.0000000Z",
+      "startUtc": "2026-08-24T09:50:00.000Z",
+      "endUtc": "2026-08-24T10:35:00.000Z",
       "durationMin": 45,
       "isService": false,
       "speakerIds": [
@@ -2290,6 +2292,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "threat-modeling-developer-behaviour-the-psychology-of-bad-co-1208433"
     },
     {
@@ -2298,8 +2301,8 @@
       "dayId": "46258",
       "roomId": "74823",
       "roomName": "8 - Scandic Lillehammer",
-      "startUtc": "2026-08-24T10:40:00.0000000Z",
-      "endUtc": "2026-08-24T12:00:00.0000000Z",
+      "startUtc": "2026-08-24T10:40:00.000Z",
+      "endUtc": "2026-08-24T12:00:00.000Z",
       "durationMin": 80,
       "isService": true,
       "speakerIds": [],
@@ -2307,6 +2310,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "lunch-392ead55-86f4-4f02-8998-6da65252050c"
     },
     {
@@ -2315,8 +2319,8 @@
       "dayId": "46258",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-24T11:00:00.0000000Z",
-      "endUtc": "2026-08-24T15:00:00.0000000Z",
+      "startUtc": "2026-08-24T11:00:00.000Z",
+      "endUtc": "2026-08-24T15:00:00.000Z",
       "durationMin": 240,
       "isService": false,
       "speakerIds": [
@@ -2334,6 +2338,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "sikkerhetsfestivalen-ctf-1214623"
     },
     {
@@ -2342,8 +2347,8 @@
       "dayId": "46258",
       "roomId": "74823",
       "roomName": "8 - Scandic Lillehammer",
-      "startUtc": "2026-08-24T11:55:00.0000000Z",
-      "endUtc": "2026-08-24T13:45:00.0000000Z",
+      "startUtc": "2026-08-24T11:55:00.000Z",
+      "endUtc": "2026-08-24T13:45:00.000Z",
       "durationMin": 110,
       "isService": false,
       "speakerIds": [
@@ -2373,6 +2378,7 @@
       ],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "topplederpanel-cybersikkerhet-og-digital-suverenitet-1236749"
     },
     {
@@ -2381,8 +2387,8 @@
       "dayId": "46258",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-24T13:45:00.0000000Z",
-      "endUtc": "2026-08-24T15:00:00.0000000Z",
+      "startUtc": "2026-08-24T13:45:00.000Z",
+      "endUtc": "2026-08-24T15:00:00.000Z",
       "durationMin": 75,
       "isService": true,
       "speakerIds": [],
@@ -2390,6 +2396,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "spare-time-with-side-events-5da6a054-b549-4348-98ef-97f1f570984f"
     },
     {
@@ -2398,8 +2405,8 @@
       "dayId": "46258",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-24T15:00:00.0000000Z",
-      "endUtc": "2026-08-24T16:45:00.0000000Z",
+      "startUtc": "2026-08-24T15:00:00.000Z",
+      "endUtc": "2026-08-24T16:45:00.000Z",
       "durationMin": 105,
       "isService": true,
       "speakerIds": [],
@@ -2407,6 +2414,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "apertif-in-the-sponsor-tent-39bf7d88-97c6-44e3-8504-a685b9292892"
     },
     {
@@ -2415,8 +2423,8 @@
       "dayId": "46258",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-24T17:00:00.0000000Z",
-      "endUtc": "2026-08-24T19:00:00.0000000Z",
+      "startUtc": "2026-08-24T17:00:00.000Z",
+      "endUtc": "2026-08-24T19:00:00.000Z",
       "durationMin": 120,
       "isService": true,
       "speakerIds": [],
@@ -2424,6 +2432,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "dinner-at-different-restaurants-around-town-d6f0fa84-340c-41ea-8c38-bd298ef88bee"
     },
     {
@@ -2432,8 +2441,8 @@
       "dayId": "46258",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-24T19:00:00.0000000Z",
-      "endUtc": "2026-08-24T22:05:00.0000000Z",
+      "startUtc": "2026-08-24T19:00:00.000Z",
+      "endUtc": "2026-08-24T22:05:00.000Z",
       "durationMin": 185,
       "isService": true,
       "speakerIds": [],
@@ -2441,6 +2450,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "after-party-at-brenneriet-2c92b769-0b5f-4fe4-84fa-d83eb2e352b5"
     },
     {
@@ -2449,8 +2459,8 @@
       "dayId": "46259",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2467,6 +2477,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "ground-control-to-major-tom-your-circuit-s-dead-space-cybers-1169979"
     },
     {
@@ -2475,8 +2486,8 @@
       "dayId": "46259",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2496,6 +2507,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "claude-make-me-a-security-engineer-make-no-mistakes-1155989"
     },
     {
@@ -2504,8 +2516,8 @@
       "dayId": "46259",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2522,6 +2534,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "key-challenges-in-api-security-1170473"
     },
     {
@@ -2530,8 +2543,8 @@
       "dayId": "46259",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2550,6 +2563,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "eu-regelverk-er-egentlig-bare-sunn-fornuft-om-du-gjor-det-re-1313556"
     },
     {
@@ -2558,8 +2572,8 @@
       "dayId": "46259",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2582,6 +2596,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "sikkerhet-som-den-ideelle-lagspiller-teamforskning-som-viser-1171307"
     },
     {
@@ -2590,8 +2605,8 @@
       "dayId": "46259",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2614,6 +2629,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "zero-infrastructure-intelligence-building-serverless-cti-pip-1203909"
     },
     {
@@ -2622,8 +2638,8 @@
       "dayId": "46259",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2642,6 +2658,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "vi-ma-ha-fabrikken-opp-igjen-innen-sondag-1166716"
     },
     {
@@ -2650,8 +2667,8 @@
       "dayId": "46259",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2670,6 +2687,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "las-kort-alarm-og-kode-hvorfor-fysiske-systemer-ikke-er-sa-s-1166519"
     },
     {
@@ -2678,8 +2696,8 @@
       "dayId": "46259",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2697,6 +2715,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "fra-compliance-til-testet-robusthet-reell-sikring-av-kontrol-1146389"
     },
     {
@@ -2705,8 +2724,8 @@
       "dayId": "46259",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2723,6 +2742,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "forretningskontinuitet-i-to-perspektiver-styring-og-beskytte-1145424"
     },
     {
@@ -2731,8 +2751,8 @@
       "dayId": "46259",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2748,6 +2768,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "at-the-dna-of-every-company-identity-and-access-management-1167569"
     },
     {
@@ -2756,8 +2777,8 @@
       "dayId": "46259",
       "roomId": "74835",
       "roomName": "5 - Kulturhuset Banken, Kafeen",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2776,6 +2797,7 @@
       ],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "emerging-cyber-forensics-challenges-what-the-c-suite-must-kn-1302446"
     },
     {
@@ -2784,8 +2806,8 @@
       "dayId": "46259",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2803,6 +2825,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "nar-mat-blir-geopolitikk-slik-sikrer-vi-norges-matfat-sammen-1092840"
     },
     {
@@ -2811,8 +2834,8 @@
       "dayId": "46259",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2830,6 +2853,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "fallgruver-og-suksessfaktorer-i-personellsikkerhetsarbeidet--1168418"
     },
     {
@@ -2838,8 +2862,8 @@
       "dayId": "46259",
       "roomId": "74839",
       "roomName": "7 - Microbryggeriet",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2849,6 +2873,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "podcast-o3c-1311726"
     },
     {
@@ -2857,8 +2882,8 @@
       "dayId": "46259",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2878,6 +2903,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "sitter-vi-fast-i-skyen-1090795"
     },
     {
@@ -2886,8 +2912,8 @@
       "dayId": "46259",
       "roomId": "81918",
       "roomName": "10 - HeartBox ,Teatersalen",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2904,6 +2930,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "the-quantum-countdown-procrastinate-or-migrate-1171105"
     },
     {
@@ -2912,8 +2939,8 @@
       "dayId": "46259",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-25T07:00:00.0000000Z",
-      "endUtc": "2026-08-25T07:40:00.0000000Z",
+      "startUtc": "2026-08-25T07:00:00.000Z",
+      "endUtc": "2026-08-25T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2931,6 +2958,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "krav-til-cybersikkerhet-i-en-usikker-tid-nis2-digitalsikkerh-1155834"
     },
     {
@@ -2939,8 +2967,8 @@
       "dayId": "46259",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-25T07:40:00.0000000Z",
-      "endUtc": "2026-08-25T07:55:00.0000000Z",
+      "startUtc": "2026-08-25T07:40:00.000Z",
+      "endUtc": "2026-08-25T07:55:00.000Z",
       "durationMin": 15,
       "isService": true,
       "speakerIds": [],
@@ -2948,6 +2976,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "break-ee3bc5ca-a802-4785-8aaf-0919fc879a87"
     },
     {
@@ -2956,8 +2985,8 @@
       "dayId": "46259",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -2973,6 +3002,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "maritime-naering-i-skuddlinjen-erfaringer-fra-dagene-da-usa--1173199"
     },
     {
@@ -2981,8 +3011,8 @@
       "dayId": "46259",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3007,6 +3037,7 @@
       ],
       "language": "English",
       "level": null,
+      "otherTags": {},
       "slug": "insecure-vibes-the-risks-of-ai-assisted-coding-1301482"
     },
     {
@@ -3015,8 +3046,8 @@
       "dayId": "46259",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3037,6 +3068,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "when-defenders-go-low-we-go-high-level-bypassing-application-1170902"
     },
     {
@@ -3045,8 +3077,8 @@
       "dayId": "46259",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3069,6 +3101,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "maverick-riskjockey-en-ai-drevet-ciso-funksjon-1170716"
     },
     {
@@ -3077,8 +3110,8 @@
       "dayId": "46259",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3095,6 +3128,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "10-dumme-sporsmal-og-hva-de-avslorer-om-sikkerhetskulturen-1171477"
     },
     {
@@ -3103,8 +3137,8 @@
       "dayId": "46259",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3121,6 +3155,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "et-tu-vendor-a-story-of-vendor-ransomware-leaks-and-heartach-1120290"
     },
     {
@@ -3129,8 +3164,8 @@
       "dayId": "46259",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3150,6 +3185,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "multi-agent-orchestration-to-catch-bad-guys-1172779"
     },
     {
@@ -3158,8 +3194,8 @@
       "dayId": "46259",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3177,6 +3213,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "the-endpoint-that-walks-mobile-devices-as-physical-security--1114608"
     },
     {
@@ -3185,8 +3222,8 @@
       "dayId": "46259",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3203,6 +3240,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "a-recipe-for-resilience-using-purdue-and-iec-62443-to-secure-1089501"
     },
     {
@@ -3211,8 +3249,8 @@
       "dayId": "46259",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3231,6 +3269,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "nar-tiden-forsvinner-strategier-for-fremtidens-digitale-bere-1140239"
     },
     {
@@ -3239,8 +3278,8 @@
       "dayId": "46259",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3258,6 +3297,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "en-felles-iam-virkelighet-for-offentlig-sektor-er-det-mulig-1108992"
     },
     {
@@ -3266,8 +3306,8 @@
       "dayId": "46259",
       "roomId": "74835",
       "roomName": "5 - Kulturhuset Banken, Kafeen",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3283,6 +3323,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "ai-i-digital-etterforskning-1173633"
     },
     {
@@ -3291,8 +3332,8 @@
       "dayId": "46259",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3308,6 +3349,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "sykt-mange-sikkerhetskrav-i-offentlig-anskaffelse-ma-det-vae-1171342"
     },
     {
@@ -3316,8 +3358,8 @@
       "dayId": "46259",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3334,6 +3376,7 @@
       ],
       "language": "Norwegian",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "innsiderisiko-forskningsperspektiver-og-forelopige-funn-1167428"
     },
     {
@@ -3342,8 +3385,8 @@
       "dayId": "46259",
       "roomId": "74839",
       "roomName": "7 - Microbryggeriet",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3353,6 +3396,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "podcast-o3c-1311727"
     },
     {
@@ -3361,8 +3405,8 @@
       "dayId": "46259",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3383,6 +3427,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "hawaii-pizza-how-dare-you-or-do-i-really-care-1168502"
     },
     {
@@ -3391,8 +3436,8 @@
       "dayId": "46259",
       "roomId": "81918",
       "roomName": "10 - HeartBox ,Teatersalen",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3408,6 +3453,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "pqc-migrasjon-for-store-virksomheter-1148467"
     },
     {
@@ -3416,8 +3462,8 @@
       "dayId": "46259",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-25T08:00:00.0000000Z",
-      "endUtc": "2026-08-25T08:40:00.0000000Z",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3436,6 +3482,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "sikkerhetskrav-i-randsonen-slik-treffer-sikkerhetskravene-un-1174160"
     },
     {
@@ -3444,8 +3491,8 @@
       "dayId": "46259",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-25T08:40:00.0000000Z",
-      "endUtc": "2026-08-25T09:00:00.0000000Z",
+      "startUtc": "2026-08-25T08:40:00.000Z",
+      "endUtc": "2026-08-25T09:00:00.000Z",
       "durationMin": 20,
       "isService": true,
       "speakerIds": [],
@@ -3453,6 +3500,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "break-5334f957-ed7e-41f5-ad2c-39878e50eecc"
     },
     {
@@ -3461,8 +3509,8 @@
       "dayId": "46259",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3478,6 +3526,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "cyberoperasjoner-som-sikkerhetspolitisk-virkemiddel-1166744"
     },
     {
@@ -3486,8 +3535,8 @@
       "dayId": "46259",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3510,6 +3559,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "your-agents-have-trust-issues-securing-ai-in-the-wild-west-o-1167435"
     },
     {
@@ -3518,8 +3568,8 @@
       "dayId": "46259",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3537,6 +3587,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "role-confusion-in-dns-1167432"
     },
     {
@@ -3545,8 +3596,8 @@
       "dayId": "46259",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3566,6 +3617,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "slutt-a-late-som-du-jobber-risikobasert-1169797"
     },
     {
@@ -3574,8 +3626,8 @@
       "dayId": "46259",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3591,6 +3643,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "the-average-employee-doesn-t-exist-measuring-security-cultur-1170561"
     },
     {
@@ -3599,8 +3652,8 @@
       "dayId": "46259",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3618,6 +3671,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "nobody-cares-about-your-intel-until-they-do-lessons-from-bui-1195967"
     },
     {
@@ -3626,8 +3680,8 @@
       "dayId": "46259",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3652,6 +3706,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "phishing-dekonstruert-hva-virker-og-hva-kan-vi-laere-av-det-1170635"
     },
     {
@@ -3660,8 +3715,8 @@
       "dayId": "46259",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3680,6 +3735,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "sertifiseringen-deres-stopper-meg-ikke-i-dora-fysisk-sikkerh-1171230"
     },
     {
@@ -3688,8 +3744,8 @@
       "dayId": "46259",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3706,6 +3762,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "ot-sikkerhet-i-matbransjen-noen-erfaringer-1183899"
     },
     {
@@ -3714,8 +3771,8 @@
       "dayId": "46259",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3731,6 +3788,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "ai-empowered-digital-twin-based-security-orchestration-autom-1168751"
     },
     {
@@ -3739,8 +3797,8 @@
       "dayId": "46259",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3760,6 +3818,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "vet-du-hvor-mange-som-jobber-for-deg-ai-agenter-som-risiko-o-1144579"
     },
     {
@@ -3768,8 +3827,8 @@
       "dayId": "46259",
       "roomId": "74835",
       "roomName": "5 - Kulturhuset Banken, Kafeen",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3786,6 +3845,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "cloud-forensics-challenges-and-best-practices-1171283"
     },
     {
@@ -3794,8 +3854,8 @@
       "dayId": "46259",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3817,6 +3877,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "fra-kontroll-til-samarbeid-slik-bygger-vi-reell-sikkerhet-i--1170328"
     },
     {
@@ -3825,8 +3886,8 @@
       "dayId": "46259",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3842,6 +3903,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "ingunn-nesheim-1167668"
     },
     {
@@ -3850,8 +3912,8 @@
       "dayId": "46259",
       "roomId": "74839",
       "roomName": "7 - Microbryggeriet",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3870,6 +3932,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "state-of-the-union-ai-in-security-2026-1141927"
     },
     {
@@ -3878,8 +3941,8 @@
       "dayId": "46259",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3897,6 +3960,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "security-at-scale-lessons-learned-from-equinor-s-security-co-1129123"
     },
     {
@@ -3905,8 +3969,8 @@
       "dayId": "46259",
       "roomId": "81918",
       "roomName": "10 - HeartBox ,Teatersalen",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3925,6 +3989,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "riv-pkiene-1168380"
     },
     {
@@ -3933,8 +3998,8 @@
       "dayId": "46259",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-25T09:00:00.0000000Z",
-      "endUtc": "2026-08-25T09:40:00.0000000Z",
+      "startUtc": "2026-08-25T09:00:00.000Z",
+      "endUtc": "2026-08-25T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3950,6 +4015,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "digitale-spokelser-ki-agenter-uten-kontroll-i-norske-virksom-1170503"
     },
     {
@@ -3958,8 +4024,8 @@
       "dayId": "46259",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-25T09:40:00.0000000Z",
-      "endUtc": "2026-08-25T11:05:00.0000000Z",
+      "startUtc": "2026-08-25T09:40:00.000Z",
+      "endUtc": "2026-08-25T11:05:00.000Z",
       "durationMin": 85,
       "isService": true,
       "speakerIds": [],
@@ -3967,6 +4033,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "lunch-8a73edd3-e466-490e-9e2f-00d7016975c5"
     },
     {
@@ -3975,8 +4042,8 @@
       "dayId": "46259",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -3995,6 +4062,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "suverenitet-uten-digital-selvskading-1169327"
     },
     {
@@ -4003,8 +4071,8 @@
       "dayId": "46259",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4023,6 +4091,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "testing-api-business-logic-with-ai-agents-what-we-got-wrong--1169692"
     },
     {
@@ -4031,8 +4100,8 @@
       "dayId": "46259",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4049,6 +4118,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "teamfiltration-goes-brrr-1153096"
     },
     {
@@ -4057,8 +4127,8 @@
       "dayId": "46259",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4074,6 +4144,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "a-bygge-sikkerhet-fra-dag-en-styringssystem-og-sikkerhetsorg-1090205"
     },
     {
@@ -4082,8 +4153,8 @@
       "dayId": "46259",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4100,6 +4171,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "a-styre-det-usynlige-psykososial-risiko-i-sikkerhetsarbeidet-1166481"
     },
     {
@@ -4108,8 +4180,8 @@
       "dayId": "46259",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4126,6 +4198,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "nar-angrepet-er-ekte-nok-laerdom-fra-tiber-no-1153940"
     },
     {
@@ -4134,8 +4207,8 @@
       "dayId": "46259",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4154,6 +4227,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "hvorfor-deteksjonene-dine-suger-og-hva-du-kan-gjore-med-det-1090027"
     },
     {
@@ -4162,8 +4236,8 @@
       "dayId": "46259",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4180,6 +4254,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "nar-risikoen-er-fysisk-svaret-er-digitalt-navs-nye-verktoy-f-1170683"
     },
     {
@@ -4188,8 +4263,8 @@
       "dayId": "46259",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4208,6 +4283,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "safety-is-no-longer-enough-why-modern-ot-risk-assessment-nee-1170647"
     },
     {
@@ -4216,8 +4292,8 @@
       "dayId": "46259",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4233,6 +4309,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "endringsevne-i-skyen-fra-risiko-til-robusthet-1166453"
     },
     {
@@ -4241,8 +4318,8 @@
       "dayId": "46259",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4258,6 +4335,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "bankid-en-falsk-trygghet-1169838"
     },
     {
@@ -4266,8 +4344,8 @@
       "dayId": "46259",
       "roomId": "74835",
       "roomName": "5 - Kulturhuset Banken, Kafeen",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4283,6 +4361,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "analyzing-ransomware-exfiltration-infrastructure-1155095"
     },
     {
@@ -4291,8 +4370,8 @@
       "dayId": "46259",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4312,6 +4391,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "hvordan-lykkes-med-tredjeparts-risikostyring-tprm-1170585"
     },
     {
@@ -4320,8 +4400,8 @@
       "dayId": "46259",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4337,6 +4417,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "du-ser-det-ikke-for-du-tror-det-1167572"
     },
     {
@@ -4345,8 +4426,8 @@
       "dayId": "46259",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4367,6 +4448,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "a-deeper-dive-in-the-mjosa-uh-esa-lake-1171009"
     },
     {
@@ -4375,8 +4457,8 @@
       "dayId": "46259",
       "roomId": "81918",
       "roomName": "10 - HeartBox ,Teatersalen",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4392,6 +4474,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "internet-voting-in-estonia-1184194"
     },
     {
@@ -4400,8 +4483,8 @@
       "dayId": "46259",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-25T11:00:00.0000000Z",
-      "endUtc": "2026-08-25T11:40:00.0000000Z",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4420,6 +4503,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "fra-kontraktsinngaelse-til-exit-hvordan-tilrettelegge-for-en-1169342"
     },
     {
@@ -4428,8 +4512,8 @@
       "dayId": "46259",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-25T11:40:00.0000000Z",
-      "endUtc": "2026-08-25T12:00:00.0000000Z",
+      "startUtc": "2026-08-25T11:40:00.000Z",
+      "endUtc": "2026-08-25T12:00:00.000Z",
       "durationMin": 20,
       "isService": true,
       "speakerIds": [],
@@ -4437,6 +4521,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "break-6cfed371-7fbe-413c-9772-f9ea0721b8ab"
     },
     {
@@ -4445,8 +4530,8 @@
       "dayId": "46259",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4462,6 +4547,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "sikkerhetsloven-neste-compliance-sjokk-for-norsk-naeringsliv-1170384"
     },
     {
@@ -4470,8 +4556,8 @@
       "dayId": "46259",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4489,6 +4575,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "sikring-i-sanntid-av-sanntidsteknologi-for-web-1171406"
     },
     {
@@ -4497,8 +4584,8 @@
       "dayId": "46259",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4515,6 +4602,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "oidc-in-security-by-obscurity-1167616"
     },
     {
@@ -4523,8 +4611,8 @@
       "dayId": "46259",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4541,6 +4629,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "storskala-sikkerhet-hvordan-verdens-storste-selskaper-jobber-1173814"
     },
     {
@@ -4549,8 +4638,8 @@
       "dayId": "46259",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4571,6 +4660,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "hva-skjedde-nar-vi-tok-med-adferdspsykologer-inn-i-kultur-ar-1167545"
     },
     {
@@ -4579,8 +4669,8 @@
       "dayId": "46259",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4599,6 +4689,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "from-chatbots-to-autonomous-malware-the-evolution-of-ai-powe-1174324"
     },
     {
@@ -4607,8 +4698,8 @@
       "dayId": "46259",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4624,6 +4715,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "dataops-on-prem-logg-og-analyse-i-stor-skala-1174051"
     },
     {
@@ -4632,8 +4724,8 @@
       "dayId": "46259",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4651,6 +4743,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "kan-vi-stole-blindt-pa-smart-teknologi-1170762"
     },
     {
@@ -4659,8 +4752,8 @@
       "dayId": "46259",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4683,6 +4776,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "hva-kan-ga-galt-nar-ferga-ligger-til-kai-1171346"
     },
     {
@@ -4691,8 +4785,8 @@
       "dayId": "46259",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4709,6 +4803,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "a-question-of-when-not-if-how-cyber-threats-can-endanger-fin-1167951"
     },
     {
@@ -4717,8 +4812,8 @@
       "dayId": "46259",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4738,6 +4833,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "spring-cleaning-how-ai-took-out-a-decade-of-identity-debt-1154722"
     },
     {
@@ -4746,8 +4842,8 @@
       "dayId": "46259",
       "roomId": "74835",
       "roomName": "5 - Kulturhuset Banken, Kafeen",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4764,6 +4860,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "linux-under-angrep-hvordan-sikre-kritiske-systemer-i-mote-me-1169511"
     },
     {
@@ -4772,8 +4869,8 @@
       "dayId": "46259",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4790,6 +4887,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "leverandorkjedeangrep-sett-fra-trusselaktorens-perspektiv-1141011"
     },
     {
@@ -4798,8 +4896,8 @@
       "dayId": "46259",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4818,6 +4916,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "jeg-ble-karet-til-en-av-norges-viktigste-ciso-er-av-en-algor-1168493"
     },
     {
@@ -4826,8 +4925,8 @@
       "dayId": "46259",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4849,6 +4948,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "infrastructure-as-code-is-still-infrastructure-1129082"
     },
     {
@@ -4857,8 +4957,8 @@
       "dayId": "46259",
       "roomId": "81918",
       "roomName": "10 - HeartBox ,Teatersalen",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4874,6 +4974,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "balancing-security-usability-and-performance-in-real-world-e-1170679"
     },
     {
@@ -4882,8 +4983,8 @@
       "dayId": "46259",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-25T12:00:00.0000000Z",
-      "endUtc": "2026-08-25T12:40:00.0000000Z",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4902,6 +5003,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "nar-jussen-moter-teknologien-og-begge-moter-virkeligheten-si-1171226"
     },
     {
@@ -4910,8 +5012,8 @@
       "dayId": "46259",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-25T12:40:00.0000000Z",
-      "endUtc": "2026-08-25T13:00:00.0000000Z",
+      "startUtc": "2026-08-25T12:40:00.000Z",
+      "endUtc": "2026-08-25T13:00:00.000Z",
       "durationMin": 20,
       "isService": true,
       "speakerIds": [],
@@ -4919,6 +5021,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "break-b63f89e5-a2c0-4a13-bd84-afccb2f2ed70"
     },
     {
@@ -4927,8 +5030,8 @@
       "dayId": "46259",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4945,6 +5048,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "last-man-standing-hvordan-sikre-operativ-evne-nar-digitale-t-1170524"
     },
     {
@@ -4953,8 +5057,8 @@
       "dayId": "46259",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -4973,6 +5077,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "inside-the-npm-supply-chain-attacks-lessons-from-a-worm-on-t-1166559"
     },
     {
@@ -4981,8 +5086,8 @@
       "dayId": "46259",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5002,6 +5107,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "no-key-required-bypassing-application-layer-encryption-with--1170264"
     },
     {
@@ -5010,8 +5116,8 @@
       "dayId": "46259",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5029,6 +5135,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "beyond-standalone-risk-assessments-making-cyber-risk-relevan-1139447"
     },
     {
@@ -5037,8 +5144,8 @@
       "dayId": "46259",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5055,6 +5162,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "hvordan-skape-suksess-med-digitale-kurs-en-aerlig-fortelling-1171218"
     },
     {
@@ -5063,8 +5171,8 @@
       "dayId": "46259",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5091,6 +5199,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "lessons-learned-and-laughs-from-incident-response-1144955"
     },
     {
@@ -5099,8 +5208,8 @@
       "dayId": "46259",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5118,6 +5227,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "integrert-sikring-i-sykehusprosjekter-fra-idefase-til-drift-1170273"
     },
     {
@@ -5126,8 +5236,8 @@
       "dayId": "46259",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5145,6 +5255,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "bridging-the-gap-between-ot-and-it-expert-panel-1173921"
     },
     {
@@ -5153,8 +5264,8 @@
       "dayId": "46259",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5173,6 +5284,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "no-organization-is-an-island-hvordan-finne-det-som-betyr-noe-1171018"
     },
     {
@@ -5181,8 +5293,8 @@
       "dayId": "46259",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5199,6 +5311,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "passkeys-migration-in-the-enterprise-1173943"
     },
     {
@@ -5207,8 +5320,8 @@
       "dayId": "46259",
       "roomId": "74835",
       "roomName": "5 - Kulturhuset Banken, Kafeen",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5225,6 +5338,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "a-closer-look-at-what-we-suspect-is-vibe-coded-ransomware-1166463"
     },
     {
@@ -5233,8 +5347,8 @@
       "dayId": "46259",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5250,6 +5364,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "leverandoravhengighet-i-et-beredskapsperspektiv-eu-kravene-s-1169506"
     },
     {
@@ -5258,8 +5373,8 @@
       "dayId": "46259",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5277,6 +5392,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "er-konsulenten-din-en-risiko-i-sikkerhetsgraderte-anskaffels-1142788"
     },
     {
@@ -5285,8 +5401,8 @@
       "dayId": "46259",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5303,6 +5419,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "no-more-shadow-it-governing-linux-desktops-with-intune-and-c-1166587"
     },
     {
@@ -5311,8 +5428,8 @@
       "dayId": "46259",
       "roomId": "81918",
       "roomName": "10 - HeartBox ,Teatersalen",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5328,6 +5445,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "trust-and-democracy-in-the-age-of-ai-1237505"
     },
     {
@@ -5336,8 +5454,8 @@
       "dayId": "46259",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-25T13:00:00.0000000Z",
-      "endUtc": "2026-08-25T13:40:00.0000000Z",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5361,6 +5479,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "artikkel-32-i-praksis-slik-ivaretar-vi-den-registrerte-1152705"
     },
     {
@@ -5369,8 +5488,8 @@
       "dayId": "46259",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-25T13:40:00.0000000Z",
-      "endUtc": "2026-08-25T16:00:00.0000000Z",
+      "startUtc": "2026-08-25T13:40:00.000Z",
+      "endUtc": "2026-08-25T16:00:00.000Z",
       "durationMin": 140,
       "isService": true,
       "speakerIds": [],
@@ -5378,6 +5497,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "spare-time-with-side-events-4a852c54-403b-4d5f-81ef-f140c931b5e5"
     },
     {
@@ -5386,8 +5506,8 @@
       "dayId": "46259",
       "roomId": "74823",
       "roomName": "8 - Scandic Lillehammer",
-      "startUtc": "2026-08-25T16:00:00.0000000Z",
-      "endUtc": "2026-08-25T17:00:00.0000000Z",
+      "startUtc": "2026-08-25T16:00:00.000Z",
+      "endUtc": "2026-08-25T17:00:00.000Z",
       "durationMin": 60,
       "isService": true,
       "speakerIds": [],
@@ -5395,6 +5515,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "drinks-daf996ff-6ac0-4d04-8b69-e67dd930aa7a"
     },
     {
@@ -5403,8 +5524,8 @@
       "dayId": "46259",
       "roomId": "74823",
       "roomName": "8 - Scandic Lillehammer",
-      "startUtc": "2026-08-25T17:00:00.0000000Z",
-      "endUtc": "2026-08-25T22:00:00.0000000Z",
+      "startUtc": "2026-08-25T17:00:00.000Z",
+      "endUtc": "2026-08-25T22:00:00.000Z",
       "durationMin": 300,
       "isService": true,
       "speakerIds": [],
@@ -5412,6 +5533,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "festival-dinner-d767134e-19f5-488d-80f5-734fe700b141"
     },
     {
@@ -5420,8 +5542,8 @@
       "dayId": "46260",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5439,6 +5561,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "offense-is-the-best-defense-the-evolution-of-ukrainian-cyber-1169343"
     },
     {
@@ -5447,8 +5570,8 @@
       "dayId": "46260",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5469,6 +5592,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "the-invisible-privileged-user-attack-path-mapping-across-you-1168543"
     },
     {
@@ -5477,8 +5601,8 @@
       "dayId": "46260",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5501,6 +5625,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "i-like-big-shares-and-i-cannot-lie-1147782"
     },
     {
@@ -5509,8 +5634,8 @@
       "dayId": "46260",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5528,6 +5653,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "governance-theatre-vs-reality-fixing-the-operating-model-beh-1129148"
     },
     {
@@ -5536,8 +5662,8 @@
       "dayId": "46260",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5559,6 +5685,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "sikkerhetskultur-erfaringer-fra-en-innenfra-og-ut-tilnaermin-1151961"
     },
     {
@@ -5567,8 +5694,8 @@
       "dayId": "46260",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5585,6 +5712,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "when-threats-become-multifaceted-how-the-police-prioritize-i-1169680"
     },
     {
@@ -5593,8 +5721,8 @@
       "dayId": "46260",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5611,6 +5739,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "hvem-eier-krisen-nar-sikkerhetshendelsen-treffer-pa-tvers-av-1171339"
     },
     {
@@ -5619,8 +5748,8 @@
       "dayId": "46260",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:15:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:15:00.000Z",
       "durationMin": 15,
       "isService": false,
       "speakerIds": [
@@ -5636,6 +5765,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "nar-fysisk-sikkerhet-blir-shadow-it-hvem-eier-egentlig-kamer-1167370"
     },
     {
@@ -5644,8 +5774,8 @@
       "dayId": "46260",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5661,6 +5791,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "how-to-prioritise-within-ot-in-light-of-a-chaotic-time-1174099"
     },
     {
@@ -5669,8 +5800,8 @@
       "dayId": "46260",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5689,6 +5820,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "bli-en-del-av-norges-beredskap-1124990"
     },
     {
@@ -5697,8 +5829,8 @@
       "dayId": "46260",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5715,6 +5847,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "deepfake-detection-in-the-real-world-1171217"
     },
     {
@@ -5723,8 +5856,8 @@
       "dayId": "46260",
       "roomId": "74835",
       "roomName": "5 - Kulturhuset Banken, Kafeen",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5746,6 +5879,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "design-intent-vs-digital-residue-inside-a-forensic-research--1170721"
     },
     {
@@ -5754,8 +5888,8 @@
       "dayId": "46260",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5773,6 +5907,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "vare-sarbare-nettverk-1171443"
     },
     {
@@ -5781,8 +5916,8 @@
       "dayId": "46260",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5800,6 +5935,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "kartlegging-av-hoyrisikoroller-og-menneskelige-sarbarheter-1148224"
     },
     {
@@ -5808,8 +5944,8 @@
       "dayId": "46260",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5825,6 +5961,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "nar-ot-moter-cloud-native-muligheter-og-risikoer-i-skjaering-1170279"
     },
     {
@@ -5833,8 +5970,8 @@
       "dayId": "46260",
       "roomId": "81918",
       "roomName": "10 - HeartBox ,Teatersalen",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5850,6 +5987,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "cryptography-and-export-controls-1169428"
     },
     {
@@ -5858,8 +5996,8 @@
       "dayId": "46260",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-26T07:00:00.0000000Z",
-      "endUtc": "2026-08-26T07:40:00.0000000Z",
+      "startUtc": "2026-08-26T07:00:00.000Z",
+      "endUtc": "2026-08-26T07:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5880,6 +6018,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "ai-agenter-og-personvern-trenger-jeg-en-dpia-1174328"
     },
     {
@@ -5888,8 +6027,8 @@
       "dayId": "46260",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-26T07:15:00.0000000Z",
-      "endUtc": "2026-08-26T07:30:00.0000000Z",
+      "startUtc": "2026-08-26T07:15:00.000Z",
+      "endUtc": "2026-08-26T07:30:00.000Z",
       "durationMin": 15,
       "isService": false,
       "speakerIds": [
@@ -5905,6 +6044,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "fra-analyse-til-gjennomforing-effektiv-fysisk-sikring-i-poli-1171401"
     },
     {
@@ -5913,8 +6053,8 @@
       "dayId": "46260",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-26T07:40:00.0000000Z",
-      "endUtc": "2026-08-26T08:00:00.0000000Z",
+      "startUtc": "2026-08-26T07:40:00.000Z",
+      "endUtc": "2026-08-26T08:00:00.000Z",
       "durationMin": 20,
       "isService": true,
       "speakerIds": [],
@@ -5922,6 +6062,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "break-24ac747c-aaf3-4814-85b5-c5cb620cfeb2"
     },
     {
@@ -5930,8 +6071,8 @@
       "dayId": "46260",
       "roomId": "74824",
       "roomName": "5 - Kulturhuset Banken, Festsalen",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 100,
       "isService": false,
       "speakerIds": [
@@ -5953,6 +6094,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "when-freedom-is-at-stake-from-ukraine-s-frontline-to-norwegi-1170937"
     },
     {
@@ -5961,8 +6103,8 @@
       "dayId": "46260",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -5978,6 +6120,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "building-tpt-from-alert-chaos-to-clear-priorities-1128991"
     },
     {
@@ -5986,8 +6129,8 @@
       "dayId": "46260",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6005,6 +6148,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "delegating-your-attack-surface-through-oauth-consents-1169263"
     },
     {
@@ -6013,8 +6157,8 @@
       "dayId": "46260",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6031,6 +6175,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "steering-the-ai-revolution-building-trust-and-accountability-1169804"
     },
     {
@@ -6039,8 +6184,8 @@
       "dayId": "46260",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6056,6 +6201,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "cybersikkerhet-er-ogsa-kultur-empiriske-funn-om-nasjonale-fo-1171069"
     },
     {
@@ -6064,8 +6210,8 @@
       "dayId": "46260",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6081,6 +6227,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "hunting-international-cyber-criminals-1169604"
     },
     {
@@ -6089,8 +6236,8 @@
       "dayId": "46260",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6108,6 +6255,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "ai-i-soc-en-hva-vi-laerte-av-a-bygge-en-agentisk-triage-assi-1151290"
     },
     {
@@ -6116,8 +6264,8 @@
       "dayId": "46260",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6136,6 +6284,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "lykketioringen-som-forsvant-en-leksjon-i-strategisk-blindhet-1168026"
     },
     {
@@ -6144,8 +6293,8 @@
       "dayId": "46260",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6161,6 +6310,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "genai-in-the-war-room-crafting-facilitating-and-analyzing-ot-1172376"
     },
     {
@@ -6169,8 +6319,8 @@
       "dayId": "46260",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6192,6 +6342,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "minimum-viable-company-nar-alt-star-pa-spill-hva-er-det-vikt-1168867"
     },
     {
@@ -6200,8 +6351,8 @@
       "dayId": "46260",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6219,6 +6370,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "virksomhetslommebok-hva-er-det-1169631"
     },
     {
@@ -6227,8 +6379,8 @@
       "dayId": "46260",
       "roomId": "74835",
       "roomName": "5 - Kulturhuset Banken, Kafeen",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6244,6 +6396,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "reducing-business-risk-through-proactive-digital-forensics-1173978"
     },
     {
@@ -6252,8 +6405,8 @@
       "dayId": "46260",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6273,6 +6426,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "nar-leverandoren-blir-angrepet-hvem-tar-regningen-1170735"
     },
     {
@@ -6281,8 +6435,8 @@
       "dayId": "46260",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6301,6 +6455,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "bry-deg-hvorfor-arbeidsmiljo-er-et-av-vare-viktigste-tiltak-1168379"
     },
     {
@@ -6309,8 +6464,8 @@
       "dayId": "46260",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6329,6 +6484,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "your-source-code-is-under-attack-who-s-defending-it-1139513"
     },
     {
@@ -6337,8 +6493,8 @@
       "dayId": "46260",
       "roomId": "81918",
       "roomName": "10 - HeartBox ,Teatersalen",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6354,6 +6510,7 @@
       ],
       "language": "English",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "cryptanalysis-with-claude-code-1171010"
     },
     {
@@ -6362,8 +6519,8 @@
       "dayId": "46260",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-26T08:00:00.0000000Z",
-      "endUtc": "2026-08-26T08:40:00.0000000Z",
+      "startUtc": "2026-08-26T08:00:00.000Z",
+      "endUtc": "2026-08-26T08:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6380,6 +6537,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "risiko-med-to-briller-fria-og-dpia-i-ki-prosjekter-1169532"
     },
     {
@@ -6388,8 +6546,8 @@
       "dayId": "46260",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-26T08:40:00.0000000Z",
-      "endUtc": "2026-08-26T09:00:00.0000000Z",
+      "startUtc": "2026-08-26T08:40:00.000Z",
+      "endUtc": "2026-08-26T09:00:00.000Z",
       "durationMin": 20,
       "isService": true,
       "speakerIds": [],
@@ -6397,6 +6555,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "break-0851b81a-f98d-4950-9e16-baa7d5c869e2"
     },
     {
@@ -6405,8 +6564,8 @@
       "dayId": "46260",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6423,6 +6582,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "hack-faster-than-you-deploy-integrating-continuous-penetrati-1171475"
     },
     {
@@ -6431,8 +6591,8 @@
       "dayId": "46260",
       "roomId": "74826",
       "roomName": "1 - Frimurerlosjen, rom 2",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6450,6 +6610,7 @@
       ],
       "language": "Norwegian",
       "level": "Deep-dive",
+      "otherTags": {},
       "slug": "wsl-nice-for-developers-even-nicer-for-red-teamers-1169561"
     },
     {
@@ -6458,8 +6619,8 @@
       "dayId": "46260",
       "roomId": "74827",
       "roomName": "6 - Lillehammer kino, sal 2",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6477,6 +6638,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "verdivurdering2025-final-v4-endelig-xlsx-1169569"
     },
     {
@@ -6485,8 +6647,8 @@
       "dayId": "46260",
       "roomId": "74828",
       "roomName": "6 - Lillehammer kino, sal 4",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6509,6 +6671,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "det-er-ikke-deg-det-er-systemet-hop-som-nokkelen-til-robust--1168637"
     },
     {
@@ -6517,8 +6680,8 @@
       "dayId": "46260",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6534,6 +6697,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "exposing-a-cybercrime-network-1166353"
     },
     {
@@ -6542,8 +6706,8 @@
       "dayId": "46260",
       "roomId": "74830",
       "roomName": "9 - Victoria Scandic, sal 3",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6561,6 +6725,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "hvordan-overleve-en-pentest-1152135"
     },
     {
@@ -6569,8 +6734,8 @@
       "dayId": "46260",
       "roomId": "74831",
       "roomName": "2 - Home hotel Hammer, moen oppe",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6592,6 +6757,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "fra-styrerom-til-sikkerhetsvakt-den-rode-traden-fra-risikost-1166393"
     },
     {
@@ -6600,8 +6766,8 @@
       "dayId": "46260",
       "roomId": "74832",
       "roomName": "2 - Home hotel Hammer, moen nede",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6621,6 +6787,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "pirates-of-the-north-sea-1170287"
     },
     {
@@ -6629,8 +6796,8 @@
       "dayId": "46260",
       "roomId": "74833",
       "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6648,6 +6815,7 @@
       ],
       "language": "Norwegian",
       "level": "High-level",
+      "otherTags": {},
       "slug": "kriseledelse-i-blindebukk-strategi-og-jus-nar-skjermene-gar--1166313"
     },
     {
@@ -6656,8 +6824,8 @@
       "dayId": "46260",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:10:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:10:00.000Z",
       "durationMin": 10,
       "isService": false,
       "speakerIds": [
@@ -6675,6 +6843,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "hva-gjor-vi-for-de-sma-1169995"
     },
     {
@@ -6683,8 +6852,8 @@
       "dayId": "46260",
       "roomId": "74836",
       "roomName": "4 - Kommunestyresalen, Lillehammer rådhus",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6702,6 +6871,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "supply-chain-security-protecting-your-business-end-to-end-1171185"
     },
     {
@@ -6710,8 +6880,8 @@
       "dayId": "46260",
       "roomId": "74837",
       "roomName": "3 - Hvelvet, Gullsalen",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6727,6 +6897,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "innsidere-og-spionasje-1132176"
     },
     {
@@ -6735,8 +6906,8 @@
       "dayId": "46260",
       "roomId": "81917",
       "roomName": "10 - HeartBox, Byscenen",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6753,6 +6924,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "ci-cd-the-most-privileged-system-in-your-cloud-1169659"
     },
     {
@@ -6761,8 +6933,8 @@
       "dayId": "46260",
       "roomId": "81919",
       "roomName": "11- Breiseth, Storlon",
-      "startUtc": "2026-08-26T09:00:00.0000000Z",
-      "endUtc": "2026-08-26T09:40:00.0000000Z",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
@@ -6780,6 +6952,7 @@
       ],
       "language": "English",
       "level": "High-level",
+      "otherTags": {},
       "slug": "employer-oversight-meets-neural-insight-business-case-risks--1169723"
     },
     {
@@ -6788,8 +6961,8 @@
       "dayId": "46260",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-26T09:10:00.0000000Z",
-      "endUtc": "2026-08-26T09:20:00.0000000Z",
+      "startUtc": "2026-08-26T09:10:00.000Z",
+      "endUtc": "2026-08-26T09:20:00.000Z",
       "durationMin": 10,
       "isService": false,
       "speakerIds": [
@@ -6807,6 +6980,7 @@
       ],
       "language": "English",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "upn-gone-wrong-breaking-identity-security-in-azure-entra-id-1170369"
     },
     {
@@ -6815,8 +6989,8 @@
       "dayId": "46260",
       "roomId": "74834",
       "roomName": "5 - Kulturhuset Banken, Expedisjon",
-      "startUtc": "2026-08-26T09:20:00.0000000Z",
-      "endUtc": "2026-08-26T09:30:00.0000000Z",
+      "startUtc": "2026-08-26T09:20:00.000Z",
+      "endUtc": "2026-08-26T09:30:00.000Z",
       "durationMin": 10,
       "isService": false,
       "speakerIds": [
@@ -6833,6 +7007,7 @@
       ],
       "language": "Norwegian",
       "level": "Detailed",
+      "otherTags": {},
       "slug": "passord-trusselmodell-beskyttelse-og-hvorfor-kompleksitet-be-1140152"
     },
     {
@@ -6841,8 +7016,8 @@
       "dayId": "46260",
       "roomId": "74838",
       "roomName": "Info",
-      "startUtc": "2026-08-26T09:40:00.0000000Z",
-      "endUtc": "2026-08-26T11:00:00.0000000Z",
+      "startUtc": "2026-08-26T09:40:00.000Z",
+      "endUtc": "2026-08-26T11:00:00.000Z",
       "durationMin": 80,
       "isService": true,
       "speakerIds": [],
@@ -6850,6 +7025,7 @@
       "description": [],
       "language": null,
       "level": null,
+      "otherTags": {},
       "slug": "lunch-209e97a1-b4c1-4fb7-a75e-fe01d8a67b7f"
     }
   ]
