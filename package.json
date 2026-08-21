@@ -1,0 +1,15 @@
+{
+  "name": "sikkerhetsfestivalen-kalender",
+  "version": "1.0.0",
+  "description": "Programkalender for Sikkerhetsfestivalen 2026",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "fetch": "node scripts/fetch-program.mjs",
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
