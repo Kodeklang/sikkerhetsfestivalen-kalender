@@ -11,16 +11,17 @@
 <link rel="manifest" href="{{ "/manifest.webmanifest" | url }}">
 <link rel="icon" href="{{ "/icons/icon.svg" | url }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{ "/icons/icon-180.png" | url }}">
-{#- The four faces every page uses. Without these the browser only discovers
-    them after it has parsed fonts.css, which costs a round trip it does not
-    need to spend. crossorigin is required even same-origin: font fetches are
-    CORS-mode anonymous, and a preload without it is simply downloaded twice.
-    IBM Plex Mono 600 is deliberately absent - only the detail pages use it. #}
+<link rel="stylesheet" href="{{ "/css/fonts.css" | url }}">
+<link rel="stylesheet" href="{{ "/css/style.css" | url }}">
+{#- After the stylesheets, deliberately. A preload is fetched at the highest
+    priority there is, and these fonts are not needed for the first paint at
+    all - font-display: swap paints the text in a fallback immediately. Ahead
+    of the render-blocking CSS they simply queued 97KB in front of the 6KB
+    that actually gates painting, which Safari does not reorder the way Chrome
+    does. IBM Plex Mono 600 stays out: only the detail pages use it. #}
 {%- for f in ["montserrat-400", "montserrat-600", "montserrat-700", "ibm-plex-mono-400"] %}
 <link rel="preload" href="{{ ("/css/fonts/" + f + "-latin.woff2") | url }}" as="font" type="font/woff2" crossorigin>
 {%- endfor %}
-<link rel="stylesheet" href="{{ "/css/fonts.css" | url }}">
-<link rel="stylesheet" href="{{ "/css/style.css" | url }}">
 <script defer src="{{ "/js/rum.js" | url }}"></script>
 </head>
 <body>
