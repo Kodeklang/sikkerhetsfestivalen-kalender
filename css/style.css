@@ -327,12 +327,18 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 
 .app--detail { overflow: hidden; }
 
+/* The scroller spans the full width, so the wheel works anywhere on the page.
+   Capping .detail itself would leave the desktop margins outside any scroll
+   container - the reading column lives on the children instead. */
 .detail {
   flex: 1; overflow-y: auto; overscroll-behavior: contain;
-  max-width: 720px; width: 100%; margin: 0 auto;
+  width: 100%;
   padding: 18px 16px 40px;
   display: flex; flex-direction: column; gap: 20px;
 }
+
+/* 688px = the 720px column the page used to be, less its two 16px gutters. */
+.detail > * { width: 100%; max-width: 688px; margin-inline: auto; }
 
 .detail__head { display: flex; flex-direction: column; gap: 12px; }
 
