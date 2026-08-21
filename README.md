@@ -62,10 +62,16 @@ grid. Clicking one focuses the grid on it:
 - rooms with no session in that track collapse away entirely
 - any remaining session that is not in the track is greyed down for context
 
-This festival happens to assign one track per room per day, so in practice a
-click leaves a single column — which on a phone removes horizontal scrolling
-altogether and turns the grid into a readable single-track agenda. The greying
-is the fallback for a track that spans several rooms.
+Which columns a track occupies is worked out at build time, per day, by walking
+that day's schedule — a track may run in several rooms, and a room may host more
+than one track, so nothing is assumed. Each chip carries its own column list in
+`data-cols`, and the mapping is rebuilt whenever the programme is scraped.
+
+In the current programme most tracks own a room for the whole day, so a click
+usually leaves a single column — on a phone that removes horizontal scrolling
+altogether and turns the grid into a readable single-track agenda. Monday shows
+the other case: Keynote and Application Security share a room, so selecting
+Keynote keeps that column and greys its neighbour.
 
 Columns collapse by being set to `0px` rather than renumbered, so no session
 has to be repositioned. Clearing the filter removes the override and the

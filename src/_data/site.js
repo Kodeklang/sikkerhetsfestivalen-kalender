@@ -95,9 +95,22 @@ const days = program.days.map((day, index) => {
   // Only the tracks actually running today. A legend listing all 20 would be
   // misleading on Monday, which has four talks, and clicking an absent track
   // would grey out the whole grid for no reason.
-  const dayTracks = [...new Map(
-    talks.filter((s) => s.track).map((s) => [s.track.id, { ...s.track, colour: colour(s.track) }]),
-  ).values()].sort(byName);
+  //
+  // Each track also carries the columns it actually occupies today, worked out
+  // from this day's schedule. Selecting a track collapses everything else, and
+  // because the mapping is derived per day per track it keeps working if the
+  // organisers move a track across rooms or split it over several.
+  const trackRooms = new Map();
+  for (const s of talks) {
+    if (!s.track) continue;
+    if (!trackRooms.has(s.track.id)) {
+      trackRooms.set(s.track.id, { ...s.track, colour: colour(s.track), cols: new Set() });
+    }
+    trackRooms.get(s.track.id).cols.add(colOf.get(s.roomId));
+  }
+  const dayTracks = [...trackRooms.values()]
+    .map(({ cols, ...t }) => ({ ...t, cols: [...cols].sort((a, b) => a - b) }))
+    .sort(byName);
 
   const [long, short] = WEEKDAY_NO[day.weekday] ?? [day.weekday, day.weekday.slice(0, 3)];
   return {

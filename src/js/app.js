@@ -87,9 +87,12 @@ if (chips.length) {
     }
 
     const matching = [...trackedSessions].filter((s) => s.dataset.track === slug);
-    // Rooms are kept when they host at least one session in the track; the
-    // other sessions in those rooms stay visible but greyed for context.
-    const keep = slug ? new Set(matching.map((s) => s.dataset.col)) : null;
+    // Which columns a track occupies is worked out at build time, per day, from
+    // that day's schedule - a track may sit in several rooms, and a room may
+    // host more than one track. Sessions in a kept room that belong to another
+    // track stay visible but greyed, for context.
+    const chip = slug ? [...chips].find((c) => c.dataset.track === slug) : null;
+    const keep = chip ? new Set(chip.dataset.cols.split(" ").filter(Boolean)) : null;
     const rooms = applyColumns(keep);
 
     for (const session of trackedSessions) {

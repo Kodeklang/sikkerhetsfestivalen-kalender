@@ -27,8 +27,8 @@ eleventyComputed:
   <ul class="tracks" aria-label="Spor">
     {%- for t in day.tracks %}
     <li>
-      <button type="button" class="chip" data-track="{{ t.slug }}" aria-pressed="false"
-              style="--track: {{ t.colour }}">{{ t.name }}</button>
+      <button type="button" class="chip" data-track="{{ t.slug }}" data-cols="{{ t.cols | join(' ') }}"
+              aria-pressed="false" style="--track: {{ t.colour }}">{{ t.name }}</button>
     </li>
     {%- endfor %}
   </ul>
