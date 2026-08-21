@@ -2,7 +2,7 @@
 // src/_data/rum.js into the browser: src/js/app.js is copied through untouched
 // and never sees a template.
 //
-// The SDK is 185KB of JavaScript on a page whose own script is 10KB, so it is
+// The SDK is 143KB of JavaScript on a page whose own script is 10KB, so it is
 // not allowed near the critical path. It used to be a deferred <script> in the
 // head, which meant every visitor downloaded and ran it before the document
 // was interactive. Now this file pulls it in once the browser is idle.
@@ -10,7 +10,7 @@
 // RUM still reports the page load itself: the SDK reads the Navigation Timing
 // entries retrospectively rather than having to be present while they happen.
 
-const SDK = "/js/datadog/datadog-rum.js";
+const SDK = "/js/datadog/datadog-rum-slim.js";
 const CONFIG = {
   "applicationId": "66620052-0f7f-4fd0-a99c-67db2da0512b",
   "clientToken": "pub572110d7577bcdf36821d5af480b08d7",
@@ -19,11 +19,9 @@ const CONFIG = {
   "env": "prod",
   "version": "1.0.0",
   "sessionSampleRate": 100,
-  "sessionReplaySampleRate": 20,
   "trackResources": true,
   "trackUserInteractions": true,
-  "trackLongTasks": true,
-  "defaultPrivacyLevel": "mask-user-input"
+  "trackLongTasks": true
 };
 
 function start() {
