@@ -62,6 +62,14 @@ The running app polls `version.json` (a 304 with no body until something
 changes) and offers a reload when the hash differs from the one it was built
 with. The service worker makes that reload instant and the site usable offline.
 
+Offline means the whole programme, not just the pages that were visited. The
+worker takes all 5MB at install — every day grid, every talk, every speaker
+photo, the subset fonts — because a conference venue is exactly where signal
+runs out, and a programme that only holds the pages someone thought to open
+first is not much of a programme. The app shell is precached atomically; the
+rest is warmed a few files at a time and tolerates individual failures, so one
+bad response cannot cost the visitor everything else.
+
 Because the worker serves CSS and JS cache-first, a visitor arriving right after
 a deploy would otherwise run the previous bundle for that whole visit — the new
 worker only takes over in the background. So the page reloads itself once when a
