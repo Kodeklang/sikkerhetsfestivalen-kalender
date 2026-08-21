@@ -269,13 +269,22 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
   background-size: cover; background-position: center;
 }
 
+/* --lines is how many lines actually fit in this card, worked out from its
+   duration at build time (see titleLines() in _data/site.js). Clamping to the
+   real height rather than to a duration bucket keeps long titles legible
+   instead of stopping at an arbitrary second line with space to spare. */
 .session__title {
   font-size: 12px; font-weight: 600; line-height: 1.28;
   overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--lines, 2);
 }
-.session--sm .session__title { font-size: 11px; -webkit-line-clamp: 1; }
-.session--md .session__title { -webkit-line-clamp: 2; }
-.session--lg .session__title { -webkit-line-clamp: 4; }
+.session--sm .session__title { font-size: 11px; }
+
+/* Narrow screens stretch the grid to 2.2px per minute, so the same card holds
+   more lines. Must track the --slot-h override at the top of this file. */
+@media (max-width: 720px) {
+  .session__title { -webkit-line-clamp: var(--lines-narrow, 2); }
+}
 
 /* ---------------------------------------------------------------- bands */
 
