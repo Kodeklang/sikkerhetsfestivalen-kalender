@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-fccf7d03f28e";
+const CACHE = "sf-a5b0ce8aa116";
 
 const BASE = "/";
 
@@ -266,7 +266,6 @@ const REST = [...new Set([
   "/img/av/NfcizvlJ5Y-64.webp", "/img/av/NfcizvlJ5Y-128.webp",
   "/img/av/2DTDH7vkQB-64.webp", "/img/av/2DTDH7vkQB-128.webp",
   "/img/av/YszVbHdw1W-64.webp", "/img/av/YszVbHdw1W-128.webp",
-  "/img/av/jEXk0XLkC9-64.webp", "/img/av/jEXk0XLkC9-128.webp",
   "/img/av/mRtETus0j6-64.webp", "/img/av/mRtETus0j6-128.webp",
   "/img/av/aJu1M-D-eE-64.webp", "/img/av/aJu1M-D-eE-128.webp",
   "/img/av/F_ugbEpK-C-64.webp", "/img/av/F_ugbEpK-C-128.webp",
