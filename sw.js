@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-a5b0ce8aa116";
+const CACHE = "sf-7361f9a58548";
 
 const BASE = "/";
 
@@ -70,6 +70,7 @@ const REST = [...new Set([
   "/program/multi-agent-orchestration-to-catch-bad-guys-1172779/",
   "/program/the-endpoint-that-walks-mobile-devices-as-physical-security--1114608/",
   "/program/a-recipe-for-resilience-using-purdue-and-iec-62443-to-secure-1089501/",
+  "/program/ledelse-under-press-den-menneskelige-dimensjon-1315073/",
   "/program/en-felles-iam-virkelighet-for-offentlig-sektor-er-det-mulig-1108992/",
   "/program/ai-i-digital-etterforskning-1173633/",
   "/program/sykt-mange-sikkerhetskrav-i-offentlig-anskaffelse-ma-det-vae-1171342/",
@@ -267,6 +268,7 @@ const REST = [...new Set([
   "/img/av/2DTDH7vkQB-64.webp", "/img/av/2DTDH7vkQB-128.webp",
   "/img/av/YszVbHdw1W-64.webp", "/img/av/YszVbHdw1W-128.webp",
   "/img/av/mRtETus0j6-64.webp", "/img/av/mRtETus0j6-128.webp",
+  "/img/av/9U2RK4-jnN-64.webp", "/img/av/9U2RK4-jnN-128.webp",
   "/img/av/aJu1M-D-eE-64.webp", "/img/av/aJu1M-D-eE-128.webp",
   "/img/av/F_ugbEpK-C-64.webp", "/img/av/F_ugbEpK-C-128.webp",
   "/img/av/c0fs1NtqRG-64.webp", "/img/av/c0fs1NtqRG-128.webp",
