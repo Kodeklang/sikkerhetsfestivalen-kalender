@@ -1875,20 +1875,6 @@
       "photo": "/img/speakers/a0ca15e3-a6a6-41ee-be6b-a474f8ca0d6e.png"
     },
     {
-      "id": "480f34c8-3360-4908-96a0-712577dc1cf2",
-      "name": "Stein Ove Røv",
-      "tagline": "IT Revisor, CISA",
-      "bio": [
-        "Stein Ove Røv har mer enn 25 års erfaring innen IT, cybersikkerhet, digitalisering og ledelse. Interessen for teknologi startet tidlig på 1980-tallet, da han begynte å programmere spill og annen programvare på de første mikrodatamaskinene.",
-        "I dag arbeider han som strategisk rådgiver og beredskapsleder for Digitalisering og IT i Skagerak Energi. Arbeidet omfatter blant annet digital strategi, cybersikkerhet, digital robusthet og beredskap. Tidligere ledet han selskapets avdeling for plattformtjenester med ansvar for IT-drift, infrastruktur og cybersikkerhet.",
-        "Stein Ove har utdanning innen økonomi, ledelse, organisasjonsutvikling og samfunnsplanlegging. Han har også studert historie med fordypning i russisk utenrikspolitikk. Siden 2010 har han vært sertifisert som, Certified Information Systems Auditor (CISA).",
-        "Gjennom karrieren har han hatt lederroller som CIO, CTO og CISO, i tillegg til flere styreverv. Han ledet tidligere arbeidet med informasjonssikkerhet i Komplett Group, hvor sikkerhetsarbeidet ble tildelt, FIDUS-prisen i 2013.",
-        "Fra 2012 til 2016 var han styreleder i SAP Brukerforening Norge og representerte Norge i den globale ledergruppen for &quot;SAP User Group Executive Network (SUGEN)&quot;",
-        "Som foredragsholder holder Stein Ove foredrag om blant annet cybersikkerhet, digital robusthet, digital suverenitet, beredskap og ledelse. Han bygger på erfaring fra både offentlig og privat sektor, og er særlig opptatt av samspillet mellom teknologi, sikkerhet, organisasjoner og samfunn."
-      ],
-      "photo": "/img/speakers/480f34c8-3360-4908-96a0-712577dc1cf2.jpg"
-    },
-    {
       "id": "76ae23bf-c003-4283-b957-37a333c68443",
       "name": "Steinar Østmoe",
       "tagline": "Director, Deloitte Legal",
@@ -3251,35 +3237,6 @@
       "level": "High-level",
       "otherTags": {},
       "slug": "a-recipe-for-resilience-using-purdue-and-iec-62443-to-secure-1089501"
-    },
-    {
-      "id": "1140239",
-      "title": "Når tiden forsvinner. Strategier for fremtidens digitale beredskapsarbeid",
-      "dayId": "46259",
-      "roomId": "74833",
-      "roomName": "5 - Kulturhuset Banken, Holbøsalen",
-      "startUtc": "2026-08-25T08:00:00.000Z",
-      "endUtc": "2026-08-25T08:40:00.000Z",
-      "durationMin": 40,
-      "isService": false,
-      "speakerIds": [
-        "480f34c8-3360-4908-96a0-712577dc1cf2"
-      ],
-      "track": {
-        "id": "411244",
-        "name": "Business Continuity & Resilience",
-        "slug": "business-continuity-resilience"
-      },
-      "description": [
-        "Presentasjonen handler om hvordan og hvorfor beredskapsarbeidet må fornyes i en teknologisk og geopolitisk virkelighet der digitale trusler og kunstig intelligens gjør at tiden forsvinner. Hendelser overlapper, utvikler seg raskt og skaper effekt gjennom cyberangrep, påvirkning, leverandørsvikt og driftsforstyrrelser.",
-        "Utgangspunktet er at beredskap begynner i linjen. Samtidig kan høyt driftstrykk gjøre det vanskelig å oppdage når en vanlig feil er i ferd med å utvikle seg til noe mer alvorlig. Foredraget viser derfor hvordan virksomheter kan gå fra en hovedsakelig hendelses- og møtebasert krisehåndtering til en mer kontinuerlig situasjonsforståelse og beslutningsevne under usikkerhet. Det krever tydelige terskler, mandat, prioriteringsregler og tiltakspakker som gjør det mulig å handle før hele situasjonsbildet er klart.",
-        "Presentasjonen tar også opp hvordan proaktiv stabsmetodikk må tilpasses digitale hendelser, og hvorfor etisk ledelse og psykologisk trygghet er en del av den operative sikkerheten. Videre belyses behovet for reparasjonsberedskap som planlegger for brudd, redusert drift og gjenoppretting, og hvordan beredskapsplan, Incident Response Plan, Business Continuity Plan og Disaster Recovery Plan må henge sammen.",
-        "En viktig grunnmur er kontroll på digitale eiendeler og avhengigheter gjennom IT Asset Management og Software Asset Management. Dette omfatter også identiteter, KI-systemer og KI-agenter, integrasjoner, API-er, sky- og SaaS-tjenester. NIS2 krever mer enn dokumentert etterlevelse; virksomheten må kunne vise at tiltakene er gjennomført, testet og virker i praksis. Poenget er enkelt: Det er ikke mulig å forstå risikoen, etablere et godt situasjonsbilde eller gjenopprette virksomheten uten å vite hva man har, hvordan det henger sammen, og hvem som faktisk har kontroll når noe går galt."
-      ],
-      "language": "Norwegian",
-      "level": "Detailed",
-      "otherTags": {},
-      "slug": "nar-tiden-forsvinner-strategier-for-fremtidens-digitale-bere-1140239"
     },
     {
       "id": "1108992",
