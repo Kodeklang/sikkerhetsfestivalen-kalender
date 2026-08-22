@@ -947,15 +947,6 @@
       "photo": "/img/speakers/484bd5bd-d26e-4279-95bc-b2a4f1972dd8.jpg"
     },
     {
-      "id": "4fd49c71-7aa3-40d5-8501-3804ace8c3c4",
-      "name": "Hans Christian Pretorius",
-      "tagline": "Partner KPMG",
-      "bio": [
-        "Hans Christian er en leder innen cybersikkerhet, datastrategi og analyse, med særlig evne til å omgjøre komplekse dataplattformer til strategiske verdier for virksomheter. Han kombinerer teknisk ekspertise med forståelse for styring og kontroll, og rådgir innen dataarkitektur, operasjonell beslutningsstøtte og ansvarlig bruk av teknologi."
-      ],
-      "photo": "/img/speakers/4fd49c71-7aa3-40d5-8501-3804ace8c3c4.jpg"
-    },
-    {
       "id": "b7b74cb9-5e7f-48f3-b011-9f54eb71f793",
       "name": "Hassan Askary",
       "tagline": "Data Scientist at Mobai AS",
@@ -4016,8 +4007,7 @@
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
-        "b86e2358-6566-41e4-a2ce-e0dd403b7487",
-        "4fd49c71-7aa3-40d5-8501-3804ace8c3c4"
+        "b86e2358-6566-41e4-a2ce-e0dd403b7487"
       ],
       "track": {
         "id": "411236",
@@ -4027,7 +4017,7 @@
       "description": [
         "Digital uavhengighet ikke lenger noe man kan velge bort – det er strategisk essensielt. Er Norge i ferd med å bli verdensledende i digital naivitet? Mange virksomheter ønsker en exit strategi for å frigjøre seg fra de store amerikanske teknologileverandørene. Utfordringen er å bygge nødvendig digital robusthet uten å gjøre seg mindre effektiv, mindre innovativ og betydelig fattigere.",
         "Hva betyr dette i praksis? Må norske virksomheter tenke nytt om internasjonale avhengigheter og endre skystrategi? Hvilke nye muligheter gir framveksten av tjenester og produkter med økt grad av suverenitet?",
-        "Med innsikt fra kritisk infrastruktur, NSM, nasjonal sky og ekomsikkerhetsutvalget deler Bente Hoff og Hans Christian Pretorius erfaringer."
+        "Med innsikt fra kritisk infrastruktur, NSM, nasjonal sky og ekomsikkerhetsutvalget deler Bente Hoff erfaringer etterfulgt av en samtale med Endre Dingsør (Virke) og Ronny Windvik (FFI), hvor de diskuterer digital suverenitet, avhengighet til globale teknologileverandører og hvilke veivalg norske virksomheter bør ta de kommende årene."
       ],
       "language": "Norwegian",
       "level": "High-level",
