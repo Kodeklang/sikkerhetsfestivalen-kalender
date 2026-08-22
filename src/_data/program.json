@@ -956,6 +956,22 @@
       "photo": "/img/speakers/b7b74cb9-5e7f-48f3-b011-9f54eb71f793.jpg"
     },
     {
+      "id": "c688a5e0-e651-405e-b6ce-9d9d946671dc",
+      "name": "Helge Mehus",
+      "tagline": "Leder - Justis, samfunnssikkerhet og beredskap i Viljr",
+      "bio": [
+        "25 år i Beredskapstroppen (1995-2020)",
+        "Internasjonal erfaring fra Kosovo, Special Teams Six (2001-2002), Afghanistan 2008 – sikkerhetsrådgiver NAK",
+        "Leder Beredskapstroppen (2014-2020)",
+        "2 år i Livvakttjenesten i PST – Leder (2020-2022)",
+        "Mastergrad i militære studier FHS (2020) – krisehåndtering i politiet",
+        "Direktør for avdelingen for beskyttelse av myndighetspersoner PST (2022-2024)",
+        "Director Head of Branch – Analyse og Sikring – Advansia (2024-2026)",
+        "Leder - Justis, samfunnssikkerhet og beredskap i Viljr (2026-)"
+      ],
+      "photo": "/img/speakers/c688a5e0-e651-405e-b6ce-9d9d946671dc.jpg"
+    },
+    {
       "id": "d09109e9-a721-4c91-8fa8-19f8d64488af",
       "name": "Henrik Brandt",
       "tagline": "Advokat | Cyber Legal - KPMG Law Norway",
@@ -3228,6 +3244,34 @@
       "level": "High-level",
       "otherTags": {},
       "slug": "a-recipe-for-resilience-using-purdue-and-iec-62443-to-secure-1089501"
+    },
+    {
+      "id": "1315073",
+      "title": "Ledelse under press - den menneskelige dimensjon",
+      "dayId": "46259",
+      "roomId": "74833",
+      "roomName": "5 - Kulturhuset Banken, Holbøsalen",
+      "startUtc": "2026-08-25T08:00:00.000Z",
+      "endUtc": "2026-08-25T08:40:00.000Z",
+      "durationMin": 40,
+      "isService": false,
+      "speakerIds": [
+        "c688a5e0-e651-405e-b6ce-9d9d946671dc"
+      ],
+      "track": {
+        "id": "411244",
+        "name": "Business Continuity & Resilience",
+        "slug": "business-continuity-resilience"
+      },
+      "description": [
+        "Krisehåndtering handler ikke bare om planer og systemer, men om mennesker som blir tvunget til å avgjørelser under stor grad av usikkerhet.",
+        "Den menneskelige dimensjonen er derfor svært viktig å fokusere på i beredskapsøyemed. Er vi gode nok på å legge disse forutsetningene inn i beredskapsarbeidet vårt, dette for å sikre evne til å opprettholde kontinuitet gjennom krisen?",
+        "Dette erfaringsbaserte innlegget vil forklare hvordan kriser påvirker oss negativt og hvordan vi kan mentalt kan forberede oss på å møte disse situasjonene. Vi må kunne håndtere oss selv for å kunne håndtere krisen. Nytteverdien vår som kriseledere avhenger dermed av at vi opprettholder en form for mentalt overskudd under påkjenningene som treffer oss."
+      ],
+      "language": "Norwegian",
+      "level": "High-level",
+      "otherTags": {},
+      "slug": "ledelse-under-press-den-menneskelige-dimensjon-1315073"
     },
     {
       "id": "1108992",
