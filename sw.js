@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-027df9acfdc9";
+const CACHE = "sf-62d25b4ae82f";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css",
-  "/css/fonts.css",
-  "/js/app.js",
-  "/js/rum.js",
+  "/css/style.css?v=62d25b4ae82f",
+  "/css/fonts.css?v=62d25b4ae82f",
+  "/js/app.js?v=62d25b4ae82f",
+  "/js/rum.js?v=62d25b4ae82f",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -559,6 +559,15 @@ self.addEventListener("fetch", (event) => {
     // Top up anything a killed worker left behind, so the offline guarantee
     // repairs itself rather than waiting for the next deploy.
     event.waitUntil(warmOnce());
+    return;
+  }
+
+  // A request that asks to bypass caches means it. The update button fetches
+  // the current page this way, and a fetch() is not a navigation - without
+  // this it was answered from the cache with the very page it was trying to
+  // replace, and the reload that followed showed it again.
+  if (request.cache === "reload" || request.cache === "no-store") {
+    event.respondWith(fetch(request));
     return;
   }
 
