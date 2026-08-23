@@ -209,6 +209,15 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  // A request that asks to bypass caches means it. The update button fetches
+  // the current page this way, and a fetch() is not a navigation - without
+  // this it was answered from the cache with the very page it was trying to
+  // replace, and the reload that followed showed it again.
+  if (request.cache === "reload" || request.cache === "no-store") {
+    event.respondWith(fetch(request));
+    return;
+  }
+
   // Fonts, icons, photos, CSS and JS are all retired by the cache name.
   event.respondWith(cacheFirst(request));
 });
