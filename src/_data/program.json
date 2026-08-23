@@ -2346,9 +2346,9 @@
       "dayId": "46258",
       "roomId": "74823",
       "roomName": "8 - Scandic Lillehammer",
-      "startUtc": "2026-08-24T11:55:00.000Z",
-      "endUtc": "2026-08-24T13:45:00.000Z",
-      "durationMin": 110,
+      "startUtc": "2026-08-24T12:00:00.000Z",
+      "endUtc": "2026-08-24T13:40:00.000Z",
+      "durationMin": 100,
       "isService": false,
       "speakerIds": [
         "1f8b3bd1-16a5-4159-9926-faf963feec6c",
