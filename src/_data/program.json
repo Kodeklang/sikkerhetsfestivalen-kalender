@@ -309,6 +309,16 @@
       "photo": "/img/speakers/fd2aa23a-c335-48a3-b1fc-598575979244.jpg"
     },
     {
+      "id": "43d00bbe-7403-4f65-be98-0bd7d6138434",
+      "name": "Alessandro Melloni",
+      "tagline": "Security Associate Manager",
+      "bio": [
+        "Alessandro Melloni er Security Associate Manager i Accenture og har en doktorgrad i kryptografi fra Simula UiB. Han arbeider i skjæringspunktet mellom kryptografisk forskning og praktisk cybersikkerhet, med særlig kompetanse innen sikre protokoller, PKI, digitale signaturer, OT-sikkerhet og overgang til post-kvantekryptografi.",
+        "Doktorgradsarbeidet hans omhandlet sikkerhet og anonymitet i onion routing og Tor, inkludert utviklingen av Counter Galois Onion, en ny krypteringsløsning presentert på EUROCRYPT 2026. I Accenture bistår han kunder og utviklingsteam med å omsette kryptografiske standarder og sikkerhetskrav til løsninger som faktisk kan implementeres."
+      ],
+      "photo": "/img/speakers/43d00bbe-7403-4f65-be98-0bd7d6138434.jpg"
+    },
+    {
       "id": "d4b0d8d0-e3d5-463c-b557-94fef5c1561f",
       "name": "Alex Delamotte",
       "tagline": "Senior Threat Researcher",
@@ -6929,6 +6939,32 @@
       "level": "Detailed",
       "otherTags": {},
       "slug": "ci-cd-the-most-privileged-system-in-your-cloud-1169659"
+    },
+    {
+      "id": "1170606",
+      "title": "Don't Cry: We Fixed Tor's Onions",
+      "dayId": "46260",
+      "roomId": "81918",
+      "roomName": "10 - HeartBox ,Teatersalen",
+      "startUtc": "2026-08-26T09:00:00.000Z",
+      "endUtc": "2026-08-26T09:40:00.000Z",
+      "durationMin": 40,
+      "isService": false,
+      "speakerIds": [
+        "43d00bbe-7403-4f65-be98-0bd7d6138434"
+      ],
+      "track": {
+        "id": "411240",
+        "name": "Cryptography",
+        "slug": "cryptography"
+      },
+      "description": [
+        "Everyone wants to hide sometimes. On the Internet, Tor (the onion router) is the most popular tool to browse anonymously. Its philosophy is to provide a low latency service where traffic from its users is mixed together to make tracing individuals much harder. The Tor protocol making this possible is a marvellous piece of both cryptographic and security engineering. In this talk, we will focus on the cryptographic challenges and explain how they are or can be overcome, including its new encryption layer designed by us."
+      ],
+      "language": "English",
+      "level": "Detailed",
+      "otherTags": {},
+      "slug": "don-t-cry-we-fixed-tor-s-onions-1170606"
     },
     {
       "id": "1169723",
