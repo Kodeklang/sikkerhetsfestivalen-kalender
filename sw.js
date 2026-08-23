@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-7361f9a58548";
+const CACHE = "sf-b3e30f61245b";
 
 const BASE = "/";
 
