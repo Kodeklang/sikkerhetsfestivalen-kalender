@@ -45,7 +45,7 @@ eleventyComputed:
       <div class="grid__corner"><abbr title="Norsk tid">CEST</abbr></div>
 
       {%- for room in day.rooms %}
-      <h2 class="grid__room" style="--col: {{ loop.index0 + 2 }}" data-col="{{ loop.index0 + 2 }}">{{ room.name }}</h2>
+      <h2 class="grid__room" style="--col: {{ loop.index0 + 2 }}" data-col="{{ loop.index0 + 2 }}"><span>{{ room.name }}</span></h2>
       {%- endfor %}
 
       {%- for room in day.rooms %}

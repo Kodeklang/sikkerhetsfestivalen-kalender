@@ -20,7 +20,7 @@
 
   --gutter-w: 58px;
   --col-w: 176px;
-  --head-h: 46px;
+  --head-h: 58px;           /* three lines of venue name plus the bottom padding */
   --slot-h: 8.5px;          /* 5 minutes; 1.7px per minute, as designed */
 
   --sans: Montserrat, system-ui, -apple-system, sans-serif;
@@ -219,13 +219,21 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
 .grid__room {
   grid-column: var(--col); grid-row: 1;
   position: sticky; top: 0; z-index: 30;
-  margin: 0; padding: 0 9px 5px;
+  margin: 0; padding: 0 6px 5px;
   display: flex; align-items: flex-end;
   font-size: 12px; font-weight: 700; letter-spacing: 0.01em;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   background: var(--paper);
   border-right: 1px solid var(--line-soft);
   border-bottom: 1px solid var(--line-strong);
+}
+/* A venue name such as "4 - Kommunestyresalen, Lillehammer rådhus" is wider
+   than its column, so it wraps to the three lines the header has height for and
+   is clamped there. The clamp needs a block box of its own: text-overflow
+   does nothing on a flex container's anonymous item, which is why the old
+   nowrap header was cut off instead of ellipsised. */
+.grid__room span {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;
+  overflow: hidden; line-height: 1.3; overflow-wrap: anywhere;
 }
 
 /* Alternating column tint, painted behind everything. */
