@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-b36e9f21b083";
+const CACHE = "sf-9b088ae15251";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=b36e9f21b083",
-  "/css/fonts.css?v=b36e9f21b083",
-  "/js/app.js?v=b36e9f21b083",
-  "/js/rum.js?v=b36e9f21b083",
+  "/css/style.css?v=9b088ae15251",
+  "/css/fonts.css?v=9b088ae15251",
+  "/js/app.js?v=9b088ae15251",
+  "/js/rum.js?v=9b088ae15251",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -195,12 +195,14 @@ const REST = [...new Set([
   "/program/supply-chain-security-protecting-your-business-end-to-end-1171185/",
   "/program/innsidere-og-spionasje-1132176/",
   "/program/ci-cd-the-most-privileged-system-in-your-cloud-1169659/",
+  "/program/don-t-cry-we-fixed-tor-s-onions-1170606/",
   "/program/employer-oversight-meets-neural-insight-business-case-risks--1169723/",
   "/program/upn-gone-wrong-breaking-identity-security-in-azure-entra-id-1170369/",
   "/program/passord-trusselmodell-beskyttelse-og-hvorfor-kompleksitet-be-1140152/",
   // Speaker photos, in both the grid and the detail size.
   "/img/av/_mmpuy7-9u-64.webp", "/img/av/_mmpuy7-9u-128.webp",
   "/img/av/qUMhZGrSmH-64.webp", "/img/av/qUMhZGrSmH-128.webp",
+  "/img/av/yn3f4CB3zS-64.webp", "/img/av/yn3f4CB3zS-128.webp",
   "/img/av/17XcnoGtDZ-64.webp", "/img/av/17XcnoGtDZ-128.webp",
   "/img/av/h6oSoPHCqg-64.webp", "/img/av/h6oSoPHCqg-128.webp",
   "/img/av/irsZefBZ2I-64.webp", "/img/av/irsZefBZ2I-128.webp",
