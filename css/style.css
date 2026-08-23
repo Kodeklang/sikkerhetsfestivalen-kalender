@@ -232,6 +232,9 @@ button.chip:hover { background: color-mix(in srgb, var(--track) 10%, #fff); }
    does nothing on a flex container's anonymous item, which is why the old
    nowrap header was cut off instead of ellipsised. */
 .grid__room span {
+  /* An explicit width: as a flex item the span would otherwise be sized from
+     its unwrapped text and only shrink as far as the engine lets it. */
+  width: 100%; min-width: 0;
   display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;
   overflow: hidden; line-height: 1.3; overflow-wrap: anywhere;
 }
