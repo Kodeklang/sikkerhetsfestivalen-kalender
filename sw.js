@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-9b088ae15251";
+const CACHE = "sf-2692d140e14c";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=9b088ae15251",
-  "/css/fonts.css?v=9b088ae15251",
-  "/js/app.js?v=9b088ae15251",
-  "/js/rum.js?v=9b088ae15251",
+  "/css/style.css?v=2692d140e14c",
+  "/css/fonts.css?v=2692d140e14c",
+  "/js/app.js?v=2692d140e14c",
+  "/js/rum.js?v=2692d140e14c",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -442,15 +442,19 @@ const fromNetwork = (url) => new Request(url, { cache: "reload" });
  * browser is free to kill a worker mid-task - resumes where it stopped instead
  * of fetching the programme again.
  */
+const missing = new Set();
 async function warm(cache) {
   let next = 0;
   const worker = async () => {
     while (next < REST.length) {
       const url = REST[next++];
-      if (await cache.match(url)) continue;
+      // A 404 is remembered for the life of this worker instance, so a page
+      // the programme no longer has is not asked for again on every visit.
+      if (missing.has(url) || await cache.match(url)) continue;
       try {
         const response = await fetch(fromNetwork(url));
         if (response.ok) await cache.put(url, response);
+        else missing.add(url);
       } catch {
         /* offline mid-warm: the fetch handler will pick this one up later */
       }
@@ -462,6 +466,16 @@ async function warm(cache) {
 // One pass at a time. Every navigation asks for the programme to be topped up,
 // and without this each would start a competing pass over the same five hundred
 // files.
+//
+// Never passed to waitUntil, and that is the most important line in this file.
+// A waiting worker may only activate once the active one has no pending
+// events, skipWaiting or not - that is in the specification, and Safari holds
+// to it. With a 5MB warm extending every navigation, and iOS killing the worker
+// partway through, the active worker was left looking permanently busy:
+// every deploy's worker installed, went to "waiting", and stayed there for
+// hours, with the visitor on the build from before. Left to run on its own the
+// warm still does its job - a killed worker resumes where it stopped the next
+// time it is woken - and it no longer stands between an update and the visitor.
 let warming = null;
 function warmOnce() {
   warming ??= caches.open(CACHE)
@@ -490,11 +504,13 @@ self.addEventListener("activate", (event) => {
     await self.registration.navigationPreload?.enable();
     const names = await caches.keys();
     await Promise.all(names.filter((n) => n !== CACHE).map((n) => caches.delete(n)));
-    // Claim before warming, not after: claiming is what reloads a page sitting
-    // on the previous version, and that must not wait for the programme.
+    // Claiming is what reloads a page sitting on the previous version.
     await self.clients.claim();
-    await warmOnce();
   })());
+  // Outside waitUntil, see warmOnce. It also keeps activation instant: a fetch
+  // is held back until the worker is activated, so a page must not have to
+  // wait for the whole programme to come down before it can be served.
+  warmOnce();
 });
 
 /**
@@ -559,8 +575,9 @@ self.addEventListener("fetch", (event) => {
   if (request.mode === "navigate") {
     event.respondWith(staleWhileRevalidate(event, request));
     // Top up anything a killed worker left behind, so the offline guarantee
-    // repairs itself rather than waiting for the next deploy.
-    event.waitUntil(warmOnce());
+    // repairs itself rather than waiting for the next deploy. Not awaited and
+    // not extending the event, see warmOnce.
+    warmOnce();
     return;
   }
 

@@ -21,7 +21,7 @@
 <pre id="out">…</pre>
 <script>
 const out = document.getElementById("out");
-const SERVED_BUILD = "9b088ae15251";
+const SERVED_BUILD = "2692d140e14c";
 const SERVED_VERSION = "21efd7dec33e";
 
 const versionOf = (html) => (html.match(/app-version" content="([^"]+)"/) || [])[1] || "?";
@@ -107,7 +107,7 @@ document.getElementById("reset").onclick = async () => {
   out.textContent = "resetting…";
   for (const reg of await navigator.serviceWorker.getRegistrations()) await reg.unregister();
   for (const name of await caches.keys()) await caches.delete(name);
-  out.textContent = "worker unregistered and caches cleared. Open the programme again: it will install afresh.";
+  out.textContent = "worker unregistered and caches cleared. Close this tab, then open the programme in a new one: it installs afresh.";
 };
 
 report();
