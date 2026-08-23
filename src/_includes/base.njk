@@ -11,8 +11,14 @@
 <link rel="manifest" href="{{ "/manifest.webmanifest" | url }}">
 <link rel="icon" href="{{ "/icons/icon.svg" | url }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{ "/icons/icon-180.png" | url }}">
-<link rel="stylesheet" href="{{ "/css/fonts.css" | url }}">
-<link rel="stylesheet" href="{{ "/css/style.css" | url }}">
+{#- The build id on the stylesheet and script URLs is what lets a fresh page
+    carry fresh assets. The worker serves these cache-first under their URL,
+    so without it a page fetched past the caches (the update button, or a new
+    worker's precache) would still be styled by whatever the previous worker
+    had stored - and iOS Safari can keep a previous worker around for a long
+    time after a deploy. A new URL is a cache miss in any worker. #}
+<link rel="stylesheet" href="{{ "/css/fonts.css" | url }}?v={{ site.buildId }}">
+<link rel="stylesheet" href="{{ "/css/style.css" | url }}?v={{ site.buildId }}">
 {#- After the stylesheets, deliberately. A preload is fetched at the highest
     priority there is, and these fonts are not needed for the first paint at
     all - font-display: swap paints the text in a fallback immediately. Ahead
@@ -22,7 +28,7 @@
 {%- for f in ["montserrat-400", "montserrat-600", "montserrat-700", "ibm-plex-mono-400"] %}
 <link rel="preload" href="{{ ("/css/fonts/" + f + "-latin.woff2") | url }}" as="font" type="font/woff2" crossorigin>
 {%- endfor %}
-<script defer src="{{ "/js/rum.js" | url }}"></script>
+<script defer src="{{ "/js/rum.js" | url }}?v={{ site.buildId }}"></script>
 </head>
 <body>
 {{ content | safe }}
@@ -32,6 +38,6 @@
   <button type="button" id="update-reload" data-en="Reload">Last inn på nytt</button>
 </p>
 
-<script type="module" src="{{ "/js/app.js" | url }}"></script>
+<script type="module" src="{{ "/js/app.js" | url }}?v={{ site.buildId }}"></script>
 </body>
 </html>

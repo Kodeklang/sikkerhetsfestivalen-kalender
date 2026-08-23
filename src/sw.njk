@@ -29,10 +29,10 @@ const SHELL = [
   {%- for d in site.days %}
   "{{ d.url | url }}",
   {%- endfor %}
-  "{{ '/css/style.css' | url }}",
-  "{{ '/css/fonts.css' | url }}",
-  "{{ '/js/app.js' | url }}",
-  "{{ '/js/rum.js' | url }}",
+  "{{ '/css/style.css' | url }}?v={{ site.buildId }}",
+  "{{ '/css/fonts.css' | url }}?v={{ site.buildId }}",
+  "{{ '/js/app.js' | url }}?v={{ site.buildId }}",
+  "{{ '/js/rum.js' | url }}?v={{ site.buildId }}",
   "{{ '/manifest.webmanifest' | url }}",
   "{{ '/icons/icon.svg' | url }}",
   "{{ '/icons/icon-192.png' | url }}",
