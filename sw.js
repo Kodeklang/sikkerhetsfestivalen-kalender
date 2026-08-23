@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-62d25b4ae82f";
+const CACHE = "sf-b36e9f21b083";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=62d25b4ae82f",
-  "/css/fonts.css?v=62d25b4ae82f",
-  "/js/app.js?v=62d25b4ae82f",
-  "/js/rum.js?v=62d25b4ae82f",
+  "/css/style.css?v=b36e9f21b083",
+  "/css/fonts.css?v=b36e9f21b083",
+  "/js/app.js?v=b36e9f21b083",
+  "/js/rum.js?v=b36e9f21b083",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
