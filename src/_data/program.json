@@ -6706,9 +6706,9 @@
         "slug": "cyber-crime"
       },
       "description": [
-        "In this talk we will walk through a specific cybercrime network investigated by the NRK. More details will be announced closer to the talk."
+        "Investment scams are everywhere, but where they come from and who is enabling them are nearly always a mystery. In this talk, NRK tells the story of how they mapped a network of websites, tracked crypto addresses and money flows, and used OSINT to expose the enablers."
       ],
-      "language": "Norwegian",
+      "language": "English",
       "level": "Detailed",
       "otherTags": {},
       "slug": "exposing-a-cybercrime-network-1166353"
