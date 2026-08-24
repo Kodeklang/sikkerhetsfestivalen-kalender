@@ -1002,6 +1002,15 @@
       "photo": "/img/speakers/2a976d1b-823c-47f8-85cb-ad2bd20deee6.jpg"
     },
     {
+      "id": "fa8b4539-1033-43ef-9a44-fe7663941db3",
+      "name": "Haakon Berge Wiken",
+      "tagline": "Leder strategi og forretningsutvikling i Omny",
+      "bio": [
+        "Haakon Berge Wiken leder strategi og forretningsutvikling i Omny, et norsk selskap etablert av Telenor, Aker og Cognite for å sikre kritisk infrastruktur mot cybertrusler. Han kommer fra McKinsey &amp; Company, der han rådga toppledelse og styrer i teknologistrategi og transformasjon. I Omny jobber han tett med sikkerhetsledere, forretningsledere og styremedlemmer på tvers av sektorer i Europa."
+      ],
+      "photo": "/img/speakers/fa8b4539-1033-43ef-9a44-fe7663941db3.jpg"
+    },
+    {
       "id": "99c62a5b-b5a5-4289-a6fb-a97c4e4a1268",
       "name": "Håkon Nikolai Stange Sørum",
       "tagline": "Principal Security Architect and Partner at O3 Cyber",
@@ -1092,15 +1101,6 @@
         "John-André Bjørkhaug holds a degree in electronic engineering, but has spent most of his career happily breaking things instead of building them. He has been working as a penetration tester since 2008, with a primary focus on infrastructure, physical security, industrial control systems, IoT, and social engineering."
       ],
       "photo": "/img/speakers/dc169b5f-03cd-4aeb-9b1b-dc3fc446d299.png"
-    },
-    {
-      "id": "9a0edd01-cf69-4d8e-9f7c-b2626c03137a",
-      "name": "John Markus Lervik",
-      "tagline": "Founder of Cognite",
-      "bio": [
-        "Dr. John Markus Lervik is the Founder of Cognite. Throughout his career, Lervik has channelled his passion for liberating data and innovating with technology into companies that revolutionize the ways we work. After finalizing his PhD at the Norwegian University of Science and Technology (NTNU), he co-founded Fast Search &amp; Transfer (FAST) in 1997 and served first as Chief Technology Officer and later as Chief Executive Officer until Microsoft acquired the company in 2008 for USD 1.3 billion. He then took the position of Vice President of Enterprise Search at Microsoft before leaving in 2009 to found the software company Cxense, which was listed on the Oslo Stock Exchange in 2014. Lervik then was part of founding Cognite in 2017."
-      ],
-      "photo": "/img/speakers/9a0edd01-cf69-4d8e-9f7c-b2626c03137a.png"
     },
     {
       "id": "30716667-9dd4-4c00-a9c9-1eeeaeee4609",
@@ -2363,9 +2363,9 @@
       "speakerIds": [
         "1f8b3bd1-16a5-4159-9926-faf963feec6c",
         "400aa3ba-dfc0-408e-ad68-598524271a2e",
-        "9a0edd01-cf69-4d8e-9f7c-b2626c03137a",
         "23bfc51c-55dc-4cf3-853e-2e1d0c191b93",
-        "20b710ad-292f-4a60-aa71-a75328edd689"
+        "20b710ad-292f-4a60-aa71-a75328edd689",
+        "fa8b4539-1033-43ef-9a44-fe7663941db3"
       ],
       "track": {
         "id": "481215",
@@ -2382,8 +2382,8 @@
         "CEO, Nord Pool | Head of Euronext Energy",
         "Anna-Karin Østlie",
         "Styremedlem i Elbits, Brakon, INAS og Finfly",
-        "John Markus Lervik",
-        "Founder of Cognite"
+        "Haakon Berge Wiken",
+        "Leder strategi og forretningsutvikling i Omny"
       ],
       "language": null,
       "level": null,
