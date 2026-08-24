@@ -1557,6 +1557,15 @@
       "photo": "/img/speakers/a4eae081-3a19-47e8-af7a-b8362df5c73b.jpg"
     },
     {
+      "id": "fcb436fe-9658-45a8-ba4c-dd4dd2cac11e",
+      "name": "Nina Meldahl",
+      "tagline": "Security Expert | Cyber Defence Center (CDC)",
+      "bio": [
+        "Nina er utdannet statsviter, og har jobbet bredt innenfor sikkerhet i flere år. Hun har bakgrunn fra PST, NSR og NFCERT og har de siste årene vært sikkerhetskonsulent for en rekke private og offentlige selskap gjennom Bouvet. I DNB jobber hun i Cyber Defence Center."
+      ],
+      "photo": "/img/speakers/fcb436fe-9658-45a8-ba4c-dd4dd2cac11e.jpg"
+    },
+    {
       "id": "43988f90-c40b-47d7-8e49-da8dadf47ec5",
       "name": "Nora Tomas",
       "tagline": "Senior Security Engineer",
@@ -5177,6 +5186,34 @@
       "level": "High-level",
       "otherTags": {},
       "slug": "hvordan-skape-suksess-med-digitale-kurs-en-aerlig-fortelling-1171218"
+    },
+    {
+      "id": "1316406",
+      "title": "AI in pratical use, for non-technical security people",
+      "dayId": "46259",
+      "roomId": "74829",
+      "roomName": "9 - Victoria Scandic, sal 1+2",
+      "startUtc": "2026-08-25T13:00:00.000Z",
+      "endUtc": "2026-08-25T13:40:00.000Z",
+      "durationMin": 40,
+      "isService": false,
+      "speakerIds": [
+        "fcb436fe-9658-45a8-ba4c-dd4dd2cac11e"
+      ],
+      "track": {
+        "id": "411226",
+        "name": "Threat Intelligence",
+        "slug": "threat-intelligence"
+      },
+      "description": [
+        "How DNBs Cyber Defence Center Uses AI to protect against AI-Driven threats",
+        "Artificial intelligence is creating new opportunities for cyber attackers, in CDC we have to meet the challenges with AI ourselves. Do you want to understand the concepts of how we are working to solve this? This is a talk for non technical security people, where we share the challenges we face today and how we are adapting our approach to stay ahead.",
+        "In this non-technical session, the Cyber Defense Center at DNB explains how the rise of AI is changing the threat landscape and why traditional ways of working are no longer enough. We will discuss how we are building our own AI-powered tools and developing new ways of working to ensure that we can continue to defend the organization effectively in an increasingly AI-driven world."
+      ],
+      "language": null,
+      "level": null,
+      "otherTags": {},
+      "slug": "ai-in-pratical-use-for-non-technical-security-people-1316406"
     },
     {
       "id": "1144955",
