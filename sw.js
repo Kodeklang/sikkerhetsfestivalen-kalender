@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-8576221ae188";
+const CACHE = "sf-a17877b76417";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=8576221ae188",
-  "/css/fonts.css?v=8576221ae188",
-  "/js/app.js?v=8576221ae188",
-  "/js/rum.js?v=8576221ae188",
+  "/css/style.css?v=a17877b76417",
+  "/css/fonts.css?v=a17877b76417",
+  "/js/app.js?v=a17877b76417",
+  "/js/rum.js?v=a17877b76417",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -273,6 +273,7 @@ const REST = [...new Set([
   "/img/av/9U2RK4-jnN-64.webp", "/img/av/9U2RK4-jnN-128.webp",
   "/img/av/aJu1M-D-eE-64.webp", "/img/av/aJu1M-D-eE-128.webp",
   "/img/av/F_ugbEpK-C-64.webp", "/img/av/F_ugbEpK-C-128.webp",
+  "/img/av/5GcU_xDD4l-64.webp", "/img/av/5GcU_xDD4l-128.webp",
   "/img/av/c0fs1NtqRG-64.webp", "/img/av/c0fs1NtqRG-128.webp",
   "/img/av/-dGGH38Wae-64.webp", "/img/av/-dGGH38Wae-128.webp",
   "/img/av/dQxi9EKEE6-64.webp", "/img/av/dQxi9EKEE6-128.webp",
@@ -283,7 +284,6 @@ const REST = [...new Set([
   "/img/av/6WcCg0It1D-64.webp", "/img/av/6WcCg0It1D-128.webp",
   "/img/av/SsvuFEuwq2-64.webp", "/img/av/SsvuFEuwq2-128.webp",
   "/img/av/0pzcRQe_Q--64.webp", "/img/av/0pzcRQe_Q--128.webp",
-  "/img/av/OpZVcauiXY-64.webp", "/img/av/OpZVcauiXY-128.webp",
   "/img/av/uqc7HTjklR-64.webp", "/img/av/uqc7HTjklR-128.webp",
   "/img/av/kL_kZ28Jex-64.webp", "/img/av/kL_kZ28Jex-128.webp",
   "/img/av/o_oNXiRsrn-64.webp", "/img/av/o_oNXiRsrn-128.webp",
