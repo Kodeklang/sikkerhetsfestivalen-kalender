@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-093f540bfcfc";
+const CACHE = "sf-91b79b20aa6b";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=093f540bfcfc",
-  "/css/fonts.css?v=093f540bfcfc",
-  "/js/app.js?v=093f540bfcfc",
-  "/js/rum.js?v=093f540bfcfc",
+  "/css/style.css?v=91b79b20aa6b",
+  "/css/fonts.css?v=91b79b20aa6b",
+  "/js/app.js?v=91b79b20aa6b",
+  "/js/rum.js?v=91b79b20aa6b",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -136,6 +136,7 @@ const REST = [...new Set([
   "/program/no-key-required-bypassing-application-layer-encryption-with--1170264/",
   "/program/beyond-standalone-risk-assessments-making-cyber-risk-relevan-1139447/",
   "/program/hvordan-skape-suksess-med-digitale-kurs-en-aerlig-fortelling-1171218/",
+  "/program/ai-in-pratical-use-for-non-technical-security-people-1316406/",
   "/program/lessons-learned-and-laughs-from-incident-response-1144955/",
   "/program/integrert-sikring-i-sykehusprosjekter-fra-idefase-til-drift-1170273/",
   "/program/bridging-the-gap-between-ot-and-it-expert-panel-1173921/",
@@ -329,6 +330,7 @@ const REST = [...new Set([
   "/img/av/SdM1esehBR-64.webp", "/img/av/SdM1esehBR-128.webp",
   "/img/av/cdX1O4acea-64.webp", "/img/av/cdX1O4acea-128.webp",
   "/img/av/6BT1nwPLPo-64.webp", "/img/av/6BT1nwPLPo-128.webp",
+  "/img/av/8cDSE8hYC6-64.webp", "/img/av/8cDSE8hYC6-128.webp",
   "/img/av/aeOWYIQM8Z-64.webp", "/img/av/aeOWYIQM8Z-128.webp",
   "/img/av/vHG16Owapz-64.webp", "/img/av/vHG16Owapz-128.webp",
   "/img/av/Pe60vahScg-64.webp", "/img/av/Pe60vahScg-128.webp",
