@@ -4443,6 +4443,34 @@
       "slug": "du-ser-det-ikke-for-du-tror-det-1167572"
     },
     {
+      "id": "1316374",
+      "title": "Sikkerhetsfestivalen Podcast - Maverick Riskjockey",
+      "dayId": "46259",
+      "roomId": "74839",
+      "roomName": "7 - Microbryggeriet",
+      "startUtc": "2026-08-25T11:00:00.000Z",
+      "endUtc": "2026-08-25T11:40:00.000Z",
+      "durationMin": 40,
+      "isService": false,
+      "speakerIds": [
+        "c1b0d7df-b93a-4484-8e29-a2c5996c70fc",
+        "2c152341-bbac-48fd-bc87-6a08b6a8a055",
+        "c0774ae5-fc1e-4ce8-97b3-130594b0bfcc"
+      ],
+      "track": {
+        "id": "411361",
+        "name": "Other",
+        "slug": "other"
+      },
+      "description": [
+        "Intervju med foredragsholderne til &quot;Maverick RiskJockey: en AI-drevet CISO-funksjon&quot;."
+      ],
+      "language": "Norwegian",
+      "level": "High-level",
+      "otherTags": {},
+      "slug": "sikkerhetsfestivalen-podcast-maverick-riskjockey-1316374"
+    },
+    {
       "id": "1171009",
       "title": "A deeper dive in the Mjøsa uh ESA lake",
       "dayId": "46259",
@@ -4940,6 +4968,34 @@
       "level": "Detailed",
       "otherTags": {},
       "slug": "jeg-ble-karet-til-en-av-norges-viktigste-ciso-er-av-en-algor-1168493"
+    },
+    {
+      "id": "1316377",
+      "title": "Sikkerhetsfestivalen Podcast - Equinor's Security Configuration initiative",
+      "dayId": "46259",
+      "roomId": "74839",
+      "roomName": "7 - Microbryggeriet",
+      "startUtc": "2026-08-25T12:00:00.000Z",
+      "endUtc": "2026-08-25T12:40:00.000Z",
+      "durationMin": 40,
+      "isService": false,
+      "speakerIds": [
+        "c1b0d7df-b93a-4484-8e29-a2c5996c70fc",
+        "287c3a6e-b313-48ce-9e19-3c7d81b7e73f",
+        "6fc667ec-159b-4fcb-b983-3a401c81dd9f"
+      ],
+      "track": {
+        "id": "411361",
+        "name": "Other",
+        "slug": "other"
+      },
+      "description": [
+        "Intervju med foredragsholderne til &quot;Security at Scale: Lessons learned from Equinor’s Security Configuration Initiative&quot;."
+      ],
+      "language": "Norwegian",
+      "level": "High-level",
+      "otherTags": {},
+      "slug": "sikkerhetsfestivalen-podcast-equinor-s-security-configuratio-1316377"
     },
     {
       "id": "1129082",
