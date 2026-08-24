@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-28d8fdc2fd65";
+const CACHE = "sf-e3615b952a4a";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=28d8fdc2fd65",
-  "/css/fonts.css?v=28d8fdc2fd65",
-  "/js/app.js?v=28d8fdc2fd65",
-  "/js/rum.js?v=28d8fdc2fd65",
+  "/css/style.css?v=e3615b952a4a",
+  "/css/fonts.css?v=e3615b952a4a",
+  "/js/app.js?v=e3615b952a4a",
+  "/js/rum.js?v=e3615b952a4a",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -111,6 +111,7 @@ const REST = [...new Set([
   "/program/analyzing-ransomware-exfiltration-infrastructure-1155095/",
   "/program/hvordan-lykkes-med-tredjeparts-risikostyring-tprm-1170585/",
   "/program/du-ser-det-ikke-for-du-tror-det-1167572/",
+  "/program/sikkerhetsfestivalen-podcast-maverick-riskjockey-1316374/",
   "/program/a-deeper-dive-in-the-mjosa-uh-esa-lake-1171009/",
   "/program/internet-voting-in-estonia-1184194/",
   "/program/fra-kontraktsinngaelse-til-exit-hvordan-tilrettelegge-for-en-1169342/",
@@ -128,6 +129,7 @@ const REST = [...new Set([
   "/program/linux-under-angrep-hvordan-sikre-kritiske-systemer-i-mote-me-1169511/",
   "/program/leverandorkjedeangrep-sett-fra-trusselaktorens-perspektiv-1141011/",
   "/program/jeg-ble-karet-til-en-av-norges-viktigste-ciso-er-av-en-algor-1168493/",
+  "/program/sikkerhetsfestivalen-podcast-equinor-s-security-configuratio-1316377/",
   "/program/infrastructure-as-code-is-still-infrastructure-1129082/",
   "/program/balancing-security-usability-and-performance-in-real-world-e-1170679/",
   "/program/nar-jussen-moter-teknologien-og-begge-moter-virkeligheten-si-1171226/",
