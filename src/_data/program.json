@@ -4971,7 +4971,7 @@
     },
     {
       "id": "1316377",
-      "title": "Sikkerhetsfestivalen Podcast - Equinor's Security Configuration initiative",
+      "title": "Sikkerhetsfestivalen Podcast - Equinor's Security Configuration initiativ",
       "dayId": "46259",
       "roomId": "74839",
       "roomName": "7 - Microbryggeriet",
@@ -4981,8 +4981,8 @@
       "isService": false,
       "speakerIds": [
         "c1b0d7df-b93a-4484-8e29-a2c5996c70fc",
-        "287c3a6e-b313-48ce-9e19-3c7d81b7e73f",
-        "6fc667ec-159b-4fcb-b983-3a401c81dd9f"
+        "6fc667ec-159b-4fcb-b983-3a401c81dd9f",
+        "80aff91b-1f4c-4ee9-bbc0-d9e71d1380ec"
       ],
       "track": {
         "id": "411361",
@@ -4990,9 +4990,9 @@
         "slug": "other"
       },
       "description": [
-        "Intervju med foredragsholderne til &quot;Security at Scale: Lessons learned from Equinor’s Security Configuration Initiative&quot;."
+        "Interview with the speakers of &quot;Security at Scale: Lessons learned from Equinor’s Security Configuration Initiative&quot;."
       ],
-      "language": "Norwegian",
+      "language": "English",
       "level": "High-level",
       "otherTags": {},
       "slug": "sikkerhetsfestivalen-podcast-equinor-s-security-configuratio-1316377"
