@@ -9,7 +9,7 @@
       "id": "46258",
       "startUtc": "2026-08-24T07:00:00.000Z",
       "endUtc": "2026-08-24T22:05:00.000Z",
-      "weekday": "Monday",
+      "weekday": "mandag",
       "rooms": [
         {
           "id": "74823",
@@ -30,7 +30,7 @@
       "id": "46259",
       "startUtc": "2026-08-25T07:00:00.000Z",
       "endUtc": "2026-08-25T22:00:00.000Z",
-      "weekday": "Tuesday",
+      "weekday": "tirsdag",
       "rooms": [
         {
           "id": "74825",
@@ -111,7 +111,7 @@
       "id": "46260",
       "startUtc": "2026-08-26T07:00:00.000Z",
       "endUtc": "2026-08-26T11:00:00.000Z",
-      "weekday": "Wednesday",
+      "weekday": "onsdag",
       "rooms": [
         {
           "id": "74825",
@@ -907,16 +907,6 @@
         "IT-sikkerhetsjef ved UiO siden 2007, fortsatt dypt teknisk og operativ."
       ],
       "photo": "/img/speakers/9b1ae9bb-0135-44f7-9aae-fc87442afc13.png"
-    },
-    {
-      "id": "a8b81814-1c01-468c-bca7-3f8db09a5d1d",
-      "name": "Frode Skaarnes",
-      "tagline": "CEO/Co-founder/LØRN AS",
-      "bio": [
-        "Frode leder i dag Lørn AS, som tilbyr foredrag, kurs, øvelser og mikrostudier innen sikkerhet. Frodes kunnskap og erfaring innen personellsikkerhet er unik, og han har et 360 graders perspektiv på temaet. For det første har han har jobbet i stillinger som er spesielt utsatt for etterretningsaktivitet fra fremmede stater, blant annet i utenrikstjenesten. Han har i mange år ledet etterretningsoperasjoner, blant annet innen menneskebasert innhenting. Og ikke minst har han ledet det nasjonale arbeidet med forebyggende personellsikkerhet som avdelingsdirektør i NSM. Disse erfaringene har gitt Frode en forståelse av hvordan mennesker kan utnyttes, hvilken skade de kan påføre virksomheten, og ikke minst hva kan man gjøre for å motvirke dette.",
-        "I tillegg til sin stilling i Lørn, så underviser han på Universitetet i Sørøst-Norge (USN), og er en del av universitetets Senter for sikkerhet, krisehåndtering og beredskapsledelse."
-      ],
-      "photo": "/img/speakers/a8b81814-1c01-468c-bca7-3f8db09a5d1d.jpg"
     },
     {
       "id": "72e2da60-5f35-4208-a5ef-804eaca0935c",
@@ -5227,8 +5217,7 @@
       "durationMin": 40,
       "isService": false,
       "speakerIds": [
-        "98e18713-ad8f-475b-8f72-1f48533655d7",
-        "a8b81814-1c01-468c-bca7-3f8db09a5d1d"
+        "98e18713-ad8f-475b-8f72-1f48533655d7"
       ],
       "track": {
         "id": "411230",
