@@ -4602,7 +4602,7 @@
     },
     {
       "id": "1171406",
-      "title": "Sikring i sanntid av sanntidsteknologi for web",
+      "title": "Securing the Live Web: How Real-Time Kills Security",
       "dayId": "46259",
       "roomId": "74825",
       "roomName": "1 - Frimurerlosjen, rom 1",
@@ -4619,14 +4619,14 @@
         "slug": "application-security"
       },
       "description": [
-        "Vi har gode og etablerte fremgangsmåter for sikring på web'en. Fra cookies til headere til JWT. Men når vi begir oss ut på sanntidsteknologi enten med Websockets, Server-Sent Events eller lignende så forsvinner noen av de ut vinduet fordi browseren ikke lenger støtter dem.",
-        "Vet du hvilke det er? Og ikke minst hvordan du helst burde sikre Websocket'ene dine?",
-        "I denne sesjonen tar vi et lite dypdykk i sikkerheten i SSE og Websockets. Og hvordan du kan utvikle appene dine til å ivareta sikkerheten også i endepunktene som bruker sanntidsteknologi."
+        "We have solid, well-established practices for securing the web. From cookies and headers to JWTs. But when we venture into real-time technologies such as WebSockets, Server-Sent Events, or similar solutions, some of those practices go out the window because the browser no longer supports them.",
+        "Do you know which ones? And, more importantly, how should you secure your WebSockets?",
+        "In this session, we’ll take a deeper look at security in SSE and WebSockets, and explore how you can build your applications to maintain strong security in endpoints that use real-time technologies."
       ],
       "language": "Norwegian",
       "level": "Detailed",
       "otherTags": {},
-      "slug": "sikring-i-sanntid-av-sanntidsteknologi-for-web-1171406"
+      "slug": "securing-the-live-web-how-real-time-kills-security-1171406"
     },
     {
       "id": "1167616",
