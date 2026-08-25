@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-e3615b952a4a";
+const CACHE = "sf-c18b85ecc84f";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=e3615b952a4a",
-  "/css/fonts.css?v=e3615b952a4a",
-  "/js/app.js?v=e3615b952a4a",
-  "/js/rum.js?v=e3615b952a4a",
+  "/css/style.css?v=c18b85ecc84f",
+  "/css/fonts.css?v=c18b85ecc84f",
+  "/js/app.js?v=c18b85ecc84f",
+  "/js/rum.js?v=c18b85ecc84f",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -116,7 +116,7 @@ const REST = [...new Set([
   "/program/internet-voting-in-estonia-1184194/",
   "/program/fra-kontraktsinngaelse-til-exit-hvordan-tilrettelegge-for-en-1169342/",
   "/program/sikkerhetsloven-neste-compliance-sjokk-for-norsk-naeringsliv-1170384/",
-  "/program/sikring-i-sanntid-av-sanntidsteknologi-for-web-1171406/",
+  "/program/securing-the-live-web-how-real-time-kills-security-1171406/",
   "/program/oidc-in-security-by-obscurity-1167616/",
   "/program/storskala-sikkerhet-hvordan-verdens-storste-selskaper-jobber-1173814/",
   "/program/hva-skjedde-nar-vi-tok-med-adferdspsykologer-inn-i-kultur-ar-1167545/",
