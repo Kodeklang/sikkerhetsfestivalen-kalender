@@ -1039,9 +1039,9 @@
     {
       "id": "a06ca65b-78e6-4fc5-9834-d937983a9818",
       "name": "Håvard Aalmo",
-      "tagline": "Head of High-Tech Crime Section, National Cybercrime Centre (NC3), KRIPOS, Norway",
+      "tagline": "Seksjonsleder - Seksjon for datakriminalitet, Nasjonalt cyberkrimsenter (NC3), KRIPOS",
       "bio": [
-        "Aalmo is head of the High-Tech Crime Section at NC3/Kripos. He has more than 25 years of experience from criminal investigations, spanning from violent crimes, international criminal cases (war crimes) and cybercrime. As the manager of an investigation section at Kripos he also participates closely in the international police cooperation through Europol and Interpol."
+        "Aalmo leder Seksjon for datakriminalitet ved Nasjonalt cyberkrimsenter (NC3) på Kripos. Han har mer enn 25 års erfaring fra etterforskning i politiet, blant annet fra voldskriminalitet, internasjonale forbrytelser (krigsforbrytelser) og datakriminalitet. Som leder for et spisset etterforskningsmiljø på Kripos deltar han også i flere internasjonale samarbeidsfora i blant annet Europol og Interpol."
       ],
       "photo": "/img/speakers/a06ca65b-78e6-4fc5-9834-d937983a9818.jpg"
     },
@@ -5346,7 +5346,13 @@
       "description": [
         "The world is changing and so are we, but are we really?",
         "In todays political climate, where there hybrid warfare is a reality, with enemies who does not care which side of the SCADA system you are on, the time has come to tackle the never ending conflict: OT vs. IT.",
-        "In this session, Amalie Lønning is inviting both IT and OT security professionals in a panel debate, addressing the challenges lying ahead to secure our most critical functions of society, breaking down silos and bridging the gap between IT and OT."
+        "In this session, Elisabet Haugsbø is inviting both IT and OT security professionals in a panel debate, addressing the challenges lying ahead to secure our most critical functions of society, breaking down silos and bridging the gap between IT and OT.",
+        "I panelet:",
+        "Daniel Ourom-Swart",
+        "Head of Industrial Cybersecurity",
+        "Svein-Tore Omdahl",
+        "Teknologidirektør Norgesgruppen",
+        "Tony Iskandar"
       ],
       "language": "English",
       "level": "High-level",
@@ -6301,7 +6307,7 @@
     },
     {
       "id": "1169604",
-      "title": "Hunting international cyber criminals",
+      "title": "Jakten på internasjonale cyberkriminelle",
       "dayId": "46260",
       "roomId": "74829",
       "roomName": "9 - Victoria Scandic, sal 1+2",
@@ -6318,12 +6324,12 @@
         "slug": "cyber-crime"
       },
       "description": [
-        "This session will give insight in the role of the police in the prevention of cyber crime, and how information gathering, international cooperation and use of different methods enables the police to investigate and prosecute highly sophisticated criminals."
+        "Innlegget vil beskrive hvordan politiet jobber med etterforskning av de mest alvorlige datakrimsakene. Målrettet innsats mot aktørene bak kriminaliteten gjør politiet i stand til å forebygge, etterforske, identifisere og til slutt iretteføre personer som står bak den alvorligste datakriminaliteten."
       ],
       "language": "Norwegian",
       "level": "High-level",
       "otherTags": {},
-      "slug": "hunting-international-cyber-criminals-1169604"
+      "slug": "jakten-pa-internasjonale-cyberkriminelle-1169604"
     },
     {
       "id": "1151290",
