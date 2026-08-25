@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-8872865fc3db";
+const CACHE = "sf-07eb4b802a5c";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=8872865fc3db",
-  "/css/fonts.css?v=8872865fc3db",
-  "/js/app.js?v=8872865fc3db",
-  "/js/rum.js?v=8872865fc3db",
+  "/css/style.css?v=07eb4b802a5c",
+  "/css/fonts.css?v=07eb4b802a5c",
+  "/js/app.js?v=07eb4b802a5c",
+  "/js/rum.js?v=07eb4b802a5c",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -155,7 +155,7 @@ const REST = [...new Set([
   "/program/i-like-big-shares-and-i-cannot-lie-1147782/",
   "/program/governance-theatre-vs-reality-fixing-the-operating-model-beh-1129148/",
   "/program/sikkerhetskultur-erfaringer-fra-en-innenfra-og-ut-tilnaermin-1151961/",
-  "/program/when-threats-become-multifaceted-how-the-police-prioritize-i-1169680/",
+  "/program/nar-truslene-blir-sammensatte-hvordan-prioriterer-politiet-i-1169680/",
   "/program/hvem-eier-krisen-nar-sikkerhetshendelsen-treffer-pa-tvers-av-1171339/",
   "/program/nar-fysisk-sikkerhet-blir-shadow-it-hvem-eier-egentlig-kamer-1167370/",
   "/program/how-to-prioritise-within-ot-in-light-of-a-chaotic-time-1174099/",
