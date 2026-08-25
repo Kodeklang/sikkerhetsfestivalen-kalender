@@ -11,7 +11,7 @@
 // The cache name carries a hash of the programme *and* every shipped asset, so
 // any real change retires the old cache wholesale.
 
-const CACHE = "sf-c391969d989e";
+const CACHE = "sf-8872865fc3db";
 
 const BASE = "/";
 
@@ -25,10 +25,10 @@ const SHELL = [
   "/",
   "/dag/2/",
   "/dag/3/",
-  "/css/style.css?v=c391969d989e",
-  "/css/fonts.css?v=c391969d989e",
-  "/js/app.js?v=c391969d989e",
-  "/js/rum.js?v=c391969d989e",
+  "/css/style.css?v=8872865fc3db",
+  "/css/fonts.css?v=8872865fc3db",
+  "/js/app.js?v=8872865fc3db",
+  "/js/rum.js?v=8872865fc3db",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/icon-192.png",
@@ -173,7 +173,7 @@ const REST = [...new Set([
   "/program/delegating-your-attack-surface-through-oauth-consents-1169263/",
   "/program/steering-the-ai-revolution-building-trust-and-accountability-1169804/",
   "/program/cybersikkerhet-er-ogsa-kultur-empiriske-funn-om-nasjonale-fo-1171069/",
-  "/program/hunting-international-cyber-criminals-1169604/",
+  "/program/jakten-pa-internasjonale-cyberkriminelle-1169604/",
   "/program/ai-i-soc-en-hva-vi-laerte-av-a-bygge-en-agentisk-triage-assi-1151290/",
   "/program/lykketioringen-som-forsvant-en-leksjon-i-strategisk-blindhet-1168026/",
   "/program/genai-in-the-war-room-crafting-facilitating-and-analyzing-ot-1172376/",
