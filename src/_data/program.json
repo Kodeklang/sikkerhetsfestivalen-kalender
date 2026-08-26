@@ -6938,9 +6938,11 @@
         "slug": "identity"
       },
       "description": [
-        "Skyen har gjort små og store virksomheter teknologisk likestilte – men ikke sikkerhetsmessig.",
-        "Små organisasjoner er i dag koblet til de samme globale plattformene, digitale økosystemene og leverandørkjedene som de største aktørene. Likevel mangler de ofte ressurser, fagmiljøer og tilgang til spesialisert rådgivning. Risikoen stopper imidlertid ikke ved virksomhetens størrelse – sårbarhet hos én liten aktør kan forplante seg langt utover egen organisasjon.",
-        "Dette foredraget utforsker dette paradokset og viser, gjennom et praktisk eksempel, hvordan mindre virksomheter kan få tilgang til konkrete, handlingsrettede sikkerhetsråd fra personer med relevant ekspertise – uten behov for kostbar, skreddersydd konsulentbistand."
+        "Skyen har gjort små og store virksomheter teknologisk likestilte, men ikke sikkerhetsmessig.",
+        "Små organisasjoner er koblet til de samme plattformene, økosystemene og leverandørkjedene som de største, men mangler ofte ressurser, fagmiljø og tilgang til spesialisert rådgivning. Risikoen stopper ikke ved virksomhetens størrelse: en sårbarhet hos én liten aktør kan forplante seg langt utover egen organisasjon.",
+        "De som faktisk gjør IAM-arbeid i mindre virksomheter er sjelden IAM-spesialister. De trenger erfaren dømmekraft raskt – og har ingen spesialist å spørre.",
+        "I denne lyntalen skisserer jeg én mulig vei ut: at spesialister gjør sin dømmekraft tilgjengelig i en form en språkmodell kan bruke, slik at en praktiker får råd forankret i en navngitt fagpersons vurderinger, ikke bare i modellens egne. Jeg viser hvordan det kan se ut med et konkret IAM-eksempel, og hva som må være på plass for at det skal være til å stole på.",
+        "Dette er en modell jeg selv jobber med. Ti minutter er nok til å legge fram idéen, ikke til å bevise den. Målet er å få den diskutert, så kom gjerne og motsi meg etterpå."
       ],
       "language": "English",
       "level": "High-level",
